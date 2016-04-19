@@ -27,4 +27,11 @@ Eine Menge $ A\subset X $ hei\ss t \deftxt{abgeschlossen} (in $ X $)$ \Leftright
 \begin{definition}
 $ A\subset X $ beliebig. Die \deftxt{abgeschlossene H\"ulle $ \bar A $ von $ A $} ist $ \bar A\coloneqq\bigcap B $, so dass $ B\supset A $, $ B $ abgeschlossen. 
 \end{definition}
-Eine Menge $ W\subset X $ hei\ss t \deftxt{Umgebung der Menge $ M\subset X $}, wenn $ \exists V $ offen mit $ M\subset V\subset W $.
+Eine Menge $ W\subset X $ hei\ss t \deftxt{Umgebung der Menge $ M\subset X $}, wenn $ \exists V $ offen mit $ M\subset V\subset W $.\\
+Sei $ k\in\N\coloneqq\lbrace 0,1,2,...\rbrace $. Eine Abbildung $ \lbrace k,k+1,k+2,...\rbrace\rightarrow X $, $ n\mapsto c_n $, hei\ss t \deftxt{Folge} in $ X $. Man schreibt kurz $ (c_n) $, im Allgemeinen ist $ k=0 $.\\
+\begin{definition}
+Eine Folge $ (c_n) $ hei\ss t \deftxt{konvergent} in $ X $, wenn es einen Punkt $ c\in X $ gibt, so dass in jeder Umgebung von $ c $ fast alle (d.h. alle bis auf endlich viele) Folgenglieder $ c_n $ liegen. Der Punkt $ c $ hei\ss t ein \deftxt{Limes der Folge}. In Zeichen:
+\[ c=\lim_{n\to\infty}c_n \]
+Nicht konvergente Folgen hei\ss en \deftxt{divergent}. 
+\end{definition}
+Eine Menge $ M\subset X $ ist genau dann abgeschlossen in $ X $, wenn der Limes jeder konvergenten Folge $ (c_n) $, $ c_n\in M $, stets zu $ M $ geh\"ort.
