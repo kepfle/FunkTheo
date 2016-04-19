@@ -1,0 +1,30 @@
+\chapter{Topologische Grundbegriffe}
+\begin{definition}
+Ist $ X $ irgendeine Menge, so hei\ss t eine Funktion $ d\colon X\times X\rightarrow\R $, $ (x,y)\mapsto d(x,y) $, eine \deftxt{Metrik auf $ X $}, wenn $ \forall x,y,z\in X $ gilt:
+\begin{enumerate}
+\item $ d(x,y)\geq 0 $, $ d(x,y)=0\Leftrightarrow x=y $
+\item $ d(x,y)=d(y,x) $
+\item $ d(x,z)\leq d(x,y)+d(y,z) $
+\end{enumerate}
+$ (X,d) $ hei\ss t \deftxt{metrischer Raum}.
+\end{definition}Im Fall $ X=\C $ nennt man $ d(w,z)\coloneqq |w-z|=\sqrt{(u-x)^2+(v-y)^2} $ (die \deftxt{euklidische Entfernung} der Punkte $ w,z $ in der Zahlebene) die \deftxt{euklidische Metrik} von $ \C $.\\
+In einem metrischen Raum $ X $ mit Metrik $ d $ hei\ss t die Menge \[ B_r(c)\coloneqq\lbrace x\in X\mid d(x,c)<r\rbrace \] die \deftxt{offene Kugel vom Radius $ r>0 $ mit Mittelpunkt $ c\in X $}.\\
+Im Fall der euklidischen Metrik auf $ \C $ hei\ss en die Kugeln \[ B_r(c)\coloneqq\lbrace z\in\C\mid |z-c|<r\rbrace \] $ r>0 $, \deftxt{offene Kreisscheibe in $ \C $}. Wir schreiben durchweg \[ \E\coloneqq B_1(0)=\lbrace z\in C\mid |z|<1\rbrace \]
+\begin{definition}
+Eine Teilmenge $ U\subset X $ eines metrischen Raumes $ X $ hei\ss t \deftxt{offen} (in $ X $)$ \Leftrightarrow\forall x\in U\exists r>0 $ so dass $ B_r(x)\subset U $ ($ \emptyset $ ist offene Menge per definitionem).
+\begin{enumerate}
+\item $ \lbrace U_\alpha\rbrace_{\alpha\in A}\Rightarrow\bigcup_{\alpha\in A}U_\alpha $ offen
+\item $ U_1,U_2,...,U_m $ offen$ \Rightarrow\bigcap_{i=1}^m U_i $ offen
+\end{enumerate}
+\end{definition}
+\begin{definition}
+Eine Menge $ A\subset X $ hei\ss t \deftxt{abgeschlossen} (in $ X $)$ \Leftrightarrow X\setminus A$ offen.
+\begin{enumerate}
+\item $ \lbrace A_\alpha\rbrace_{\alpha\in\sA} $ abgeschlossene Mengen$ \Rightarrow\bigcap_{\alpha\in\sA} A_\alpha$ abgeschlossen
+\item $ A_1,A_2,...,A_m $ abgeschlossen$ \Rightarrow\bigcup_{i=1}^m A_i $ abgeschlossen
+\end{enumerate}
+\end{definition}
+\begin{definition}
+$ A\subset X $ beliebig. Die \deftxt{abgeschlossene H\"ulle $ \bar A $ von $ A $} ist $ \bar A\coloneqq\bigcap B $, so dass $ B\supset A $, $ B $ abgeschlossen. 
+\end{definition}
+Eine Menge $ W\subset X $ hei\ss t \deftxt{Umgebung der Menge $ M\subset X $}, wenn $ \exists V $ offen mit $ M\subset V\subset W $.
