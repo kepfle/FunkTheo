@@ -1,1 +1,59 @@
-\chapter{title}
+\chapter{Konvergente Folgen komplexer Zahlen}
+\subsection*{Rechenregeln}
+Konvergiert die Folge $ c_n $ gegen $ c\in\C $, so liegen in jeder Kreisscheibe $ B_\e(c) $, $ \e>0 $, um $ c $ fast alle Folgenglieder $ c_n $.\\ F\"ur jedes $ z\in\C $ mit $ |z|<1 $ ist die \deftxt{Potenzfolge $ z^n $} konvergent: $ \lim z^n=0 $; f\"ur alle $ |z|>1 $ ist die Folge $ z^n $ divergent.\\
+\begin{definition}
+Eine Folge $ c_n $ hei\ss t \deftxt{beschr\"ankt}$ :\Leftrightarrow\exists M>0 $, so dass $ |c_n|\leq M\forall n\in\N $.\\
+\end{definition}
+Wie im Reellen folgt:
+Jede konvergente Folge komplexer Zahlen ist beschr\"ankt. Sind $ c_n,d_n $ konvergente Folgen, so gelten die Limesregeln:
+\begin{enumerate}
+\item[i)] $ \forall a,b\in\C $ ist $ ac_n+bd_n $ konvergent:
+\[ \lim(ac_n+bd_n)=a\lim c_n+b\lim d_n \]
+($ \C- $Linearit\"at)
+\item[ii)] Die Produktfolge $ c_nd_n $ ist konvergent:
+\[ \lim(c_nd_n)=(\lim c_n)(\lim d_n) \] 
+\item[iii)] Ist $ \lim d_n\neq 0 $, so gibt es ein $ k\in\N $, so dass $ d_n\neq 0\forall n\geq k $; die Quotientenfolge $ \left(\frac{c_n}{d_n}\right)_{n\geq k} $ konvergiert gegen $ \frac{\lim c_n}{\lim d_n} $.
+\item[iv)] Die Betragsfolge $ |c_n| $ reeller Zahlen ist konvergent:
+\[ \lim |c_n|=|\lim c_n| \]
+\item[v)] Die Folge $ \bar c_n $ konvergiert gegen $ \bar c $.
+\end{enumerate}
+\begin{satz}
+Folgende Aussagen \"uber eine Folge $ c_n $ sind \"aquivalent:
+\begin{enumerate}
+\item $ c_n $ ist konvergent.
+\item Die beiden reellen Folgen $ \Re c_n $, $ \Im c_n $ sind konvergent.
+Im Fall der Konvergenz gilt:
+\[ \lim c_n=\lim\Re c_n+i\lim\Im c_n \]
+\end{enumerate}
+\end{satz}
+\begin{beweis}
+\begin{description}
+\item[i)$ \Rightarrow $ii)] Limesregeln i) und v) und $ \Re c_n=\frac{1}{2}(c_n+\bar c_n) $, $ \Im c_n=\frac{1}{2i}(c_n-\bar c_n) $.
+\item[ii)$ \Rightarrow $i)] \[ \lim c_n=\lim(\Re c_n+i\Im c_n)=\lim\Re c_n+i\lim\Im c_n \]
+\end{description}
+\end{beweis}
+\begin{definition}
+Eine Folge $ c_n $ hei\ss t \deftxt{Cauchy-Folge}, wenn $ \forall\e>0\exists k\in\N $, so dass $ |c_n-c_m|<\e\forall n,m\geq k $.
+\end{definition}
+\begin{satz}[Konvergenzkriterium von Cauchy]
+Folgende Aussagen \"uber eine Folge $ (c_n $ sind \"aquivalent:
+\begin{enumerate}
+\item $ (c_n) $ ist konvergent.
+\item $ (c_n) $ ist eine Cauchyfolge.
+\end{enumerate}
+\end{satz}
+\begin{beweis}
+\begin{description}
+\item[i)$ \Rightarrow $ii)] Da $ (c_n) $ konvergent ist, $ \exists c $, so dass $ \forall\frac{\e}{2}>0\exists k\in\N:|c_n-c|<\e\forall n\geq k $. Mit der Dreiecksungleichung folgt:
+\[ |c_n-c_m|\leq|c_n-c|+|c-c_m|<\frac{\e}{2}+\frac{\e}{2}=\e\forall n,m\geq k \]
+\item[ii)$ \Rightarrow $i)] $ (c_n) $ ist eine Cauchyfolge. Es gilt:
+\[ |\Re c_n-\Re c_m|\leq|c_n-c_m|,\quad |\Im c_n-\Im c_m|\leq|c_n-c_m| \]
+Also sind $ (\Re c_n) $ und $ (\Im c_n) $ reelle Cauchy-Folgen, also nach Analysis 1 konvergent. Somit ist auch $ c_n=\Re c_n+i\Im c_n $ konvergent.
+\end{description}
+\end{beweis}
+\begin{satz}
+F\"ur $ K\subset\C $ ist $ K $ kompakt$ \Leftrightarrow K$ beschr\"ankt und abgeschlossen.
+\end{satz}
+\begin{satz}[Bolzano-Weierstra\ss]
+Jede beschr\"ankte Folge komplexer Zahlen besitzt eine konvergente Teilfolge.
+\end{satz}
