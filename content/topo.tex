@@ -34,4 +34,37 @@ Eine Folge $ (c_n) $ hei\ss t \deftxt{konvergent} in $ X $, wenn es einen Punkt 
 \[ c=\lim_{n\to\infty}c_n \]
 Nicht konvergente Folgen hei\ss en \deftxt{divergent}. 
 \end{definition}
-Eine Menge $ M\subset X $ ist genau dann abgeschlossen in $ X $, wenn der Limes jeder konvergenten Folge $ (c_n) $, $ c_n\in M $, stets zu $ M $ geh\"ort.
+Eine Menge $ M\subset X $ ist genau dann abgeschlossen in $ X $, wenn der Limes jeder konvergenten Folge $ (c_n) $, $ c_n\in M $, stets zu $ M $ geh\"ort.\\
+\begin{definition}
+Ein Punkt $ p\in X $ hei\ss t \deftxt{H\"aufungspunkt} einer Menge $ M\subset X :\Leftrightarrow\forall $Umgebung $ U $ von $ p $ gilt:
+\[ U\cap (M\setminus\lbrace p\rbrace)\neq\emptyset \]
+\end{definition}
+In jeder Umgebung eines H\"aufungspunktes $ p $ von $ M $ liegen unendlich viele Punkte von $ M $; es gibt stets eine Folge $ (c_n) $ in $ M\setminus\lbrace p\rbrace $ mit $ \lim c_n=p $.
+\newpage
+\begin{beispiel*}
+\begin{enumerate}
+\item[]
+\item $ X=\R $, $ M=\Q $. Die Menge $ U $ aller H\"aufungspunkte? $ U=\R $.
+\item $ X=\R $, $ M=\Z $. $ U = \emptyset $.
+\item $ X=\R $, $ M=\left\lbrace\frac{1}{n}\right\rbrace_{n=1}^\infty $, $ U=\lbrace 0\rbrace $.
+\end{enumerate}
+\end{beispiel*}
+\begin{definition}
+Eine Teilmenge $ A $ eines metrischen Raumes $ X $ hei\ss t \deftxt{dicht}, in $ X:\Leftrightarrow\forall $offene $ U\subset X: U\cap A\neq\emptyset \Leftrightarrow\bar A=X$.
+\end{definition}
+\begin{beispiel*} $ X=C[a,b] $, $ d(f,g)=\sup_{x\in[a,b]} |f(x)-g(x)| $, $ f,g\in X $, $ A=\sP= $ alle Polynome auf $ [a,b] $. 
+\end{beispiel*}
+\begin{satz}[\"Aquivalenzsatz]
+Folgende Aussagen \"uber einen metrischen Raum $ X $ sind \"aquivalent:
+\begin{enumerate}
+\item Jede offene \"Uberdeckung $ U=\lbrace U_j\rbrace_{j\in J} $ von $ X $ besitzt eine endliche Teil\"uberdeckung. (Heine-Borel-Eigenschaft)
+\item Jede Folge $ (x_n) $ in $ X $ besitzt eine konvergente Teilfolge. (Weierstra\ss-Bolzano-Eigenschaft)
+\end{enumerate}
+\end{satz}
+\begin{definition}
+Man nennt $ X $ \deftxt{kompakt}, wenn die Bedingungen i) und ii) aus \ref{satz2.8} erf\"ullt sind. Eine Teilmenge $ K $ von $ X $ hei\ss t \deftxt{kompakt}, oder auch ein \deftxt{Kompaktum} (in $ X $), wenn $ K $ mit der induzierten Metrik ein kompakter Raum ist. 
+\end{definition}
+\begin{enumerate}
+\item[($ \ast $)] Jedes Kompaktum in $ X $ ist abgeschlossen in $ X $. In einem kompakten Raum ist jede abgeschlossene Teilmenge kompakt.
+\item[($ \ast\ast $)] Jede offene Menge $ D $ in $ \C $ ist die Vereinigung von abz\"ahlbar unendlich vielen kompakten Teilmengen von $ D $.
+\end{enumerate}
