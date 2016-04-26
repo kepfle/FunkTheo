@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.15)  22 APR 2016 14:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.15)  26 APR 2016 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1295,70 +1295,70 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 )
 (./inc/settings/hyphenation.tex) (./funktheo.aux (./inc/titlepage.aux)
 (./inc/preface.aux) (./content/kapitel1.aux) (./content/topo.aux)
-(./content/folgen.aux) (./content/reihen.aux))
+(./content/folgen.aux) (./content/reihen.aux) (./content/stetig.aux))
 \openout1 = `funktheo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 25.
-LaTeX Font Info:    Try loading font information for FML+fncmi on input line 25
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 27.
+LaTeX Font Info:    Try loading font information for FML+fncmi on input line 27
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
 File: fmlfncmi.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncmi.
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for FMS+fncm on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for FMS+fncm on input line 27.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/fouriernc/fmsfncm.fd
 File: fmsfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FMS/fncm.
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 27.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Try loading font information for T1+fnc on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Try loading font information for T1+fnc on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/fouriernc/t1fnc.fd
 File: t1fnc.fd 2005/12/13 scaled font definitions for T1/fnc.
 )
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 11.15991pt on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \iintop on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \iiintop on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \oiintop on input line 25.
+(Font)              scaled to size 11.15991pt on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \iintop on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \iiintop on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \oiintop on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-LaTeX Info: Redefining \microtypecontext on input line 25.
+LaTeX Info: Redefining \microtypecontext on input line 27.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1403,7 +1403,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring ON on input line 25.
+Package hyperref Info: Link coloring ON on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1413,9 +1413,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count184
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (./funktheo.out) (./funktheo.out)
 \@outlinefile=\write5
@@ -1451,19 +1451,19 @@ Package babel Info: Redefining ngerman shorthand "~
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 33.
  [2
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 31.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 33.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -1473,10 +1473,10 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 31.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 33.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <70> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 31.
-Package tocbasic Info: character protrusion at toc deactivated on input line 31
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 33.
+Package tocbasic Info: character protrusion at toc deactivated on input line 33
 .
  (./funktheo.toc
 LaTeX Font Info:    Font shape `T1/fnc/bx/n' in size <12> not available
@@ -1537,15 +1537,15 @@ File: uesint.fd
 \openout6 = `funktheo.toc'.
 
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 11.15991pt on input line 32.
+(Font)              scaled to size 11.15991pt on input line 34.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 34.
  [3]
 \openout2 = `inc/preface.aux'.
 
@@ -1574,13 +1574,13 @@ LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 23.13821pt on input line 7.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 34.
  [5]
 \openout2 = `content/kapitel1.aux'.
 
@@ -1628,6 +1628,18 @@ LaTeX Font Info:    Font shape `T1/fnc/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/fnc/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 16.07027pt on input line 2.
+
+Overfull \hbox (2.86295pt too wide) in paragraph at lines 8--11
+\T1/fnc/m/n/12 (-20) heit[] von $\U/futm/m/n/12 C$\T1/fnc/m/n/12 (-20) . F¸r je
+-de Zahl $\FML/fncmi/m/it/12 z \FMS/fncm/m/n/12 Å \T1/fnc/m/n/12 (-20) (\FML/fn
+cmi/m/it/12 x; y\T1/fnc/m/n/12 (-20) ) \FMS/fncm/m/n/12 2 \U/futm/m/n/12 C$ \T1
+/fnc/m/n/12 (-20) be-steht die ein-deu-ti-ge Dar-stel-lung $(\FML/fncmi/m/it/12
+ x; y\T1/fnc/m/n/12 (-20) ) \FMS/fncm/m/n/12 Å \T1/fnc/m/n/12 (-20) (\FML/fncmi
+/m/it/12 x; \T1/fnc/m/n/12 (-20) 0) \FMS/fncm/m/n/12 Ä \T1/fnc/m/n/12 (-20) (0\
+FML/fncmi/m/it/12 ; \T1/fnc/m/n/12 (-20) 1)(\FML/fncmi/m/it/12 y; \T1/fnc/m/n/1
+2 (-20) 0)$,
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 20.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1638,13 +1650,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 20.
 [7])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 42.
  [8]
 \openout2 = `content/topo.aux'.
 
@@ -1655,29 +1667,46 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 20.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 20.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 20.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 20.
 [9
 
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 29--33
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--39
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 44.
+[10]
+Underfull \hbox (badness 1888) in paragraph at lines 54--55
+ []\T1/fnc/m/n/12 (+20) Ei-ne Teil-men-ge $\FML/fncmi/m/it/12 A$ \T1/fnc/m/n/12
+ (+20) ei-nes me-tri-schen Raum-es $\FML/fncmi/m/it/12 X$ \T1/fnc/m/n/12 (+20) 
+heiˇt []dicht[], in $\FML/fncmi/m/it/12 X \T1/fnc/m/n/12 (+20) :\FMS/fncm/m/n/1
+2 , 8$\T1/fnc/m/n/12 (+20) offene 
+ []
+
+)
+Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 43.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 43.
@@ -1685,15 +1714,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 43.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 43.
-[10])
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
  [11]
 \openout2 = `content/folgen.aux'.
 
@@ -1752,13 +1772,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 52.
  [14])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 44.
  [15]
 \openout2 = `content/reihen.aux'.
 
@@ -1782,33 +1802,139 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+ []
+
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 7.06795pt on input line 31.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 31.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 31.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 31.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 31.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 31.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 31.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 31.
+
+Overfull \hbox (15.35188pt too wide) in paragraph at lines 33--34
+[] $[][]$ \T1/fnc/m/n/12 (-20) ab-so-lut konvergent$\FMS/fncm/m/n/12 ) [][] [] 
+\FML/fncmi/m/it/12 a[]$\T1/fnc/m/n/12 (-20) , $[][] [] \FML/fncmi/m/it/12 a[]$ 
+\T1/fnc/m/n/12 (-20) ab-so-lut kon-ver-gent, i.e. $\FMS/fncm/m/n/12 8\FML/fncmi
+/m/it/12 " \FMS/fncm/m/n/12 É \T1/fnc/m/n/12 (-20) 0\FMS/fncm/m/n/12 9\FML/fncm
+i/m/it/12 n[] \FMS/fncm/m/n/12 2 \U/futm/m/n/12 N$
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 38.
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 43.
- [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
+(babel)             in language  on input line 45.
+ [19]
+\openout2 = `content/stetig.aux'.
+
+ (./content/stetig.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [20
+
+
+
+
+]
+Kapitel 5.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
+
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 4--5
+ []\T1/fnc/m/n/12 (+20) Ei-ne Ab-bil-dung $\FML/fncmi/m/it/12 f [] [] X \FMS/fn
+cm/m/n/12 ! \FML/fncmi/m/it/12 Y$ \T1/fnc/m/n/12 (+20) heiˇt []ste-tig im Punkt
+ $\FML/fncmi/m/it/12 a \FMS/fncm/m/n/12 2 \FML/fncmi/m/it/12 X$[]\T1/fnc/m/n/12
+ (+20) , wenn das $\FML/fncmi/m/it/12 f\FMS/fncm/m/n/12 ^^@$\T1/fnc/m/n/12 (+20
+) Urbild 
+ []
+
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+ [21]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+ [22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
  (./funktheo.aux (./inc/titlepage.aux) (./inc/preface.aux)
 (./content/kapitel1.aux) (./content/topo.aux) (./content/folgen.aux)
-(./content/reihen.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
+(./content/reihen.aux) (./content/stetig.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
 Package rerunfilecheck Info: File `funktheo.out' has not changed.
-(rerunfilecheck)             Checksum: 638B243AFC85A00B59F2BE7A1BBD7453;329.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
+(rerunfilecheck)             Checksum: 3BB4DF24DC241C34821D3CBE4F7DC908;383.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 55.
  ) 
 Here is how much of TeX's memory you used:
- 27328 strings out of 493304
- 498497 string characters out of 6139871
- 632709 words of memory out of 5000000
- 29939 multiletter control sequences out of 15000+600000
- 74917 words of font info for 172 fonts, out of 8000000 for 9000
+ 27473 strings out of 493304
+ 500509 string characters out of 6139871
+ 633410 words of memory out of 5000000
+ 30018 multiletter control sequences out of 15000+600000
+ 92327 words of font info for 224 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  68i,12n,71p,10537b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1823,10 +1949,10 @@ tic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on funktheo.pdf (17 pages, 117368 bytes).
+Output written on funktheo.pdf (22 pages, 131400 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 500000)
- 34357 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 312 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 35389 words of extra memory for PDF output out of 35830 (max. 10000000)
 

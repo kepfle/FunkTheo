@@ -22,6 +22,8 @@
 \ifthenelse{\equal{\sectioning}{1}}{}{\automark[chapter]{chapter}}%different headlines for chapter-only and sectioning
 
 %\includeonly{content/int1}											% while writing your book, compile only what you need
+\binoppenalty=\maxdimen
+\relpenalty=\maxdimen
 \begin{document}
 \ifthenelse{\equal{\nulltesKapitelerzeugen}{1}}{\addtocounter{section}{-1}}{}
 \raggedbottom
@@ -41,6 +43,7 @@
 \include{content/topo}
 \include{content/folgen}
 \include{content/reihen}
+\include{content/stetig}
 % only use section-wise documents since include inserts new pages!
 % ================================
 \ifthenelse{\equal{\useThumbs}{1}}

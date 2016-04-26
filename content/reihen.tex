@@ -1,6 +1,50 @@
 \chapter{Konvergente und absolut konvergente Reihen}
 \begin{definition}
 Ist $ (a_\nu)_{\nu\geq k} $ eine Folge komplexer Zahlen, so hei\ss t die Folge $ (s_n)_{n\geq k} $, $ s_n\coloneqq\sum_{\nu=k}^{n}a_\nu $, der Partialsummen eine \deftxt{(unendliche) Reihe} mit den \deftxt{Gliedern} $ a_\nu $. Man schreibt $ \sum_{\nu=k}^{\infty}a_\nu $, $ \sum_{k}^{\infty}a_\nu $, $ \sum_{\nu\geq k} $ oder einfach $ \sum a_\nu $.\\
- Eine Reihe $ \sum a_\nu $ hei\ss t \deftxt{konvergent}, wenn die Partilsummenfolge $ (s_n) $ konvergiert, andernfalls hei\ss t sie \deftxt{divergent}. Im Konvergenzfall schreibt man suggestiv:
+ Eine Reihe $ \sum a_\nu $ hei\ss t \deftxt{konvergent}, wenn die Partialsummenfolge $ (s_n) $ konvergiert, andernfalls hei\ss t sie \deftxt{divergent}. Im Konvergenzfall schreibt man suggestiv:
 \[ \sum a_\nu\coloneqq\lim s_n \]
 \end{definition}
+Wegen $ a_n=s_n-s_{n-1} $ gilt $ \lim a_n=0 $ f\"ur jede konvergente Reihe.\\
+Die Limesregeln i) und v) \"ubertragen sich sofort auf Reihen:
+\[ \sum_{\nu\geq k} (aa_\nu+bb_\nu)=a\sum_{\nu\geq k} a_\nu+b\sum_{\nu\geq k}b_\nu \]
+\[ \overline{\sum_{\nu\geq k}a_\nu}=\sum_{\nu\geq k} \bar a_\nu \]
+Speziell folgt: Die komplexe Reihe $ \sum_{\nu\geq k} a_\nu $ ist genau dann konvergent wenn die beiden reellen Reihen $ \sum_{\nu\geq k} \Re a_\nu $ und $ \sum_{\nu\geq k} \Im a_\nu $ konvergieren; also dann gilt:
+\[ \sum_{\nu\geq k} a_\nu=\sum_{\nu\geq k} \Re a_\nu+\sum_{\nu\geq k} \Im a_\nu \]
+\begin{satz}[Konvergenzkriterium von Cauchy]
+Eine Reihe $ \sum a_\nu $ konvergiert genau dann wenn $ \forall\e>0\exists n_0\in\N $ so dass
+\[ \left|\sum_{m+1}^{n} a_\nu\right|<\e\forall m,n\geq n_0 \]
+\end{satz}
+\begin{definition}
+Eine Reihe $ \sum a_\nu $ hei\ss t \deftxt{absolut konvergent}, wenn die Reihe $ \sum |a_\nu| $ nichtnegativer reeller Zahlen konvergiert. 
+\end{definition}
+\begin{satz}[Majorantenkriterium]
+Es sei $ \sum_{\nu\geq k} t_\nu $ eine konvergente Reihe mit reellen Gliedern $ t_\nu\geq 0 $; es sei $ (a_\nu)_{\nu\geq k} $ eine komplexe Zahlenfolge, so dass $ \forall\nu: |a_\nu|\leq t_\nu $. Dann ist $ \sum_{\nu\geq k} a_\nu $ absolut konvergent.
+\end{satz}
+\begin{beweis}
+\[ \sum_{m+1}^{n} |a_\nu|\leq\sum_{m+1}^{n}t_\nu<\footnote[1]{Cauchy-Kriterium}\e \]
+Also ist $ \sum|a_\nu| $ konvergent.
+\end{beweis}
+Wegen $ \max(|\Re a|,|\Im a|)\leq |a|\leq|\Re a|+|\Im a| $ gilt (nach dem Majorantenkriterium): $ \sum a_\nu $ ist absolut konvergent$ \Leftrightarrow\sum \Re a_\nu $, $ \sum\Im a_\nu $ sind absolut konvergent.\\
+\begin{satz}[Umordnungssatz]
+$ \sum_{\nu\geq 0} a_\nu$ konvergiere absolut. Dann konvergiert jede 'Umordnung'\footnotemark[2] dieser Reihe.
+\end{satz}
+\footnotetext[2]{$ \sum a_{\tau(\nu)} $, $ \tau\colon\N\rightarrow\N $ Bijektion}
+\begin{beweis}
+$ \sum_{\nu\geq 0} $ absolut konvergent$ \Rightarrow \sum_{\nu\geq 0}\Re a_\nu$, $ \sum_{\nu\geq 0} \Im a_\nu $ absolut konvergent, i.e. $ \forall\e>0\exists n_0\in\N $ so dass $ \sum_{m+1}^{n}|\Re a_\nu|<\e $, $ \sum_{m+1}^{n} |\Im a_\nu|<\e\forall m,n\geq n_0 $. $ \tau\colon\N\rightarrow\N $ Bijektion$ \Rightarrow\exists N_0\in\N $ so dass $ \tau(n)\geq n_0\forall n\geq N_0 $. Also: 
+\[ \sum_{N_0+1}^{N} |\Re a_{\tau(\nu)}|<\e,\qquad\sum_{N_0+1}^{N}|\Im a_{\tau(\nu)}|<\e \]
+Diese Reihen sind konvergent nach Cauchy, somit auch absolut konvergent und die Behauptung folgt.
+\end{beweis}
+Sind $ \sum_{0}^{\infty} a_\mu $, $ \sum_{0}^{\infty}a_\nu $ zwei Reihen, so hei\ss t jede Reihe $ \sum_{0}^{\infty}c_\lambda $, wobei $ c_0,c_1,c_2,... $ genau einmal alle Produkte $ a_\mu b_\nu $ durchl\"auft, eine \deftxt{Produktreihe} von $ \sum a_\mu $ und $ \sum b_\nu $. Die wichtigste Produktreihe ist das \deftxt{Cauchyprodukt} $ \sum p_\lambda $ mit $ p_\lambda\coloneqq\sum_{\mu+\nu=\lambda} a_\mu b_\nu $. Diese Bildung wird nahegelegt, wenn man Potenzreihen formal ausmultipliziert:
+\[ \left(\sum_{0}^{\infty} a_\mu x^\mu\right)\left(\sum_{0}^{\infty} b_\nu x^\nu\right)=\sum_{0}^{\infty}p_\lambda x^\lambda \]\\
+\begin{satz}[Reihenproduktsatz]
+Es seien $ \sum_{0}^{\infty} a_\mu $, $ \sum_{0}^{\infty} b_\nu $ absolut konvergente Reihen. Dann konvergiert jede Produktreihe $ \sum_{0}^{\infty} c_\lambda $ absolut. Es gilt stets:
+\[ \left(\sum_{0}^{\infty} a_\mu\right)\left(\sum_{0}^{\infty} b_\nu \right)=\sum_{0}^{\infty}p_\lambda \]
+\end{satz}
+\begin{beweis}
+$ \forall l\in\N\exists m\in\N $, so dass $ c_0,c_1,c_2,...,c_l $ unter den Produkten $ a_\mu b_\nu $, $ 0\geq \mu,\nu\geq m $, vorkommen. Dann:
+\[ \sum_{0}^{l}|c_\lambda|\leq\left(\sum_{0}^{m}|a_\mu|\right)\left(\sum_{0}^{m}|b_\nu|\right)\leq\left(\sum_{0}^{\infty}|a_\mu|\right)\left(\sum_{0}^{\infty}|b_\nu|\right)<+\infty \]
+Also ist $ \sum_0^\infty|c_\lambda| $ konvergent, also $ \sum_0^\infty c_\lambda $ absolut konvergent und somit unabh\"angig von Umordnungen. Insbesondere:
+\[ (a_0+a_1+...+a_m)(b_0+b_1+...+b_m)=(c_0+c_1+...+c_{(m+1)^2-1}) \]
+Es folgt:
+\[ \left(\sum_{0}^{\infty} a_\mu\right)\left(\sum_{0}^{\infty} b_\nu \right)=\sum_{0}^{\infty}p_\lambda \]
+\end{beweis}

@@ -1,1 +1,15 @@
 \chapter{Stetige Funktionen}
+$ f\colon X\rightarrow Y $, $ f $ hei\ss t \deftxt{Funktion} oder \deftxt{Abbildung}, $ X $ hei\ss t \deftxt{Argumentbereich} und $ Y $ \deftxt{Wertebereich}. Man schreibt auch $ X\ni x\rightarrow f(x)\in Y $.\\
+\begin{definition}
+Eine Abbildung $ f\colon X\rightarrow Y $ hei\ss t \deftxt{stetig im Punkt $ a\in X $}, wenn das $ f- $Urbild $ f^{-1}(V)=\lbrace x\in X\mid f(x)\in V\rbrace $ einer jeden Umgebung $ V $ von $ f(a) $ in $ Y $ eine Umgebung von $ a $ in $ X $ ist.
+\end{definition}
+\begin{definition}
+Die Funktion $ f\colon X\rightarrow Y $ konvergiert bei Ann\"aherung an $ a\in X $ gegen $ b\in Y $, in Zeichen $ \lim_{x\to a} f(x)=b $ oder $ f(x)\rightarrow b $ wenn $ x\rightarrow a $, wenn es zu jeder Umgebung $ V $ von $ b $ in $ Y $ eine Umgebung $ U $ von $ a $ in $ X $ gibt mit $ f(U\setminus\lbrace a\rbrace)\subset V $.
+\end{definition}
+\begin{bemerkung*}
+$ f $ ist stetig in $ a\Leftrightarrow\exists\lim_{x\to a}f(x)=f(a) $.
+\end{bemerkung*}
+\begin{satz}[Folgenkriterium]
+Genau dann ist $ f\colon X\rightarrow Y $ stetig in $ a $, wenn $ \forall $Folge $ (x_n) $ von Punkten $ x_n\in X $ mit $ \lim x_n=a $ gilt: $ \lim f(x_n)=f(a) $.
+\end{satz}
+Zwei Abbildungen $ f\colon X\rightarrow Y $ und $ g\colon Y\rightarrow Z $ werden zusammengesetzt zu $ g\circ f\colon X\rightarrow Z $, $ z\rightarrow (g\circ f)(x)\coloneqq g(f(x)) $. Bei dieser Komposition von Abbildungen vererbt sich die Stetigkeit: Ist $ f\colon X\rightarrow Y $ stetig in $ a\in X $ und ist $ g\colon Y\rightarrow Z $ stetig in $ f(a)\in Y $, so ist $ g\circ f\colon X\rightarrow Z $ stetig in $ a $.
