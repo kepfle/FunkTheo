@@ -1,0 +1,20 @@
+\chapter{Zusammenh\"angende R\"aume,\\Gebiete in $ \C $}
+\begin{definition}
+Sei $ (X, d_x) $ ein metrische Raum, $ A\subset X $ eine Menge. $ A $ ist \deftxt{zusammenh\"angend}$ \Leftrightarrow\nexists U_1,U_2 $ offen in $ X $, so dass:
+\begin{enumerate}
+\item $ U_1\cup U_2\supset A $
+\item $ U_1\cap U_2=\emptyset $
+\item $ U_1\cap A\neq\emptyset $, $ U_2\cap A\neq\emptyset $
+\end{enumerate}
+\end{definition}
+\begin{beispiel*}
+\begin{enumerate}
+\item[]
+\item $ \R=X $, $ d_x(x,y)=|x-y| $, $ A=\Q $: $ U_1=(-\infty,\sqrt{2}) $, $ U_2=(\sqrt{2},+\infty) $
+\item $ \R=X $, $ d_x(x,y)=|x-y| $, $ A=[0,1] $.\\
+Seien $ U_1,U_2 $ offene Mengen mit i)-iii), $ 0\in U_1 $, $ 1\in U_2 $, $ \frac{1}{2}\in U_1 \Rightarrow I_1=\left[\frac{1}{2},1\right]$, $ \frac{3}{4}\in U_2\Rightarrow I_2=\left[\frac{1}{2},\frac{3}{4}\right]$ $\Rightarrow\exists! x_0\in\bigcap_{n=1}^\infty I_n $ (Intervallschachtelungsprinzip). $ x_0 $ liegt also in $ U_1 $ oder $ U_2 $. $ U_1 $ ist offen, also existiert ein $ \e>0 $, so dass $ (x_0-\e,x_0+\e)\subset U_1 $, aber $ I_n\subset(x_0-\e,x_0+\e) $ f\"ur $ n $ gen\"ugend gro\ss $\lightning $ Also ist $ A $ zusammenh\"angend.
+\end{enumerate} 
+\end{beispiel*}
+\begin{bemerkung*}
+Sei $ (X,d_x) $ ein metrischer Raum, $ A,B\subset X $ zusammenh\"angend, $ A\cap B\neq\emptyset $. Dann ist $ A\cup B $ zusammenh\"angend.
+\end{bemerkung*}
