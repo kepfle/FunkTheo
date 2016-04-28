@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.15)  28 APR 2016 15:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.15)  28 APR 2016 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2004,7 +2004,19 @@ ri-scher Raum, $\FML/fncmi/m/it/12 A \FMS/fncm/m/n/12 ^^Z \FML/fncmi/m/it/12 X$
 (+20) ist []weg-zu-sam-men-hän- 
  []
 
-)
+
+Overfull \vbox (10.87498pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+
+[26])
 Overfull \vbox (10.87498pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -2016,7 +2028,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 47.
 
-[26]
+[27]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
  (./funktheo.aux (./inc/titlepage.aux) (./inc/preface.aux)
@@ -2029,13 +2041,13 @@ Package rerunfilecheck Info: File `funktheo.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
- 27566 strings out of 493304
- 501644 string characters out of 6139871
+ 27573 strings out of 493304
+ 501699 string characters out of 6139871
  636099 words of memory out of 5000000
  30057 multiletter control sequences out of 15000+600000
- 92873 words of font info for 229 fonts, out of 8000000 for 9000
+ 92991 words of font info for 231 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 68i,12n,71p,10537b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,71p,10537b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/fourier/fourier-mcl.pfb></usr/share/texlive/texmf-dis
@@ -2049,10 +2061,10 @@ ic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on funktheo.pdf (26 pages, 148476 bytes).
+Output written on funktheo.pdf (27 pages, 150542 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
- 164 named destinations out of 1000 (max. 500000)
+ 387 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 168 named destinations out of 1000 (max. 500000)
  35909 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -38,5 +38,11 @@ $ \R^2: y=\sin\frac{1}{x} $, $ 0<x\leq 1 $, $ A=(\lbrace 0\rbrace\times[-1,1])\c
 $ A\subset\R^2 $ offen, $ d_{\R^2} (x,y)=\norm{x-y}$. $ A $ zusammenh\"angend$ \Rightarrow A $wegzusammenh\"angend.
 \end{proposition}
 \begin{beweis}
-Sei $ x_0\in A $ beliebig, aber fixiert. $ A(x_0)\coloneqq\lbrace y\in A\mid\exists\gamma\colon[0,1]\rightarrow A, \gamma(0)=x_0,\gamma(1)=x_1\rbrace $. Dann ist $ A(x_0) $ wegzusammenh\"angend und offen.
+Sei $ x_0\in A $ beliebig, aber fixiert. $ A(x_0)\coloneqq\lbrace y\in A\mid\exists\gamma\colon[0,1]\rightarrow A, \gamma(0)=x_0,\gamma(1)=x_1\rbrace $.
+\begin{enumerate}
+\item $ A(x_0) $ ist wegzusammenh\"angend.
+\item $ A(x_0) $ ist offen, weil $ \forall y\in A(x_0)\subset A\exists\e>0 $ so dass $ B_\e(y) $. Also ist die Kurve $ \gamma $ von $ x_0 $ zu $ y +$der Radius von $ y $ zu beliebigem Punkt von $ B_\e(y) $ auch eine stetige Kurve. Also ist auch $ B_\e(y)\subset A(x_0) $ und somit ist $ A(x_0) $ offen.
+\item $ A(x_0) $ ist abgeschlossen in $ A $. Sei $ y\ast\in A $ und $ \exists y_n\in A(x_0) $, $ y_n\xrightarrow{n\to\infty}y^\ast $. Da $ A $ offen ist, existiert ein $ \e>0 $, so dass $ B_\e(y^\ast)\subset A $. Dann $ \exists n\in\N $ so dass $ y_n\in B_\e(y^\ast) $. Also existiert ein $ \gamma\colon[0,1]\rightarrow A $, so dass $ \gamma(0)=x_0 $, $ \gamma(1)=x_1 $, Dann ist diese Kurve+der Radius $ [y_n,y^\ast] $ eine Kurve die $ x_0 $ mit $ y^\ast $ verbindet. Also $ y^\ast\in A(x_0) $. Somit ist $ A(x_0) $ in $ A $ abgeschlossen.
+\end{enumerate}
+Also sind $ A(x_0) $ und $ A\setminus A(x_0) $ offen$ \lightning $ $ A\setminus A(x_0)=\emptyset \Rightarrow A(x_0)=A$. Da $ A(x_0) $ wegzusammenh\"angend ist, ist somit auch $ A $ wegzusammenh\"angend.
 \end{beweis}
