@@ -18,3 +18,25 @@ Seien $ U_1,U_2 $ offene Mengen mit i)-iii), $ 0\in U_1 $, $ 1\in U_2 $, $ \frac
 \begin{bemerkung*}
 Sei $ (X,d_x) $ ein metrischer Raum, $ A,B\subset X $ zusammenh\"angend, $ A\cap B\neq\emptyset $. Dann ist $ A\cup B $ zusammenh\"angend.
 \end{bemerkung*}
+\begin{definition}
+Sei $ (X,d_x) $ ein metrischer Raum, $ A\subset X $ eine Teilmenge. $ \forall x_0\in A $ definieren wir \[ K(x)\coloneqq\left\lbrace\bigcup_\alpha A_\alpha\mid x_0\in A_\alpha, A_\alpha\subset A\text{ zusammeh\"angend} \right\rbrace \]
+$ K(x) $ hei\ss t \deftxt{Zusammenhangskomponente des Punktes $ x $ von $ A $}.
+\end{definition}
+\begin{bemerkung*}
+$ K(x_0) $ ist zusammenh\"angend.
+\end{bemerkung*}
+\begin{definition}
+$ (X,d_x) $ metrischer Raum, $ A\subset X $ eine Teilmenge. $ A $ ist \deftxt{wegzusammenh\"angend}$ \Leftrightarrow\forall x_0,x_1\in A \exists$stetige Abbildung $ \gamma\colon[0,1]\rightarrow A $ so dass $ \gamma(0)=x_0 $, $ \gamma(1)=x_1 $.
+\end{definition}
+\begin{bemerkung*}
+$ A\subset X $ wegzusammenh\"angend$ \nLeftarrow\Rightarrow A$ zusammenh\"angend.
+\begin{beispiel*}
+$ \R^2: y=\sin\frac{1}{x} $, $ 0<x\leq 1 $, $ A=(\lbrace 0\rbrace\times[-1,1])\cup\left\lbrace\left(x,\sin\frac{1}{x}\right),0<x\leq 1\right\rbrace $
+\end{beispiel*}
+\end{bemerkung*}
+\begin{proposition}
+$ A\subset\R^2 $ offen, $ d_{\R^2} (x,y)=\norm{x-y}$. $ A $ zusammenh\"angend$ \Rightarrow A $wegzusammenh\"angend.
+\end{proposition}
+\begin{beweis}
+Sei $ x_0\in A $ beliebig, aber fixiert. $ A(x_0)\coloneqq\lbrace y\in A\mid\exists\gamma\colon[0,1]\rightarrow A, \gamma(0)=x_0,\gamma(1)=x_1\rbrace $. Dann ist $ A(x_0) $ wegzusammenh\"angend und offen.
+\end{beweis}

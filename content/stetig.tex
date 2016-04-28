@@ -10,6 +10,32 @@ Die Funktion $ f\colon X\rightarrow Y $ konvergiert bei Ann\"aherung an $ a\in X
 $ f $ ist stetig in $ a\Leftrightarrow\exists\lim_{x\to a}f(x)=f(a) $.
 \end{bemerkung*}
 \begin{satz}[Folgenkriterium]
-Genau dann ist $ f\colon X\rightarrow Y $ stetig in $ a $, wenn $ \forall $Folge $ (x_n) $ von Punkten $ x_n\in X $ mit $ \lim x_n=a $ gilt: $ \lim f(x_n)=f(a) $.
+Genau dann ist $ f\colon X\rightarrow Y $ stetig in $ a $, wenn $ \forall $Folgen $ (x_n) $ von Punkten $ x_n\in X $ mit $ \lim x_n=a $ gilt: $ \lim f(x_n)=f(a) $.
 \end{satz}
-Zwei Abbildungen $ f\colon X\rightarrow Y $ und $ g\colon Y\rightarrow Z $ werden zusammengesetzt zu $ g\circ f\colon X\rightarrow Z $, $ z\rightarrow (g\circ f)(x)\coloneqq g(f(x)) $. Bei dieser Komposition von Abbildungen vererbt sich die Stetigkeit: Ist $ f\colon X\rightarrow Y $ stetig in $ a\in X $ und ist $ g\colon Y\rightarrow Z $ stetig in $ f(a)\in Y $, so ist $ g\circ f\colon X\rightarrow Z $ stetig in $ a $.
+Zwei Abbildungen $ f\colon X\rightarrow Y $ und $ g\colon Y\rightarrow Z $ werden zusammengesetzt zu $ g\circ f\colon X\rightarrow Z $, $ z\rightarrow (g\circ f)(x)\coloneqq g(f(x)) $. Bei dieser Komposition von Abbildungen vererbt sich die Stetigkeit: Ist $ f\colon X\rightarrow Y $ stetig in $ a\in X $ und ist $ g\colon Y\rightarrow Z $ stetig in $ f(a)\in Y $, so ist $ g\circ f\colon X\rightarrow Z $ stetig in $ a $.\\
+\begin{definition}
+Eine Funktion $ f\colon X\rightarrow Y $ hei\ss t \deftxt{stetig}, wenn sie in jedem Punkt von $ X $ stetig ist.
+\end{definition}
+\begin{satz}[Stetigkeitskriterium]
+Folgende Aussagen sind \"aquivalent:
+\begin{enumerate}
+\item $ f $ ist stetig.
+\item Das Urbild $ f^{-1}(V) $ jeder in $ Y $ offenen Menge $ V $ ist offen in $ X $.
+\item Das Urbild $ f^{-1}(A) $ jeder in $ Y $ abgeschlossenen Menge $ A $ ist abgeschlossen in $ X $.
+\end{enumerate}
+\end{satz}
+\begin{satz}
+Es sei $ f\colon X\rightarrow Y $ stetig und $ K\subset X $ ein Kompaktum. Dann ist auch $ f(K)\subset Y $ ein Kompaktum.
+\end{satz}
+\begin{beweis}
+Sei $ \lbrace U_\alpha\rbrace_{\alpha\in A} $ eine offene \"Uberdeckung von $ f(K) $. Sei $ W_\alpha\coloneqq f^{-1}(U_\alpha)\forall\alpha\in A $. $ f $ ist stetig, also ist f\"ur alle $ \alpha\in A $ $ W_\alpha $ offen. Also ist $ \lbrace W_\alpha\rbrace_{\alpha\in A} $ eine offene \"Uberdeckung von $ K $. Da $ K $ kompakt ist, existieren endlich viele $ \alpha_1,\alpha_2,...,\alpha_m $, so dass $ K\subset\bigcup_{i=1}^m W_{\alpha_i} $. Dann ist $ \lbrace U_{\alpha_i}\rbrace_{i=1}^m $ eine endliche \"Uberdeckung von $ f(K) $. Somit ist $ f(K) $ nach Definition ein Kompaktum. 
+\end{beweis}
+In \ref{satz5.6} ist enthalten, dass reellwertige stetige Funktionen $ f\colon X\rightarrow\R $ auf jedem Kompaktum $ K $ in $ X $ Maxima und Minima annehmen.\\
+Komplexwertige Funktionen $ f\colon X\rightarrow\C $ und $ g\colon X\rightarrow\C $ lassen sich addieren und multiplizieren: $ (f+g)(x)=f(x)+g(x) $ und $ (f\cdot g)(x)=f(x)g(x) $, $ x\in X $. Die zu $ f $ konjugierte Funktion $ \bar f $ wird durch $ \bar f(x)=\overline{f(x)} $, $ x\in X $, definiert.\\
+Rechenregeln: $ \overline{f+g}=\bar f+\bar g $, $ \overline{f\cdot g}=\bar f\cdot\bar g $, $ \bar{\bar f}=f $. Realteil und Imagin\"arteil von $ f $ werden durch $ (\Re f)(x)=\Re (f(x)) $ und $ (\Im f)(x)=\Im (f(x)) $, $ x\in X $, erklärt. F\"ur $ u\coloneqq\Re f $ und $ v\coloneqq \Im f $ (reellwertige Funktionen) gilt: $ f=u+iv $, $ u=\frac{1}{2}(f+\bar f) $, $ v=\frac{1}{2i}(f-\bar f) $, $ f\bar f=u^2+v^2 $.\\
+Man hat:
+\begin{enumerate}
+\item $ f\colon X\rightarrow\C $, $ g\colon X\rightarrow\C $ stetig in $ a\in X \Rightarrow f+g, fg, \bar f$ stetig in $ a $.
+\item $ f=u+iv $ stetig in $ a\Leftrightarrow u,v$ stetig in $ a $.
+\item $ g $ nullstellenfrei in $ X $ (d.h. $ g(x)\neq 0\forall x\in X $), dann hei\ss t die Funktion $ x\rightarrow \frac{f(x)}{g(x)} $ die \deftxt{Quoiientenfunktion} von $ f $ und $ g $. Sind $ f $ und $ g $ stetig in $ a\Rightarrow\frac{f(x)}{g(x)} $ stetig in $ a $.
+\end{enumerate}
