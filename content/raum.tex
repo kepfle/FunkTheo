@@ -1,4 +1,5 @@
-\chapter{Zusammenh\"angende R\"aume,\\Gebiete in $ \C $}
+\chapter[Zusammenh\"angende R\"aume, Gebiete in $ \C $]{Zusammenh\"angende R\"aume,\\Gebiete in $ \C $}
+\section*{Zusammenhang und Wege}
 \begin{definition}
 Sei $ (X, d_x) $ ein metrische Raum, $ A\subset X $ eine Menge. $ A $ ist \deftxt{zusammenh\"angend}$ \Leftrightarrow\nexists U_1,U_2 $ offen in $ X $, so dass:
 \begin{enumerate}
@@ -35,7 +36,7 @@ $ \R^2: y=\sin\frac{1}{x} $, $ 0<x\leq 1 $, $ A=(\lbrace 0\rbrace\times[-1,1])\c
 \end{beispiel*}
 \end{bemerkung*}
 \begin{proposition}
-$ A\subset\R^2 $ offen, $ d_{\R^2} (x,y)=\norm{x-y}$. $ A $ zusammenh\"angend$ \Rightarrow A $wegzusammenh\"angend.
+$ A\subset\R^2 $ offen, $ d_{\R^2} (x,y)=\norm{x-y}$. $ A $ zusammenh\"angend$ \Rightarrow A $ wegzusammenh\"angend.
 \end{proposition}
 \begin{beweis}
 Sei $ x_0\in A $ beliebig, aber fixiert. $ A(x_0)\coloneqq\lbrace y\in A\mid\exists\gamma\colon[0,1]\rightarrow A, \gamma(0)=x_0,\gamma(1)=x_1\rbrace $.
@@ -46,3 +47,71 @@ Sei $ x_0\in A $ beliebig, aber fixiert. $ A(x_0)\coloneqq\lbrace y\in A\mid\exi
 \end{enumerate}
 Also sind $ A(x_0) $ und $ A\setminus A(x_0) $ offen$ \lightning $ $ A\setminus A(x_0)=\emptyset \Rightarrow A(x_0)=A$. Da $ A(x_0) $ wegzusammenh\"angend ist, ist somit auch $ A $ wegzusammenh\"angend.
 \end{beweis}
+\begin{definition}
+	$ f\colon X\rightarrow\C $ hei\ss t \deftxt{lokal-konstant} genau dann wenn $ \forall x\in X\exists $ offene Umgebung $ U\subset X $, $ x\in U $, so dass $ f|_U= $konstant.
+\end{definition}
+Ist $ f $ lokal-konstant, dann ist $ f $ stetig.\\
+\begin{satz}
+	$ X $ metrischer Raum. Dann sind \"aquivalent:\begin{enumerate}
+		\item $ f\colon X\rightarrow\C $ lokal-konstant$ \Rightarrow f$ konstant
+		\item $ A\subset X $ nicht leer, offen und abgeschlossen$ \Rightarrow A=X $
+		\item $ X $ zusammenh\"angend
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	\begin{description}
+		\item[i)$ \Rightarrow $ii)] Sei $ A\subset X $, $ A\neq\emptyset $, offen und abgeschlossen. $ B\coloneqq X\setminus A $ offen und abgeschlossen, $ A\cap B=\emptyset $, $ f(x)= \begin{cases}
+		1&x\in A\\0&x\in B
+		\end{cases} $. Es folgt direkt dass $ f $ lokal-konstant, also insbesondere stetig ist. Also ist $ f $ konstant, n\"amlich $ f=1 $, denn $ A\neq\emptyset $. Da $ A=f^{-1}(1)=X $, ist $ A=X $.
+		\item[ii)$ \Rightarrow $i)] Sei $ f\colon X\rightarrow\C $ lokal-konstant. Fixiere $ c\in X $. $ A\coloneqq f^{-1}(f(c)) $. Da $ f $ lokal-konstant, ist $ A $ offen, $ c\in A\neq\emptyset $. Da $ f $ stetig, ist $ A $ abgeschlossen. Also ist $ A=X $. Insbesondere ist $ f(x)=f(x)\forall x\in X $. Also ist $ f $ konstant.
+	\end{description}
+\end{beweis}
+\begin{satz}
+	$ I\subset\R $ Intervall$ \Rightarrow I $ zusammenh\"angend.
+\end{satz}
+\newpage
+\section*{Gebiete in $ \C $}
+\begin{definition}
+	\bullshit
+	\begin{enumerate}
+		\item $ z_0,z_1\in\C $, $ \gamma(t)=(1-t)z_0+tz_1 $, $ t\in[0,1] $. $ \gamma $ hei\ss t \deftxt{Strecke} von $ z_0 $ nach $ z_1 $, $ \gamma=[z_0,z_1] $.
+		\item $ z_0,z_1\in\R $, dann ist $ [z_0,z_1]= $Intervall.
+		\item Seien $ \gamma_1\colon[a_j,b_j]\rightarrow\C $, $ j=1,2 $, $ \gamma_1(b_1)=\gamma_2(a_2) $. Der \deftxt{Summenweg} $ \gamma_1+\gamma_2 $ von $ \gamma_1 $ und $ \gamma_2 $ ist $ \gamma\colon[a_1,b_2-a_2+b_1] $, $ \gamma(t)=\begin{cases}
+		\gamma_1(t)&t\in[a_1,b_1]\\\gamma_2(t+a_2-b_1)&t\in[b_1,b_2-a_2+b_1]
+		\end{cases} $.
+		\item $ \gamma $ hei\ss t \deftxt{Polygon} oder \deftxt{Streckenzug}, falls $ \gamma=[z_0,z_1]+[z_1,z_2]+...+[z_{n-1},z_n] $.
+		\item Polygon $ \gamma $ hei\ss t \deftxt{achsenparallel}, falls $ [z_j,z_{j+1}] $ parallel zur $ x- $Achse oder $ y- $Achse ist, $ j=0,...,n-1 $, d.h. $ \Re=z_j=\Re z_{j+1} $ oder $ \Im z_j=\Im z_{j+1} $.
+		\item $ D\subset\C $ hei\ss t \deftxt{Bereich}, falls $ D $ offen und nicht leer ist.
+	\end{enumerate}
+\end{definition}
+\begin{satz}
+	Sei $ B\subset\C $ Bereich. Dann sind \"aquivalent:
+	\begin{enumerate}
+		\item $ B $ ist zusammenh\"angend.
+		\item $ \forall p,q\in B\exists $Polygon in $ B $, das $ p $ und $ q $ verbindet.
+		\item $ B $ ist wegzusammenh\"angend.
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	\begin{description}
+		\item[ii)$ \Rightarrow $iii)] Jedes Polygon ist ein Weg.
+		\item[iii)$ \Rightarrow $i)] Folgt aus Bemerkung oben.
+		\item[i)$ \Rightarrow $ii)] Sei $ p\in B $ fest, $ z\in B $.
+		\[ f(z)=\begin{cases}
+		1&  \exists \text{Polygon von }  p  \text{ nach }  b \\0& \text{sonst}
+		\end{cases} \]
+		Zeige: $ f $ lokal konstant. Sei $ w\in B $. Da $ B $ offen, gibt es eine Kreisscheibe $ \triangle\subset B $, $ \triangle\ni w $. Ist $ z\in\triangle $, so existiert ein Polygon von $ z $ nach $ w $ in $ \triangle $. D.h. $ f(w)=1\Rightarrow f(z)=1 $ und $ f(w)=0\Rightarrow f(z)=0 \forall z\in\triangle$. Also ist $ f $ lokal-konstant auf $ B $ und $ f $ somit konstant. Da $ f(p)=1 $ folgt $ f=1 $.
+	\end{description}
+\end{beweis}
+\newpage
+\begin{definition}
+	$ G\subset\C $ Bereich. Ist $ G $ (weg-)zusammenh\"angend, so hei\ss t $ G $ \deftxt{Gebiet}.
+\end{definition}
+$ G $ ab jetzt immer ein Gebiet, und $ D $ immer ein Bereich.\\
+\begin{definition}
+	$ p,q\in D $ $ p\sim_D q \Leftrightarrow\exists$Weg in $ D $ der $ p $ und $ q $ verbindet. Die \"Aquivalenzklasse $ [p]_D $ hei\ss t \deftxt{Zusammenhangskomponente die $ p $ enth\"alt}.
+\end{definition}
+$ z_0,z_1\in\C $, $ d(z_0,z_1)=|z_0-z_1| $ Abstand zwischen $ z_0 $ und $ z_1 $.\\
+$ z_0\in\C $, $ A\subset\C $ abgeschlossen, $ d(z_0,A)=\inf\lbrace d(z_0,w)\mid w\in A\rbrace $\\
+$ D\subset\C $ Bereich, $ c\in D $, $ \partial D=\bar D\setminus D $. Randabstand $ d_c(D)=d(c,\partial D) $.\\
+Sonderfall: $ D=\C $, $ d_c(D)=+\infty $.
