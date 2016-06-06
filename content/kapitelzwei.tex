@@ -1,0 +1,30 @@
+\chapter{Konvergenzbegriffe der Funktionentheorie}
+\section*{Gleichm\"a\ss ige, lokal-gleichm\"a\ss ige und kompakte Konvergenz}
+\begin{definition}
+	Eine Funktionenfolge $ f_n\colon X\rightarrow\C $ hei\ss t in $ A\subset\C $ \deftxt{gleichm\"a\ss ig konvergent gegen $ f\colon A\rightarrow\C $}, wenn $ \forall\e>0\exists n_0(\e)\in\N $ so dass $ \forall n\geq n_0 $ und $ \forall x\in X $ gilt:
+	\[ |f(x)-f_n(x)|<\e \]
+\end{definition}
+\begin{beispiel*}
+	\begin{enumerate}
+		\item 	$ f_n(x)=x^n $, $ A=[0,1) $. $ f(x)\equiv 0\forall x\in A $. $ f_n\xrightarrow{n\to\infty}f $ punktweise, aber nicht gleichm\"a\ss ig.
+		\item $ A=[0,1] $.
+		\[ f_n(z)=\begin{cases}
+		2nx&f\in[0,\sfrac{1}{2n}]\\
+		2-2nx&f\in(\sfrac{1}{2n},\sfrac{1}{n}]\\
+		0&x\in(\sfrac{1}{n},1]
+		\end{cases} \]
+		$ f(x)\equiv 0\forall x\in[0,1] $.
+	\end{enumerate}
+\end{beispiel*}
+%
+%
+%
+%
+%
+%Vorlesung nachtragen
+%
+%
+%
+%
+%
+%

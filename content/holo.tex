@@ -1,0 +1,55 @@
+\chapter{Holomorphe Funktionen}
+\begin{definition}
+	Eine Funktion $ f\colon D\rightarrow\C $ hei\ss t \deftxt{holomorph in $ D $}, wenn $ f $ in jedem Punkt $ c\in D $ komplex differenzierbar ist.\\
+	Die Menge der holomorphen Funktionen in $ D $ bezeichnen wir mit $ \sO(D) $.
+\end{definition}
+\section*{Differentiationsregeln}
+\paragraph{Summen- und Produktregel.} $ \forall f,g\in\sO(D) \forall a,b\in\C$ ist $ af+bg \in\sO(D) $ und $ fg\in\sO(D) $ und $ (af+bg)'=af'+bg' $, $ (fg)'=f'g+fg' $. Insbesondere $ p(z)=a_0+a_1z+a_2z^2+...+a_nz^n\in\sO(\C) $ und $ p'(z)=a_1+2a_2z+...+na_nz^{n-1} $.
+\paragraph{Quotientenregel.} $ \forall f,g\in\sO(D), \forall z\in D: g(z)\neq 0 $: $\frac{f}{g}\in\sO(D)$
+\[ \left(\frac{f}{g}\right)=\frac{f'g-fg'}{g^2} \]
+\paragraph{Kettenregel.} $ g\in\sO(D), h\in\sO(D'), g(D)\subset D' $: $ (h\circ g)(z)\coloneqq h(g(z))\in\sO(D) $
+\[ (h\circ g)'(z)=h'(g(z))g'(z)\forall z\in D \]
+\newpage
+\section*{Charakterisierung lokal-konstanter Funktionen}
+\begin{proposition}
+	Folgende Aussagen \"uber eine Funktion $ f\colon D\rightarrow\C $ sind \"aquivalent:
+	\begin{enumerate}
+		\item $ f $ ist lokal-konstant in $ D $.
+		\item $ f $ ist holomorph in $ D $ und es gilt $ f'(z)=0\forall z\in D $.
+	\end{enumerate}
+\end{proposition}
+\begin{beweis}
+	\begin{description}
+		\item[i)$ \Rightarrow $ii)] Trivial.
+		\item[ii)$ \Rightarrow $i)] $ 0=f'(z)=u_x+iv_x $, also $ u_x=0=v_y $ und $ v_x=0=-u_y $. Also sind alle partiellen Ableitungen identisch $ 0 $. Somit ist $ u\equiv c $, $ v\equiv c $ auf jeder Zusammenhangsskomponente von $ D $, also ist $ f $ lokal-konstant,
+	\end{description}
+\end{beweis}
+\begin{korollar}
+	$ f\in\sO(D), f(z)\in\R\forall z\in D  $ oder $ f(z)\in i\R\forall z\in D $. Dann ist $ f $ lokal-konstant.
+\end{korollar}
+\begin{beweis}
+	Sei $ f(z)\in\R\forall z\in D $, d.h. $ f(z)=u(z)+iv(z) $ mit $ v(z)\equiv 0 $ in $ D $. Dann ist nach Cauchy-Riemann: $ u_x=v_y\equiv 0 $ und $ u_y=-v_x\equiv 0 $ in $ D $. Also ist $ f $ lokal-konstant in $ D $.\\
+	Anderer Fall analog.
+\end{beweis}
+\begin{korollar}
+	$ f\in\sO(D), |f(z)|=1\forall z\in D $. Dann ist $ f $ lokal-konstant in $ D $.
+\end{korollar}
+\begin{beweis}
+	Sei $ f(z)=u(z)+iv(z) $, $ |f(z)=1 $, also $ u^2+v^2\equiv 1 $. Dann ist $ uu_x+vv_x\equiv 0 $ und $ uu_y+vv_y\equiv 0 $. Mit Cauchy-Riemann folgt dann:
+	\[ u^2u_x+uvv_x-uvv_x+v^2u_x=(u^2+v^2)u_x\equiv 0 \]
+	Also: $ u_x\equiv 0=v_y $. Ebenfalls mit Cauchy-Riemann:
+	\[ v^2v_x+uvu_x+u^2v_x-uvu_x=(u^2+v^2)v_x\equiv 0 \]
+	Also: $ v_x\equiv 0 $, und somit ist $ f $ lokal-konstant in $ D $.
+\end{beweis}
+\section*{Partielle Differentiation nach $ x,y,z $ und $ \bar z $}
+$ f\colon D\rightarrow\C $, $ D $ offene Menge, $ f=u+iv $ ist in $ D $ reell differenzierbar. Wir definieren:
+\[ f_x\coloneqq u_x+iv_x,\quad f_y\coloneqq u_y+v_y\quad f_z\coloneqq\frac{1}{2}(f_x-if_z),\quad f_{\bar z}\coloneqq\frac{1}{2}(f_x+if_y) \]
+Von hier bekommen wir direkt:
+\[ u_x=\frac{1}{2}(f_x+\bar f_x),\quad v_x=\frac{1}{2i}(f_x-\bar f_x),\quad u_y=\frac{1}{2}(f_y+\bar f_y),\quad v_y=\frac{1}{2i}(f_y-\bar f_y),\quad f_x=f_z+f_{\bar z},\quad f_y=i(f_z-f_{\bar z}) \]
+\begin{satz}
+	Genau dann ist eine in $ D $ stetig reell differenzierbare Funktion $ f\colon D\rightarrow \C $ holomorph in $ D $, wenn $ \forall c\in D $ $ \frac{\partial f}{\partial \bar z}(c)=0 $. Allschon ist $ \frac{\partial f}{\partial z} $ die Ableitung $ f' $ von $ f $ in $ D $.
+\end{satz}
+\begin{beweis}
+	\[ \frac{\partial f}{\partial\bar z}(c)=0\Leftrightarrow\frac{1}{2}(f_x+if_y)=0\Leftrightarrow\frac{1}{2}(u_x+iv_x)+\frac{i}{2}(u_y+iv_y)=0\Leftrightarrow\frac{1}{2}(u_x-v_y)+\frac{i}{2}(v_x+u_y)\equiv 0 \]
+	Nach Cauchy-Riemann ist $ f $ dann holomorph.
+\end{beweis}

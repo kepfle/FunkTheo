@@ -1,0 +1,147 @@
+\chapter{Potenzreihen}
+\section{Konvergenzkriterien}
+\begin{definition}
+	Ist $ c\in\C $ fixiert,  so hei\ss t jede Funktionenreihe $ \sum_{0}^{\infty}a_\nu(z-c)^\nu $, $ a_\nu\in\C $, eine \deftxt{(formale) Potenzreihe} mit \deftxt{Entwicklungspunkt $ c $} und \deftxt{Koeffizienten $ a\nu $}. 
+\end{definition}
+Um bequem formulieren zu k\"onnen, nehmen wir h\"aufig $ c=0 $ an. Wir schreiben $ B_r $ anstelle von $ B_r(0) $.\\
+Man nennt eine Potenzreihe \deftxt{konvergent}, wenn es noch einen weiteren Punkt $ z_1\neq c $ gibt, wo sie konvergiert.\\
+\begin{lemma}[Konvergenzlemma von Abel]
+	Zur Potenzreihe $ \sum a_\nu(z-c)^\nu $ gebe es positive reelle Zahlen $ s,M $, so dass stets gilt:
+	\[ |a_\nu|s^\nu\leq M \]
+	Dann ist die Potenzreihe konvergent in der offenen Kreisscheibe $ B_s(c) $.
+\end{lemma}
+\begin{beweis}
+	Sei $ c=0 $. Sei $ r $ mit $ 0<r<s $ beliebig. Setzt man $ q\coloneqq rs^{-1} $, so gilt
+	\[ |a_\nu z^\nu|_{B_r}=|a_\nu|r^\nu\leq Mq^\nu,\quad \nu\in\N \]
+	Da $ \sum q^\nu<\infty $ wegen $ 0<q<1 $, so folgt
+	\[ \sum|a_\nu z^\nu|_{B_r}\leq M\sum q^\nu<\infty \]
+	Da dies f\"ur alle $ r<s $ gilt, folgt die normale Konvergenz in $ B_s $.
+\end{beweis}
+\begin{korollar}
+	Konvergiert die Reihe $ \sum a_\nu z^\nu $ in $ z_0\neq 0 $, so ist $ \sum a_\nu z^\nu $ normal konvergent in der offenen Kreisscheibe $ B_{|z_0|} $.
+\end{korollar}
+\begin{satz}[Konvergenzsatz f\"ur Potenzreihen]
+	Es sei $ \sum a_\nu(z-c)^\nu $ eine Potenzreihe. Sei $ R $ das Supremum aller reellen Zahlen $ t\geq 0 $, so dass die Folge $ |a_\nu| t^\nu $ beschr\"ankt ist. Dann gilt:
+	\begin{enumerate}
+		\item In der Kreisscheibe $ B_R(c) $ ist die Reihe normal konvergent.
+		\item In jedem Punkt $ x\in\C\setminus \overline{B_R(c)} $ ist die Reihe divergent.
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	Sei $ c=0 $. Es gilt $ 0\leq R<\infty $. Im Fall $ R=0 $ ist nichts zu zeigen. Sei also $ R>0 $. F\"ur jedes $ s $, $ 0<s<R $, ist die Folge $ |a_\nu|s^\nu $ beschr\"ankt. Nach dem Konvergenzlemma konvergiert $ \sum a_\nu z^\nu $ mithin normal in $ B_s $. Da $ s<R $ beliebig nah bei $ R $ w\"ahlbar ist, folgt die normale Konvergenz in $ B_R $.\\
+	F\"ur jedes $ w $ mit $ |w|>R $ ist die Folge $ |a_\nu||w|^\nu $ unbeschr\"ankt und die Reihe $ \sum a_\nu w^\nu $ notwendig divergent.
+\end{beweis}
+\begin{bemerkung*}
+	Die Grenzfunktion von $ \sum a_\nu(z-c)^\nu $ ist stetig in $ B_R(c) $. Wir bezeichnen diese Funktion durchweg mit $ f $.\\
+	Die durch den Konvergenzsatz eindeutig bestimmte Gr\"o\ss e $ R $ mit $ 0\leq R\leq\infty $ hei\ss t der \deftxt{Konvergenzradius}, die Menge $ B_R(c) $ hei\ss t die \deftxt{Konvergenzkreisscheibe} der Potenzreihe. 
+\end{bemerkung*}
+\begin{definition}
+F\"ur eine Folge $ \lbrace\alpha_n\rbrace_{n=0}^\infty $ reeller Zahlen ist
+\[ \limsup \alpha_n\coloneqq\lim_{N\to\infty}\sup(\alpha_N,\alpha_{N+1},\alpha_{N+2},...) \]
+\end{definition}
+\begin{satz}[Formel von Cauchy-Hadamard]
+	Die Potenzreihe $ \sum a_\nu(z-c)^\nu $ hat den Konvergenzradius
+	\[ R=\frac{1}{\limsup\sqrt[\nu]{|a_\nu|}} \]
+\end{satz}
+\begin{beweis}
+	Wir setzen $ L\coloneqq(\limsup\sqrt[\nu]{|a_\nu|})^{-1} $. Es ist zu zeigen: F\"ur jedes $ r $, $ 0<r<L $, gilt $ r\leq R $ und f\"ur jedes $ s $, $ L<s<\infty $, gilt $ s\geq R $.\\
+	Sei zun\"achst $ 0<r<L $, also $ r^{-1}>\limsup\sqrt[\nu]{|a_\nu|} $. Nach Definition von $ \limsup $ gibt es ein $ \nu_0\in\N $, so dass gilt:
+	\[ \sqrt[\nu]{|a_\nu|}<r^{-1}\forall \nu\geq\nu_0 \]
+	Mithin ist die Folge $ |a_\nu|r^\nu $ beschr\"ankt, d.h. $ r\leq R $.\\
+	Sei nun $ L<s<\infty $, also $ s^{-1}<\limsup\sqrt[\nu]{|a_\nu|} $. Nach Definition von $ \limsup $ existiert eine unendliche Teilmenge $ M\subset\N $, so dass f\"ur alle $ m\in M $ gilt:
+	\[ s^{-1}<\sqrt[m]{|a_m|} \]
+	Das hei\ss t $ |a_m|s^m>1 $, also ist $ |a_\nu|s^\nu $ keine Nullfolge und somit $ s\geq R $.
+\end{beweis}
+\begin{satz}[Quotientenkriterium]
+	Es sei $ \sum a_\nu(z-c)^\nu $ eine Potenzreihe mit Konvergenzradius $ R $. Es sei $ a_\nu\neq 0 $ f\"ur alle $ \nu $. Dann gilt:
+	\[ \liminf\frac{|a_\nu|}{|a_{\nu+1}|}\leq R\leq\limsup\frac{|a_\nu|}{|a_{\nu+1}|} \]
+	Speziell:
+	\[ R=\lim\frac{|a_\nu|}{|a_{\nu+1}|} \]
+	falls der Limes existiert.
+\end{satz}
+\begin{beweis}
+	Setzt man \[ S\coloneqq\liminf\frac{|a_\nu|}{|a_{\nu+1}|},\quad T\coloneqq\liminf\frac{|a_\nu|}{|a_{\nu+1}|} \]
+	so gen\"ugt es zu zeigen: F\"ur jedes $ s $, $ 0<s<S $, gilt $ s\leq R $ und f\"ur jedes $ t $, $ T<t<\infty $, gilt $ t\geq R $.\\
+	Sei zun\"achst $ 0<s<S $. Nach Definition von $ \liminf $ gibt es ein $ l\in\N $, so dass gilt:
+	$ a_\nu\neq 0 $ und $ |a_\nu a_{\nu+1}^{-1}|>s $, d.h. $ |a_{\nu+1}|s<|a_\nu| $ f\"ur alle $ \nu\geq l $. Setzt man $ A\coloneqq |a_l|s^l $, so folgt sofort $ |a_{l+m}|s^{l+m}\leq A $ f\"ur alle $ m\geq 0 $ durch Induktion. Die Folge $ |a_\nu|s^\nu $ ist mithin beschr\"ankt, d.h. $ s\leq R $.\\
+	Sei nun $ T<t<\infty $. Dann gibt es laut Definition von $ \limsup $ ein $ l\in\N $, so dass gilt: $ a_\nu\neq 0 $ und $ |a_\nu a_{\nu+1}^{-1}|<t $, d.h. $ |a_{\nu+1}|t>|a_\nu| $ f\"ur alle $ \nu\geq l $. Setzt man $ B\coloneqq |a_l|t^l $, so folgt jetzt induktiv $ |a_{l+m}|t^{l+m}\geq B $ f\"ur alle $ m\geq 0 $. Da $ B\geq 0 $, so ist also $ |a_\nu|t^\nu $ keine Nullfolge, d.h. $ t\geq R $.
+\end{beweis}
+\section{Beispiele konvergenter Potenzreihen}
+\subsection*{Exponentialreihe und trigonometrische Reihen, Eulersche Formel} Die \deftxt{Exponentialreihe} definiert man als
+\[ e^z=\exp z=\sum_{k=0}^{\infty}\frac{z^k}{k!}=1+z+\frac{z^2}{2!}+\frac{z^3}{3!}+... \]
+Ihr Konvergenzradius bestimmt sich nach dem Quotientenkriterium mit $ a_nu\coloneqq\frac{1}{\nu!} $ zu
+\[ R=\lim\frac{|a_\nu|}{|a_{\nu+1}|}=\lim (\nu+1)=\infty \]
+d.h. die Reihe konvergiert normal \"uberall in $ \C $.\\
+Die \deftxt{Cosinusreihe} und die \deftxt{Sinusreihe}
+\[ \cos z=\sum_{0}^{\infty}(-1)^\nu\frac{z^{2\nu}}{(2\nu)!}=1-\frac{z^2}{2!}+\frac{z^4}{4!}-\frac{z^6}{6!}+...\quad\sin z=\sum_0^\infty(-1)^\nu\frac{z^{2\nu+1}}{(2\nu+1)!}=z-\frac{z^3}{3!}+\frac{z^5}{5!}-... \]
+konvergieren ebenfalls \"uberall in $ \C $, denn $ \cos z $ und $ \sin z $ sind Teilreihen der konvergenten Reihe $ \exp z $.\\
+\begin{satz}[Eulersche Formel]
+	\[ \exp iz=\cos z+i\sin z\forall z\in\C \]
+\end{satz}
+\begin{beweis}
+	\[ \exp iz=\sum_{k=0}^{\infty}\frac{(iz)^k}{k!}=\sum_{\nu=0}^{\infty}\frac{(-1)^\nu}{(2\nu)!}z^{2\nu}+i\sum_{\nu=0}^{\infty}\frac{(-1)^\nu z^{2\nu+1}}{(2\nu+1)!}=\cos z+i\sin z \]
+\end{beweis}
+$ \cos z $ ist eine \deftxt{gerade Funktion}, $ \sin z $ eine \deftxt{ungerade Funktion}:
+\[ \cos(-z)=\sum\frac{(-1)^\nu}{(2\nu)!}(-z)^{2\nu}=\sum\frac{(-1)^\nu}{(2\nu)!}z^{2\nu}=\cos z \]
+Analog f\"ur $ \sin -z=-\sin z $.\\
+Weiter gilt:
+\[ \cos z=\frac{1}{2}(\exp iz+\exp -iz),\quad \sin z=\frac{1}{2i}(\exp iz-\exp -iz) \] 
+\subsection*{Logarithmische Reihe und Arcustangens-Reihe}
+Die \deftxt{Logarithmische Reihe} definiert man als
+\[ \lambda(z)=\sum_1^\infty\frac{(-1)^{\nu-1}}{\nu}z^\nu=z-\frac{z^2}{2}+\frac{z^3}{3}-\frac{z^4}{4}+... \]
+$ R=1 $, da
+\[ \frac{|a_\nu|}{|a_{\nu+1}|}=\frac{\nu+1}{\nu}\xrightarrow{\nu\to\infty}1 \]
+Die \deftxt{Arcustangens-Reihe} definiert man als
+\[ a(z)=\sum_1^\infty\frac{(-1)^{\nu-1}}{2\nu-1}z^{2\nu-1}=z-\frac{z^3}{3}+\frac{z^5}{5}-... \]
+\section{Holomorphie von Potenzreihen}
+\subsection*{Formale gliedweise Differentiation und Integration}
+\begin{satz}
+	Hat $ \sum a_\nu(z-c)^\nu $ den Konvergenzradius $ R $, so haben auch die durch gliedweise Differentiation bzw. Integration entstehenden Reihen $ \sum \nu a_\nu(z-c)^{\nu-1} $ und $ \sum\frac{1}{\nu+1}a_\nu(z-c)^{\nu+1} $ den Konvergenzradius $ R $.
+\end{satz}
+\begin{beweis}
+	\begin{enumerate}
+		\item F\"ur den Konvergenzradius $ R' $ der differenzierten Reihe gilt:
+		\[ R'=\sup\lbrace t\geq 0\mid \nu|a_\nu|t^{\nu-1}\text{ ist beschr\"ankt}\rbrace \]
+		Da mit $ \nu|a_\nu|t^{\nu-1} $ erst recht die Folge $ |a_\nu|t^\nu $ beschr\"ankt ist, folgt $ R'\leq R $. Um $ R\leq R' $ einzusehen, gen\"ugt es zu sehen, dass f\"ur jedes $ r>R $ gilt: $ r\leq R' $. Man w\"ahle zu $ r $ ein $ s $ mit $ r<s<R $. Dann ist die Folge $ |a_\nu|s^\nu $ beschr\"ankt. Es gilt:
+		\[ \nu|a_\nu|r^{\nu-1}=(r^{-1}|a_\nu|s^\nu)\nu q^\nu \]
+		mit $ q\coloneqq \frac{r}{s} $. Da $ \nu q^\nu $ wegen $ 0<q<1 $ eine Nullfolge ist, so ist auch $ \nu|a_\nu|r^{\nu-1} $ eine Nullfolge. Es folgt $ r\leq R'\Rightarrow R'=R $.
+		\item Analog.
+	\end{enumerate}
+\end{beweis}
+\subsection*{Holomorphie von Potenzreihen, Vertauschungssatz}
+\begin{satz}[Vertauschbarkeit von Differentiation und Summation bei Potenzreihen]
+	Die Potenzreihe $ \sum a_\nu|z-c|^\nu $ habe den konvergenzradius $ R>0 $. Dann ist ihre Grenzfunktion $ f $ in $ B_R(c) $ beliebig oft komplex differenzierbar, also insbesondere holomorph in $ B_R(c) $. Es gilt:
+	\[ f^{(k)}(z)=\sum_{\nu\geq k} (k!)\binom{\nu}{k}a_\nu(z-c)^{\nu-k},\quad z\in B_R(c), n\in\N \]
+	Speziell: $ \frac{f^{(k)}}{k!}=a_k $ (Taylorsche koeffizientenformeln).
+\end{satz}
+\begin{beweis}
+	Es gen\"ugt, den Fall $ k=1 $ zu behandeln; hieraus der Allgemeinfall durch Iteration. Wir setzen $ B\coloneqq B_R(c) $. Zun\"achst ist auf Grund von obigem Satz klar, dass durch
+	\[ g(z)\coloneqq\sum_{\nu\geq 1} \nu a_\nu(z-c)^{\nu-1} \]
+	eine Funktion $ g\colon B\rightarrow\C $ definiert wird. Unsere Behauptung ist: $ f'=g $. Wir nehmen wieder $ c=0 $ an. Sei $ b\in B $ fixiert. Um $ f'(b)=g(b) $ zu zeigen, setzen wir: \[ q_\nu(z)\coloneqq z^{\nu-1}+z^{\nu-2}b+z^{\nu-2}b^2+...+b^{\nu-1},\quad z\in\C, \nu=1,2,... \]
+	Dann gilt stets:
+	\[ z^\nu-b^\nu=(z-b)q_\nu(z) \]
+	und also \[ f(z)-f(b)=\sum_{\nu\geq 1} a_\nu(z^\nu-b^\nu)=(z-b)\sum_{\nu\geq 1} a_\nu q_\nu(z),\quad z\in B \]
+	Sei nun $ f_1(z)\coloneqq\sum_{\nu\geq 1}^{} a_\nu q_\nu(z) $. Dann folgt (beachte: $ q_\nu(b)=\nu b^{\nu-1} $):
+	\[ f(z)=f(b)=(z-b)f_1(z),\quad z\in B \] und
+	\[ f_1(b)=\sum_{\nu\geq 1}^{} \nu a_\nu b^{\nu-1}=g(b) \]
+	Es ist daher nur noch zu zeigen, dass $ f_1 $ stetig in $ b $ ist. Dazu gen\"ugt es nachzuweisen, dass die Reihe $ \sum_{\nu\geq 1} a_\nu q_\nu(z) $ in $ B $ normal konvergiert. Das aber ist klar, denn f\"ur jede kreisscheibe $ B_r $, $ |b||<r<R $, gilt
+	\[ |a_\nu q-\nu|_{B_r}\leq a_\nu\nu r^{\nu-1} \]
+	also
+	\[ \sum_{\nu\geq 1}^{}|a_\nu q_\nu|_{B_r}\leq\sum_{\nu\geq 1}^{} \nu|a_\nu|r^{\nu-1}<\infty \]
+	nach Satz oben.
+\end{beweis}
+\subsection*{Beispiele holomorpher Funktionen}
+\begin{enumerate}
+	\item Geometrische Reihe:
+	\[ \sum_{\nu=0}^\infty z^\nu=\frac{1}{1-z}\Rightarrow\frac{1}{(1-z)^{k+1}}=\sum_{\nu\geq k}^{}\binom{\nu}{k}z^{\nu-k},\quad z\in\E  \]
+	\item Exponentialfunktion:
+	\[ \exp' z=\left(\sum_{\nu\geq 0}^{}\frac{z^\nu}{\nu!}\right)'=\sum_{\nu\geq 1}^{}\frac{z^{\nu-1}}{(\nu-1)!}=\exp z \]
+	\item Cosinusfunktion:
+	\[ \cos' z=\left(\sum_{\nu=0}^{\infty}\frac{(-1)^\nu z^{2\nu}}{(2\nu)!}\right)'=\sum_{\nu=1}^{\infty}\frac{(-1)^\nu z^{2\nu-1}}{(2\nu-1)!}=-\sin z \]
+	\item Sinusfunktion:
+	\[ \sin' z=\cos z \]
+	\item Logarithmische Reihe:
+	\[ \lambda(z)=z-\frac{z^2}{2}+\frac{z^3}{3}-...\Rightarrow\lambda'(z)=1-z+z^2-z^3+...=\frac{1}{1+z} \]
+	\item Arcustangens-Reihe:
+	\[ a(z)=z-\frac{z^3}{3}+\frac{z^5}{5}-...\Rightarrow a'(z)=\frac{1}{1+z^2} \]
+\end{enumerate}

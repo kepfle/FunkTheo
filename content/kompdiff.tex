@@ -1,0 +1,58 @@
+\chapter{Komplexe Differentialrechnung}
+\section*{Komplexe Differenzierbarkeit}
+\begin{definition}
+	Eine Funktion $ f\colon D\rightarrow\C $ hei\ss t \deftxt{komplex differenzierbar} in $ c\in D $, wenn es eine in $ c $ stetige Funktion $ f_1 \colon D\rightarrow\C$ gibt, so dass
+	\[ f(z)=f(c)+(z-c)f_1(z)\forall z\in D \]
+	($ \C- $Linearisierung)\\
+	Die Funktion $ f_1 $ ist dann eindeutig durch $ f $ bestimmt:
+	\[ f_1(z)=\frac{f(z)-f(c)}{z-c}\forall z\in D\setminus\lbrace c\rbrace \]
+	(Differenzenquotient)
+\end{definition}
+Wegen der Stetigkeit von $ f_1 $ in $ c $ gilt, wenn man $ h=z-c $ setzt:
+\[ \lim_{h\to 0}\frac{f(c+h)-f(c)}{h}=f_1(c) \]
+Die Zahl $ f_1(c)\in\C $ hei\ss t die \deftxt{Ableitung (nach $ z $) von $ f $ in $ c $}.\\
+$ f\in c $ differenzierbar$ \Rightarrow f$ in $ c $ stetig.\\
+Man beweist direkt: $ f $ in $ c $ komplex differenzierbar$ \Rightarrow\forall\e>0\exists\delta>0 $ so dass
+\[ |f(c+h)-f(c)-f'(c)h|\leq\e|h|\forall h\in\C, |h|\leq\delta \] 
+\section*{Cauchy-Riemannsche Differenzialgleichungen}
+Wir schreiben $ c=a+ib=(a,b) $, $ z=x+iy=(x,y) $. Ist $ f(z)=u(x,y)+iv(x,y) $ komplex differenzierbar in $ c\in D $, so gilt:
+\[ f'(z)=\lim_{h\to 0}\frac{f(c+h)-f(c)}{h}=\lim_{h\to\infty}\frac{f(c+ih)-f(c)}{ih} \]
+W\"ahlt man $ h $ reell, so folgt
+\begin{align*} f'(c)&=\lim_{h\to 0}\frac{u(a+h,b)-u(a,b)}{h}+i\lim_{h\to 0}\frac{v(a+h,b)-v(a,b)}{h}\\&=\lim_{h\to 0}\frac{u(a,b+h)-u(a,b)}{ih}+i\lim_{h\to 0}\frac{v(a,b+h)-v(a,b)}{ih} \end{align*}
+Hieraus folgt: $ \exists u_x(c),v_x(c),u_y(c),v_y(c) $ und \[ f'(c)=u_x(c)+iv_x(c)=v_y(c)-iu_y(c)\Rightarrow \begin{cases}
+u_x(c)=v_y(c)\\v_x(c)=-u_y(c)
+\end{cases}\]
+Dies ist die \deftxt{Cauchy-Riemannsche Differenzialgleichung}. Sie ist eine notwendige Bedingung f\"ur komplexe Differenzierbarkeit.\\
+$ f\colon X\rightarrow \C $, $ c\in D $, $ f(z)=u(x,y)+iv(x,y) $. $ f $ ist in $ c $ reell differenzierbar genau dann, wenn eine $ \R- $lineare Abbildung $ T $ existiert, so dass
+\[ \exists\lim_{h\to 0}\frac{|f(c+h)-f(c)-T(h)|}{|h|} \]
+\[ T= \begin{pmatrix}
+u_x(c)&v_x(c)\\ u_y(c)&v_y(v)
+\end{pmatrix} \]
+\section*{Hinreichendes Kriterium f\"ur komplexe Differenzierbarkeit}
+Sind $ u,v $ in $ D $ stetig differenzierbare reelle Funktionen, so ist die komplexe Funktion $ f=u+iv $ in jedem Punkt von $ D $ reell differenzierbar. Gilt zus\"atzlich $ u_x=v_y $ und $ u_y=-v_x $ \"uberall in $ D $, so ist $ f $ in jedem Punkt von $ D $ komplex differenzierbar.
+\begin{beweis}
+	Sei $ c=a+ib=(a,b) $, $ h=\Delta x+i\Delta y=(\Delta x,\Delta y) $. Dann ist
+	\begin{align*} \lim_{h\to 0}\frac{f(c+h)-f(c)}{h}&=\lim_{(\Delta x,\Delta y)\to(0,0)}\frac{u(a+\Delta x,b+\Delta y)+iv(a+\Delta x,b+\Delta y)-u(a,b)-iv(a,b)}{\Delta x+i\Delta y}\\&=\lim_{(\Delta x,\Delta y)\to(0,0)}\frac{u_x(a,b)\Delta x+u_y(a,b)\Delta y+iv_x(a,b)\Delta x+iv_y(a,b)\Delta y+o(|\Delta x+i\Delta y|)}{\Delta x+i\Delta y}\\&=\lim_{(\Delta x,\Delta y)\to(0,0)}\frac{(u_x(a,b)+iv_x(a,b))\Delta x+i(iv_x(a,b)+u_x(a,b))\Delta y+o(|\Delta x+i\Delta y|)}{\Delta x+i\Delta y}\\&=\lim_{(\Delta x,\Delta y)\to(0,0)}\frac{(u_x(a,b)+iv_x(a,b)(\Delta x+i\Delta y)+o(|\Delta x+i\Delta y)}{\Delta x+i\Delta y}\\&=u_x(a,b)+iv_x(a,b) \end{align*}
+\end{beweis}
+\begin{beispiel*}
+	$ f(z)=2yx+3ixy^2 $. F\"ur welche $ z\in\C $ ist $ f $ komplex differenzierbar? $ u(x,y)=2yx $, $ v(x,y)=3xy^2 $.
+	\begin{align*}
+	&u_x=2y=6xy=v_y\\
+	&v_x=3y^2=-2x=-u_y
+	\end{align*}
+	L\"osungen dieses LGS: $ (x=0,y=0) $, $ \left(x=\frac{1}{3},y=-\frac{\sqrt{2}}{3}\right)  $ und $ \left(x=\frac{1}{3}, y=\frac{\sqrt{2}}{3}\right) $.
+\end{beispiel*}
+\section*{Harmonische Funktionen}
+Laplace-Operator:
+\[ \Delta\varphi=\frac{\partial^2\varphi}{\partial x^2}+\frac{\partial^2\varphi}{\partial y^2} \]
+\begin{definition}
+	Sei $ \varphi\in C^2(G) $, $ G\in\C $ ein Gebiet. Dann ist $ \varphi $ \deftxt{harmonisch} in $ G $ genau dann, wenn $ \Delta\varphi\equiv 0 $ in $ G $ ist.
+\end{definition}
+\begin{satz}
+	Ist $ f=u+iv $ \"uberall in $ D $ komplex differenzierbar und sind $ u $ und $ v $ zweimal reell stetig differenzierbar in $ D $, so gilt: $ u_{xx}+u_{yy}=0 $ und $ v_{xx}+v_{yy}=0 $ in $ D $.
+\end{satz}
+\begin{beweis}
+	$ u_x=v_y\Rightarrow u_{xx}=v_{yx} $, $ u_y=-v_x\Rightarrow u_{yy}=-v_{xy}$. Also:
+	\[ u_{xx}+u_{yy}=v_{yx}-v_{xy}=0 \]
+	Anderer Fall analog.
+\end{beweis}
