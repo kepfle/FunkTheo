@@ -6,3 +6,13 @@
 \contentsline {chapter}{\numberline {4}Konvergente und absolut konvergente Reihen}{17}{chapter.4}
 \contentsline {chapter}{\numberline {5}Stetige Funktionen}{21}{chapter.5}
 \contentsline {chapter}{\numberline {6}Zusammenh\"angende R\"aume, Gebiete in $ \math@bb {C}$}{25}{chapter.6}
+\contentsline {chapter}{\numberline {7}Komplexe Differentialrechnung}{31}{chapter.7}
+\contentsline {chapter}{\numberline {8}Holomorphe Funktionen}{35}{chapter.8}
+\contentsline {paragraph}{Summen- und Produktregel.}{35}{paragraph*.2}
+\contentsline {paragraph}{Quotientenregel.}{35}{paragraph*.3}
+\contentsline {paragraph}{Kettenregel.}{35}{paragraph*.4}
+\contentsline {chapter}{\numberline {9}Konvergenzbegriffe der Funktionentheorie}{39}{chapter.9}
+\contentsline {chapter}{\numberline {10}Potenzreihen}{41}{chapter.10}
+\contentsline {section}{\numberline {10.1}Konvergenzkriterien}{41}{section.10.1}
+\contentsline {section}{\numberline {10.2}Beispiele konvergenter Potenzreihen}{44}{section.10.2}
+\contentsline {section}{\numberline {10.3}Holomorphie von Potenzreihen}{45}{section.10.3}
