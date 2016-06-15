@@ -21,7 +21,7 @@
 
 \ifthenelse{\equal{\sectioning}{1}}{}{\automark[chapter]{chapter}}%different headlines for chapter-only and sectioning
 
-\includeonly{content/potenz}											% while writing your book, compile only what you need
+\includeonly{content/int}											% while writing your book, compile only what you need
 \binoppenalty=\maxdimen
 \relpenalty=\maxdimen
 \begin{document}
@@ -49,6 +49,8 @@
 \include{content/holo}
 \include{content/kapitelzwei}
 \include{content/potenz}
+\include{content/kapitelfuenf}
+\include{content/int}
 % only use section-wise documents since include inserts new pages!
 % ================================
 \ifthenelse{\equal{\useThumbs}{1}}

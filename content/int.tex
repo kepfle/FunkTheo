@@ -1,0 +1,94 @@
+\chapter{Komplexe Integralrechnung}
+\section{Wegintegrale in $ \C $}
+Eine \deftxt{Kurve}: $ \gamma\colon I=[a,b]\rightarrow\C\cong\R^2_{x,y} $, $ \gamma(t)=(x(t),y(t)) $, stetig differenzierbar.\\
+$ \gamma(a) $ hei\ss t \deftxt{Anfangspunkt}, $ \gamma(b) $ \deftxt{Endpunkt}.
+\section{Eigenschaften komplexer Wegintegrale}
+%
+%
+%
+%
+%
+%
+%
+\begin{satz}[Vertauschungssatz f\"ur Reihen]
+	Sei $ \gamma $ ein Weg und $ \sum f_\nu $, $ f_\nu\in C(|\gamma|) $, eine Funktionsreihe, die in $ |\gamma| $ gleichm\"a\ss ig gegen eine Funktion $ f\colon |\gamma|\rightarrow\C $ konvergiert. Dann gilt:
+	\[ \sum\int_{\gamma}^{} f_\nu\dd z=\int_{\gamma}^{}\left(\sum f_\nu\right)\dd z=\int_{\gamma}^{} f\dd z \]
+\end{satz}
+\section{Wegunabh\"angigkeit von Integralen, Stammfunktionen}
+\begin{satz}
+	Ist $ f $ stetig in $ D $, so sind folgende Aussagen \"uber eine Funktion $ F\colon D\rightarrow\C $ \"aquivalent:
+	\begin{enumerate}
+		\item $ F $ ist holomorph in $ D $ und es gilt $ F'=f $.
+		\item F\"ur jeden Weg $ \gamma $ in $ D $ mit Anfangspunkt $ w $ und Endpunkt $ z $ gilt:
+		\[ \int_{\gamma}^{} f\dd z=F(z)-F(w) \]
+	\end{enumerate}
+\end{satz}
+\newpage
+\begin{beweis}
+	\begin{description}
+		\item[i)$ \Rightarrow $ii):] Ist $ \gamma\colon[a,b]\rightarrow D $, $ t\mapsto \zeta(t) $, stetig differenzierbar, so gilt
+		\[ \int_{\gamma}^{} f\dd z=\int_a^b f(\zeta(t))\zeta'(t)\dd t=\int_a^b F'(\zeta(t))\zeta'(t)\dd t=\int_a^b\frac{\dd}{\dd t}(F(\zeta(t)))\dd t=F(\zeta(b))-F(\zeta(a))=F(z)-F(w) \]
+		Ist nun $ \gamma=\gamma_1+..+\gamma_m $ irgendein Weg, dann ist
+		\[ \int_{\gamma}^{} f\dd z=\sum_{\mu=1}^{m}\int_{\gamma_\mu}f\dd z=\sum_{\mu=1}^{m} F(b_\mu)-F(a_\mu)=F(b_m)-F(a_i)=F(z)-F(w) \]
+		\item[ii)$ \Rightarrow $i):] Wir zeigen, dass f\"ur jeden Punkt $ c\in D $ gilt: $ F'(c)=f(c) $. Es sei $ \bar B\subset D $ eine Kreisscheibe um $ c $. Nach Voraussetzung gilt: 
+		\[ F(z)=F(c)+\int_{[c,z]} f\dd z\forall z\in B \]
+		Setzt man \[ F_1(z)=\frac{1}{z-c}\int_{[c,z]}f\dd\zeta \]
+		f\"ur $ z\in B\setminus\lbrace c\rbrace $ und $ F_1(c)\coloneqq f(c) $, so folgt:
+		\[ F(z)=F(c)+(z-c)F_1(z),\quad z\in B \]
+		Zeigen wir noch, dass $ F_1 $ stetig in $ c $ ist, so folgt $ F'(c)=F_1(c)=f(c) $. F\"ur $ z\in B\setminus\lbrace c\rbrace $ gilt:
+		\[ F_1(z)-F_1(c)=\frac{1}{z-c}\int_{[c,z]}^{} (f(\zeta)-f(c))\dd\zeta \]
+		Es folgt:
+		\[ |F_1(z)-F_1(c)|\leq\frac{1}{|z-c|}|f-f(c)|_{[z,c]}|z-c|\leq |f-f(c)|_B\forall z\in B \]
+		$ f $ ist stetig, also folgt, dass $ F_1 $ stetig in $ c $ ist.
+	\end{description}
+\end{beweis}
+Eine Funktion $ f\in C(D) $ hei\ss t \deftxt{integrabel}, wenn eine Stammfunktion von $ f $ existiert.\\
+\begin{satz}[Integrabilit\"atskriterium]
+	Folgende Aussagen \"uber eine in $ D $ stetige Funktion $ f $ sind \"aquivalent:
+	\begin{enumerate}
+		\item $ f $ ist integrabel in $ D $.
+		\item F\"ur jeden in $ D $ geschlossenen Weg $ \gamma $ gilt:
+		\[ \int_{\gamma}^{} f\dd z=0 \]
+	\end{enumerate}
+\end{satz}
+\begin{bemerkung*}
+	\[ F(z)\coloneqq\int_{\gamma_z}^{} f(\zeta)\dd\zeta \]
+	ist eine Stammfunktion wenn i) gilt. Weil
+	\[ 0=\int_{\gamma_z-\gamma_z'}^{}f(\zeta)\dd\zeta=\int_{\gamma_z}^{} f\dd\zeta-\int_{\gamma_z'}^{} f\dd\zeta  \]
+	also
+	\[ \int_{\gamma_z}^{}f\dd\zeta=\int_{\gamma_z'}^{}f\dd\zeta\forall\gamma_z,\gamma_z' \] mit Anfangspunkt $ z $ und Endpunkt $ z $, d.h. $ F(z) $ ist von der Wahl von $ \gamma_z $ unabh\"angig, d.h. $ F(z) $ ist korrekt definiert und man kann zeigen, dass $ F'(z)=f(z)\forall z\in D $.
+\end{bemerkung*}
+\begin{beweis}
+	\begin{description}
+	\item[ii)$ \Rightarrow $i):] Da Wege stets in Zusammenhangskomponenten von $ D $ verlaufen, darf man annehmen, dass $ D $ ein Gebiet ist. Sei $ \gamma $ irgendein Weg in $ D $ von $ w $ nach $ z $, Wege $ \gamma_z $, $ \gamma_w $ in $ D $ von $ z_1 $ nach $ w $ bzw. $ z $. Dann ist $ \gamma_w+\gamma-\gamma_z $ ein geschlossener Weg, daher gilt
+	\[ 0=\int_{\gamma_w+\gamma-\gamma_z}^{} f\dd\zeta=\int_{\gamma_w}^{} f\dd\zeta+\int_{\gamma}^{} f\dd\zeta-\int_{\gamma_z}^{} f\dd\zeta=F(w)+\int_{\gamma}^{} f\dd\zeta-F(z) \]
+	Also erf\"ullt $ F $ die Eigenschaft vom letzten Satz.
+	\item[i)$ \Rightarrow $ii):] Trivial, weil
+	\[ \int_{\gamma}^{} f\dd\zeta=F(\text{Endpunkt})-F(\text{Anfangspunkt})=0 \]
+	\end{description}
+\end{beweis}
+\begin{definition}
+	$ G \subset \C $ hei\ss t \deftxt{Sterngebiet} mit Zentrum $ c\in G $ genau dann, wenn $ \forall z\in G $ gilt: $ [c,z]\subset G $.
+\end{definition}
+\newpage
+\begin{definition}
+	Seien $ z_1,z_2,z_3\in\C $ drei Punkte. Die kompakte Menge \[ \Delta\coloneqq\lbrace z\in\C\mid z=z_1+s(z_2-z_1)+t(z_3-z_1),s\geq 0,t\geq 0, s+t\leq 1\rbrace \]
+	hei\ss t das \deftxt{(kompakte) Dreieck} mit Eckpunkten $ z_1,z_2,z_3 $.\\
+	Der geschlossene Streckenzug
+	\[ \partial\Delta\coloneqq[z_1,z_2]+[z_2,z_3]+[z_3,z_1] \]
+	hei\ss t der \deftxt{Rand von $ \Delta $}. 
+\end{definition}
+\begin{satz}
+	Es sei $ G $ ein Sterngebiet mit Zentrum $ z_1 $. Es sei $ f\in C(G) $, f\"ur den Rand $ \partial\Delta $ eines jeden Dreiecks $ \Delta\subset G $, das $ z $ als Endpunkt hat, gelte:
+	\[ \int_{\partial\Delta}^{} f\dd\zeta = 0 \]
+	Dann ist $ f $ integrabel in $ G $, die Funktion
+	\[ F(z)\coloneqq\int_{[z_1,z]}^{} f\dd\zeta,\quad z\in G \]
+	ist eine Stammfunktion zu $ f $ in $ G $. Speziell gilt:
+	\[ \int_{\gamma}^{} f\dd\zeta=0 \]
+	f\"ur jeden geschlossenen Weg $ \gamma $ in $ G $.
+\end{satz}
+\begin{beweis}
+	Sei $ G $ ein Sterngebiet. Dann ist $ [z_1,z]\subset G\forall z\in G $ und $ F $ wohldefiniert. Sei $ c\in G $ fixiert. Ist $ z $ nahe genug bei $ c $ gew\"ahlt, so liegt das Dreieck $ \Delta $ mit den Eckpunkten $ z_1,c,z $ in $ G $. Nach Voraussetzung verschwindet das Integral von $ f $ l\"angs $ \partial\Delta=[z_1,c]+[c,z]+[z,z_1] $, so gilt:
+	\[ F(z)=F(c)+\int_{[c,z]}^{} f\dd\zeta \]
+	$ z\in G $ nahe bei $ c $. hieraus folgt wie im Beweis der Implikation ii)$ \Rightarrow $i) des Satzes 1, dass $ F $ in $ c $ komplex differenzierbar ist und dass gilt: $ F'(c)=f(c) $.
+\end{beweis}

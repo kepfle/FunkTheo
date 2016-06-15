@@ -1,0 +1,112 @@
+\chapter{Elementar-transzendente Funktionen}
+\section{Exponentialfunktion und trigonometrische Funktionen}
+\begin{satz}
+	Sei $ z\in\C $.
+	\begin{enumerate}
+		\item $ \exp z\neq 0 $
+		\item $ (\exp z)^{-1}=\frac{1}{\exp z}=\exp -z $
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	$ h(z)\coloneqq\exp z \exp -z\colon\C\rightarrow\C $ holomorph.
+	\[ h'(z)=\exp z\exp -z + \exp z(-\exp -z)=0 \]
+	Also $ h'\equiv 0 $ auf $ \C $, also ist $ h $ konstant auf $ \C $ ($ h\equiv c\in\C $).
+	\[ c=h(0)=\exp 0\exp -0=1 \]
+	Somit:
+	\[ \exp z\exp -z=1\forall z\in\C \]
+	Hieraus folgt i) und ii) direkt.
+\end{beweis}
+\newpage
+\begin{satz}
+	Sei $ G\subseteq\C $ Gebiet, $ f\colon G\rightarrow\C $ holomorph. Dann sind \"aquivalent:
+	\begin{enumerate}
+		\item $ \exists a,b\in\C $:
+		\[ f(z)=a\exp bz\forall z\in G \]
+		\item $ \exists b\in\C $:
+		\[ f'=bf\text{ auf }G \]
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	\begin{description}
+		\item[i)$ \Rightarrow $ii):] trivial
+		\item[ii)$ \Rightarrow $i):] Sei
+		\[ h(z)=f(z)\exp -bz \]
+		\[ h'(z)=f'(z)\exp -bz - b\exp -bz f(z)=(bf(z)-bf(z))\exp -bz = 0 \]
+		Also $ h'\equiv 0 $ auf $ G $. Also existiert ein $ a\in\C $, so dass $ h\equiv a $ auf $ G $.
+		\[ a=h(z)=f(z)\exp -bz\Leftrightarrow f(z)=a\exp bz \]
+		\[ h(0)=f(0)\exp 0=f(0)\Rightarrow f(z)=f(0)\exp bz \]
+	\end{description}
+\end{beweis}
+Spezialfall: Die einzige holomorphe Funktion $ f\colon\C\rightarrow\C $, die $ f'=f $ und $ f(0)=1 $ erf\"ullt, ist die Exponentialfunktion.\\
+\begin{satz}[Additionstheorem f\"ur $ \exp $]
+	\[ \exp(z+w)=\exp z\exp w\forall z,w\in\C \]
+\end{satz}
+\begin{beweis}
+	Sei $ w\in\C $ fix, $ f(z)\coloneqq\exp(z+w) $.
+	\[ f'(z)=\exp(z+w)=f(z) \]
+	Also:
+	\[ f(z)=f(0)\exp z=\exp w\exp z \]
+\end{beweis}
+\begin{satz}[Additionstheoreme f\"ur $ \sin $, $ \cos $]
+	\[ \cos(z+w)=\cos z\cos w-\sin z\sin w \]
+	\[ \sin(z+w)=\sin z\cos w+\sin w\cos z \]
+\end{satz}
+\begin{beweis}
+	\[ \exp (i(z+w))=\exp iz\exp iw=(\cos z+i\sin z)(\cos w+i\sin w)=\cos z\cos w-\sin z\sin w+i(\cos z\sin w+\sin z\cos w) \]
+	Analog:
+	\[ \exp(-i(z+w))=... \]
+	Rest folgt aus vorigem Kapitel.
+\end{beweis}
+\begin{definition}
+	Eine Funktion $ f\colon\C\rightarrow\C $ hei\ss t \deftxt{$ \omega- $periodisch} (oder \deftxt{periodisch}), falls $ \exists\omega\in\C $ mit $ f(z)=f(z+\omega)\forall z\in\C $. $ \omega $ hei\ss t dann \deftxt{Periode} von $ f $.
+\end{definition}
+\begin{beispiel*}
+	$ z\in\C $, $ k\in\Z $:
+	\[ \exp(z+2\pi ik)=\exp z\exp 2\pi ik=\exp z(\cos 2\pi k+i\sin 2\pi k)=\exp z \]
+	Also ist $ \exp $ periodisch mit Periode $ 2\pi i k $, $ k\in\Z $ (im Unterschied zu $ e^x $, $ x\in\R $!).
+\end{beispiel*}
+\section{Polarkoordinaten und Einheitswurzeln}
+$ w=u+iv $.
+\[ \tan\varphi=\frac{v}{u}\Leftrightarrow\arctan\frac{v}{u}=\varphi \]
+und
+\[ r=|w|=\sqrt{u^2+v^2} \]
+Das hei\ss t:
+\[ w=r\cdot e^{i\varphi}=r\exp i\varphi=r(\cos\varphi+i\sin\varphi) \]
+und
+\[ |w|=|r\exp i\varphi|=r|\exp i\varphi|=r\sqrt{\cos^2\varphi+\sin^2\varphi}=r \]
+$ w\in\C $, $ w\neq 0 $.
+\[ \varphi=\arg w= \begin{cases}
+\arctan\frac{v}{u}&v\geq 0,u>0\\
+\pi-\arctan\frac{v}{u}&v\geq 0, u<0\\
+\pi&v=0,u<0\\
+\pi+\arctan\frac{v}{u}&u,v<0\\
+\frac{3}{2}\pi&v<0, u=0\\
+2\pi-\arctan\frac{v}{u}&v<0<u
+\end{cases} \]
+\begin{beispiel*}
+	\[ 1=1\cdot e^{i\cdot 0},\quad i=1\cdot e^{i\cdot\sfrac{\pi}{2}},\quad -1=e^{i\cdot\pi},\quad -i=e^{\sfrac{3}{2}\pi i},\quad 1=e^{2\pi i},... \]
+\end{beispiel*}
+Multiplikation:
+\[ z\cdot w=|z||w|e^{i(\arg z+\arg w)} \]
+Per Induktion kann man dann folgern:
+\[ (e^{i\varphi})^n=e^{i\varphi n}\forall\varphi\in\R,n\in\Z \]
+\begin{satz}[Moivresche Formel]
+	\[ (\cos\varphi+i\sin\varphi)^n=\cos\varphi n+i\sin\varphi n \]
+\end{satz}
+Problem: L\"ose $ z^n=1 $, $ n\in\N $, $ z\in\C $. Wir wissen (Fundamentalsatz der Algebra): Die Gleichung hat h\"ochstens $ n $ L\"osungen, n\"amlich
+\[ \zeta_k\coloneqq e^{\frac{2\pi i k}{n}},\quad k\in\lbrace 0,...,n-1\rbrace \]
+\[ \zeta_k^n=\left(e^{\frac{2\pi ik}{n}}\right)^n=e^{2\pi ik}=1 \]
+$ \zeta_k $ hei\ss en \deftxt{n-te Einheitswurzeln}. 
+\newpage
+\section{Logarithmusfunktion}
+\begin{definition}
+	Sei $ G\subset\C $ ein Gebiet. Eine holomorphe Funktion $ l\colon G\rightarrow\C $ hei\ss t \deftxt{Logarithmusfunktion}, falls $ \exp(l(z))=z \forall z\in G$.
+\end{definition}
+\begin{bemerkung*}
+	\begin{enumerate}
+		\item[]
+		\item $ l'(z)=\frac{1}{z} $
+		\item $ l $ h\"angt ab von $ G $.
+		\item $ G= \C\setminus\R_0^- $, $ l(z)=\ln|z|+i\arg z =\log z$
+	\end{enumerate}
+\end{bemerkung*}

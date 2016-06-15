@@ -16,3 +16,11 @@
 \contentsline {section}{\numberline {10.1}Konvergenzkriterien}{41}{section.10.1}
 \contentsline {section}{\numberline {10.2}Beispiele konvergenter Potenzreihen}{44}{section.10.2}
 \contentsline {section}{\numberline {10.3}Holomorphie von Potenzreihen}{45}{section.10.3}
+\contentsline {chapter}{\numberline {11}Elementar-transzendente Funktionen}{49}{chapter.11}
+\contentsline {section}{\numberline {11.1}Exponentialfunktion und trigonometrische Funktionen}{49}{section.11.1}
+\contentsline {section}{\numberline {11.2}Polarkoordinaten und Einheitswurzeln}{51}{section.11.2}
+\contentsline {section}{\numberline {11.3}Logarithmusfunktion}{53}{section.11.3}
+\contentsline {chapter}{\numberline {12}Komplexe Integralrechnung}{55}{chapter.12}
+\contentsline {section}{\numberline {12.1}Wegintegrale in $ \math@bb {C}$}{55}{section.12.1}
+\contentsline {section}{\numberline {12.2}Eigenschaften komplexer Wegintegrale}{55}{section.12.2}
+\contentsline {section}{\numberline {12.3}Wegunabh\"angigkeit von Integralen, Stammfunktionen}{55}{section.12.3}
