@@ -24,3 +24,6 @@
 \contentsline {section}{\numberline {12.1}Wegintegrale in $ \math@bb {C}$}{55}{section.12.1}
 \contentsline {section}{\numberline {12.2}Eigenschaften komplexer Wegintegrale}{55}{section.12.2}
 \contentsline {section}{\numberline {12.3}Wegunabh\"angigkeit von Integralen, Stammfunktionen}{55}{section.12.3}
+\contentsline {chapter}{\numberline {13}Integralsatz, Integralformel und Potenzreihenentwicklung}{59}{chapter.13}
+\contentsline {section}{\numberline {13.1}Cauchyscher Integralsatz f\"ur Sterngebiete}{59}{section.13.1}
+\contentsline {section}{\numberline {13.2}Cauchysche Integralformel f\"ur Kreisscheiben}{62}{section.13.2}

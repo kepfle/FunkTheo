@@ -1,0 +1,60 @@
+\chapter{Integralsatz, Integralformel und Potenzreihenentwicklung}
+\section{Cauchyscher Integralsatz f\"ur Sterngebiete}
+\begin{lemma}[Integrallemma von Goursat]
+Es sei $ f $ holomorph im Bereich $ D $. Dann gilt f\"ur den Rand $ \partial \Delta $ eines jeden Dreiecks $ \Delta\subset D $:
+\[ \int_{\partial\Delta}^{} f\dd\zeta = 0 \]
+\end{lemma}
+\begin{beweis}
+Sei $ \int_{\partial\Delta}^{} f\dd\zeta\neq 0 $ und sei \[ \alpha(\Delta)\coloneqq\left|\int_{\partial\Delta}^{} f\dd\zeta\right|\neq 0 \]
+Wir teilen $ \Delta $ in vier gleiche Dreiecke $ \Delta_1^1, \Delta_1^2,\Delta_1^3,\Delta_1^4 $. Dann
+\[ \int_{\partial\Delta}f\dd\zeta=\sum_{k=1}^{4}\int_{\partial\Delta_1^k}^{}f\dd\zeta \]
+Damit existiert ein $ k_1 $, so dass
+\[ \left|\int_{\partial\Delta_1^{k_1}}f\dd\zeta\right|\geq\frac{\alpha(\Delta)}{4} \]
+Wir teilen $ \Delta_1^{k_1} $ in vier gleiche Dreiecke $ \Delta_2^{k_1,1},\Delta_2^{k_1,2},\Delta_2^{k_1,3},\Delta_2^{k_1,4} $ und bekommen
+\[ \int_{\partial\Delta_1^{k_1}}f\dd\zeta=\sum_{k=1}^4\int_{\partial\Delta_2^{k_1,k}}f\dd\zeta \]
+Damit existiert ein $ k_2 $, so dass
+\[ \left|\int_{\partial\Delta_2^{k_1,k_2}}^{}f\dd\zeta\right|\geq\frac{1}{4}\left|\int_{\partial\Delta_1^k}^{}f\dd\zeta\right|\geq\frac{1}{4^2}\alpha(\Delta) \]
+Wir machen genau das gleiche f\"ur $ \Delta_2^{k_!,k_2} $ und bekommen $ \Delta_3^{k_1,k_2,k_3},...,\Delta_m^{k_1,k_2,...,k_m} $, so dass
+\[ \left|\int_{\partial\Delta_m^{k_1,...,k_m}}^{} f\dd\zeta\right|\geq\frac{1}{4^m}\alpha(\Delta) \]
+Es existiert genau ein \[ p=\bigcap_{m=1}^\infty \Delta_m^{k_1,..,k_m}\subset D\]
+$ f\in\sO(D) $, also:
+\[ f(\zeta)=f(p)+f'(p)(\zeta-p)+g(\zeta)(\zeta-p),\quad g\in C(D),g(p)=0 \]
+Dann:
+\[ \int_{\partial\Delta_m^{k_1,...,k_m}}^{}f\dd\zeta=\int_{\partial\Delta_m^{k_1,...,k_m}}^{}f(p)\dd\zeta+\int_{\partial\Delta_m^{k_1,...,k_m}}^{}f'(p)(\zeta-p)\dd\zeta+\int_{\partial\Delta_m^{k_1,...,k_m}}^{}g(\zeta)(\zeta-p)\dd\zeta \]
+F\"ur $ f(p) $ ist $ f(p)\zeta $ eine Stammfunktion, f\"ur $ f'(p)(\zeta-p) $ ist $ \frac{1}{2}f'(p)(\zeta-p)^2 $ eine Stammfunktion, also folgt:
+\[ \left|\int_{\partial\Delta_m^{k_1,...,k_m}}^{}f\dd\zeta\right|=\left|\int_{\partial\Delta_m^{k_1,...,k_m}}^{}g(\zeta)(\zeta-p)\dd\zeta\right|\leq\sup_{\partial\Delta_m^{k_1,...,k_m}}|g(\zeta)(\zeta-p)|\cdot\frac{l(\Delta)}{2^m}\leq\sup_{\zeta\in\partial\Delta_m^{k_1,...,k_m}}|g(\zeta)|\frac{l(\Delta)^2}{4^m}\xrightarrow{m\to\infty}0 \]
+Auf der anderen Seite:
+\[ \left|\int_{\partial\Delta_m^{k_1,...,k_m}}f\dd\zeta\right|\geq\frac{1}{4^m}\alpha(\Delta) \]
+\[ \frac{1}{4^m}\alpha(\Delta)\geq\sup_{\zeta\in\partial\Delta_m^{k_1,...,k_m}}|g(\zeta)|\frac{l(\Delta)^2}{4^m}\xrightarrow{m\to\infty}0\lightning \]
+\end{beweis}
+\begin{satz}[Cauchyscher Integralsatz f\"ur Sterngebiete]
+Es sei $ G $ ein Sterngebiet mit Zentrum $ c $, es sei $ f\colon G\rightarrow\C $ holomorph in $ G $. Dann ist $ f $ integrabel in $ G $, die Funktion
+\[ F(z)\coloneqq\int_{[c,z]}^{} f\dd\zeta,\quad z\in G \]
+ist eine Stammfunktion von $ f $ in $ G $. Speziell gilt:
+\[ \int_{\gamma}^{} f\dd\zeta=0 \]
+f\"ur jeden geschlossenen Weg $ \gamma $ in $ G $.
+\end{satz}
+\begin{beweis}
+Wegen $ f\in\sO(G) $ folgt mit Goursat:
+\[ \int_{\partial\Delta}^{} f\dd\zeta=0,\quad\Delta\subset G \]
+Mit dem Integrabilit\"atskriterium f\"ur Sterngebiete folgt dann, dass
+\[ F(z)=\int_{[c,z]}^{} f\dd\zeta \] eine Stammfunktion von $ f $ ist.
+\end{beweis}
+\begin{beweis}[Reeller Beweis des Integrallemmas von Goursat:]
+Sei $ D\subset\C $ ein Bereich, $ \Sigma\subset D $ mit glattem Rand $ \partial\Sigma $ und $ f\in\sO(D) $.
+\begin{align*} \int_{\partial\Sigma} f\dd\zeta&=\int_{\partial\Sigma}^{} (u+iv)(\dd x+i\dd y)\\&=\int_{\partial\Sigma}(u\dd x-v\dd y)+i\int_{\partial\Sigma}^{} (v\dd x+u\dd y)\\&=\iint_\Sigma -\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\dd x\dd y+i\iint_\Sigma-\frac{\partial v}{\partial y}+\frac{\partial u}{\partial x}\dd x\dd y\\&=0 \end{align*}
+\end{beweis}
+\newpage
+\section{Cauchysche Integralformel f\"ur Kreisscheiben}
+\begin{lemma}[Zentrierungslemma]
+Sei $ D\subset\C $ ein Bereich, $ \bar B\subset D $ eine Kreisscheibe, $ B_r(z)\coloneqq\lbrace\eta\mid |z-\zeta|=r\rbrace $ und $ f\in\sO(D\setminus\lbrace z\rbrace) $. Dann ist
+\[ \int_{\partial B}^{} f\dd\zeta=\int_{\partial B_r(z)}^{} f\dd\zeta \]
+\end{lemma}
+\begin{beweis}
+Sei $ l $ eine Gerade, so dass $ z\in l $. Wir nehmen $ \Omega_1,\Omega_2 $ wie auf dem Bild (:|). Dann sind $\omega_1\subset\tilde \Omega_1 $ und $ \Omega_2\subset\tilde{\Omega}_2 $ Sterngebiete.
+Dann:
+\[ \int_{\partial\Omega_1}^{} f\dd\zeta=0,\quad\int_{\partial\Omega_2}^{} f\dd\zeta = 0\Rightarrow\int_{\partial\Omega_1\cup\partial\Omega_2}^{} f\dd\zeta = 0 \]
+Es folgt:
+\[ \int_{\partial B}^{} f\dd\zeta - \int_{\partial B_r(z)}^{} f\dd\zeta = 0 \]
+Die Aussage folgt.
+\end{beweis}
