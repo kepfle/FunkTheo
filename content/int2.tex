@@ -58,3 +58,76 @@ Es folgt:
 \[ \int_{\partial B}^{} f\dd\zeta - \int_{\partial B_r(z)}^{} f\dd\zeta = 0 \]
 Die Aussage folgt.
 \end{beweis}
+\begin{korollar}
+	Ist $ g $ beschr\"ankt um $ z $, so gilt:
+	\[ \int_{\partial B}g\dd\zeta=0 \]
+\end{korollar}
+\begin{beweis}
+	$ \exists M>0,\e>0 $, so dass $ \forall $Kreis $ S\subset B $ um $ z $ mit Radius $ t<s $ gilt: $ |g|_S\leq M $. Mit dem Zentrierungslemma und der Standardabsch\"atzung haben wir:
+	\[ \left|\int_{\partial B}^{} g\dd\zeta\right|=\left|\int_S g\dd\zeta\right|\leq|g|_S2\pi t\leq M2\pi t\forall t>0 \]
+	Hieraus folgt die Behauptung.
+\end{beweis}
+\newpage
+\begin{satz}[Cauchysche Integralformel f\"ur Kreisscheiben]
+	Es sei $ f $ holomorph im Bereich $ D $, es sei $ B\coloneqq B_r(c) $, $ r>0 $, eine Kreisscheibe, die nebst Rand $ \partial B $ in $ D $ liegt. Dann gilt $ \forall z\in B $:
+	\[ f(z)=\frac{1}{2\pi i}\int_{\partial B}^{}\frac{f(\zeta)}{\zeta-z}\dd\zeta \]
+\end{satz}
+\begin{beweis}
+	Sei $ z\in B $ fixiert. Die Funktion $ g(\zeta)=\frac{f(\zeta)-f(z)}{\zeta-z} $ f\"ur $ \zeta\in D\setminus\lbrace z\rbrace $, $ g(z)\coloneqq f'(z) $, ist holomorph in $ D\setminus\lbrace z\rbrace $ und stetig in $ D $. Dann folgt:
+	\[ 0=\int_{\partial B}^{}g\dd\zeta=\int_{\partial B}^{}\frac{f(\zeta)}{\zeta-z}\dd\zeta-f(z)\int_{\partial B}^{}\frac{\dd\zeta}{\zeta-z}=\int_{\partial B}^{}\frac{f(\zeta)}{\zeta-z}\dd\zeta-2\pi if(z) \]
+	Die Behauptung folgt.
+\end{beweis}
+\begin{korollar}[Mittelwertgleichung]
+	Unter den Voraussetzungen von obigem Satz gilt:
+	\[ f(c)=\frac{1}{2\pi}\int_0^{2\pi}f(c+re^{i\theta})\dd\theta \]
+\end{korollar}
+\begin{beweis}
+	\[ f(c)=\frac{1}{2\pi i}\int_0^{2\pi}\frac{f(c+re^{i\theta})}{re^{i\theta}}\dd(c+re^{i\theta})=\frac{1}{2\pi i}\in_0^{2\pi}\frac{f(c+re^{i\theta})rie^{i\theta}{re^{i\theta}}}\dd\theta \]
+	Durch K\"urzen erh\"alt man die obige Formel.
+\end{beweis}
+\begin{korollar}[Mittelwertungleichung]
+	\[ |f(c)|\leq |f|_{\partial B_r(c)} \]
+\end{korollar}
+\section{Entwicklung holomorpher Funktionen in Potenzreihen}
+\begin{definition}
+	Eine Funktion $ f\colon D\rightarrow\C $ hei\ss t im Kreis $ B=B_r(c)\subset D $ \deftxt{in eine Potenzreihe $ \sum a_\nu(z-c)^\nu $ um $ c $ entwickelbar}, wenn die Potenzreihe in $ B $ gegen $ f|_B $ konvergiert.
+\end{definition}
+\\
+Aus der Vertauschbarkeit von Differentation und Summation f\"ur Potenzreihen folgt sofort:
+\begin{satz}
+	Ist $ f $ in $ B $ um $ c $ in eine Potenzreihe $ \sum a_\nu(z-c)^\nu $ entwickelbar, so ist $ f $ in $ B $ beliebig oft komplex differenzierbar und es gilt:
+	\[ a_\nu=\frac{f^{(\nu)}(c)}{\nu!}\forall \nu\in\N \]
+\end{satz}
+Eine Potenzreihenentwicklung einer Funktion $ f $ um $ c $ ist also, unabh\"angig vom Radius $ r $ des Kreises $ B $, eindeutig durch die Ableitungen von $ f $ in $ c $ bestimmt und hat immer die Form
+\[ f(z)=\sum\frac{f^{(\nu)}(c)}{\nu}(z-c)^\nu \]
+Diese Reihe hei\ss t (wie im Reellen) die \deftxt{Taylorreihe von $ f $ um $ c $}. Sie konvergiert in $ B $ normal.\\
+\\
+Ist $ \gamma $ ein st\"uckweise stetig differenzierbarer Weg in $ \C $, so ordnen wir jeder stetigen Funktion $ f\colon |\gamma|\rightarrow\C $ die Funktion \[ F(z)\coloneqq\frac{1}{2\pi i}\int_\gamma\frac{f(\zeta)}{\zeta-z}\dd\zeta,\quad z\in\C\setminus|\gamma| \]
+zu. Wir behaupten:
+\begin{lemma}[Entwicklungslemma]
+	Die Funktion $ F $ ist in $ \C\setminus|\gamma| $ holomorph. Ist $ c\notin|\gamma| $ irgendein Punkt, so konvergiert die Potenzreihe
+	\[ \sum_{0}^{\infty}a_\nu(z-c)^\nu\quad\text{mit}\quad a_\nu\coloneqq\frac{1}{2\pi i}\int_{\gamma}^{}\frac{f(\zeta)}{(\zeta-z)^{\nu+1}}\dd\zeta \]
+	in jeder Kreisscheibe um $ c $, die $ |\gamma| $ nicht trifft, gegen $ F $. Die Funktion $ F $ ist beliebig oft differenzierbar in $ \C\setminus|\gamma| $. Es gilt:
+	\[ F^{(k)}(z)=\frac{k!}{2\pi i}\int_\gamma\frac{f(\zeta)}{(\zeta-z)^{k+1}}\dd\zeta\forall\zeta\in\C\setminus|\gamma|\forall k\in\N \]
+\end{lemma} 
+\newpage
+\begin{beweis}
+	Sei $ B=B_r(c) $ mit $ B\cap|\gamma|=\emptyset $. Die in $ \E $ konvergente Reihe
+	\[ \frac{1}{(1-w)^{k+1}}=\sum_{\nu\geq k}^{}\binom{\nu}{k}w^{\nu-k} \]
+	liefert (mit $ w\coloneqq\frac{z-c}{\zeta-c} $):
+	\begin{align*} \frac{1}{(\zeta-c)^{k+1}}&=\sum_{\nu\geq k}\frac{1}{(\zeta-c)^{\nu+1}}(\zeta-c)^{\nu-k}\forall z\in B,\zeta\in|\gamma|,k\in\N\\
+	&=\frac{1}{\left((\zeta-c)-(z-c)\right)^{k+1}}\\
+	&=\frac{1}{(\zeta-c)^{k+1}}\frac{1}{\left(1-\left(\frac{z-c}{\zeta-c}\right)\right)^{k+1}}\\
+	&=\frac{1}{(\zeta-c)^{k+1}}\sum_{\nu\geq k}^{}\binom{\nu}{k}\left(\frac{z-c}{\zeta-c}\right)^{\nu-k} \end{align*}
+	Mit $ g_\nu(\zeta) $, $ \zeta\in|\gamma| $, folgt daher:
+	\[ \frac{k!}{2\pi i}\int_{\gamma}^{}\frac{f(\zeta)}{(\zeta-z)^{k+1}}\dd\zeta=\frac{1}{2\pi i}\int_{\gamma}^{}\sum_{\nu\geq k}^{}k!\binom{\nu}{k}g_\nu(\zeta)(z-c)^{\nu-k}\dd\zeta \]
+	Da $ |\zeta-c|\geq r\forall\zeta\in|\gamma| $, folgt $ |g_\nu|_{|\gamma|}\leq r^{-(\nu+1)}|f|_{|\gamma|} $ und also
+	\[ \max_{\zeta\in|\gamma|}|g_\nu(\zeta)(z-c)^{\nu-k}|\leq\frac{1}{r^{k+1}}|f|_{|\gamma|}q^{\nu-k}\quad\text{mit} \quad q\coloneqq\frac{|z-c|}{r}\]
+	Da $ 0\leq q<1\forall z\in B $ und da
+	\[ \sum_{\nu\geq k}^{}\binom{\nu}{k}q^{\nu-k}=\frac{1}{(1-q)^{\nu+1}} \]
+	konvergiert oben die rechts unter dem Integral stehende Reihe f\"ur feste $ z\in B $ in $ \zeta $ normal auf $ \gamma $. Daher gilt nach dem Vertauschungssatz f\"ur Reihen:
+	\[ \frac{k!}{2\pi i}\int_{\gamma}^{}\frac{f(\zeta)}{(\zeta-z)^{k+1}}\dd\zeta=\sum_{\nu\geq k}^{}k!\binom{\nu}{k}a_\nu(z-c)^{\nu-k}\quad\text{mit}\quad a_\nu\coloneqq\frac{1}{2\pi i}\int_{\gamma}^{}\frac{f(\zeta)}{(\zeta-z)^{\nu+1}}\dd\zeta \]
+	Damit ist gezeigt, dass die durch oben definierte Funktion $ F $ in der Kreisscheibe $ B $ durch die Potenzreihe $ \sum a_\nu(z-c)^\nu $ dargestellt wird ($ k=0 $), wegen Eigenschafteen von Potenzreihen folgt weiter, dass $ F $ in $ B $ komplex differenzierbar ist und dass gilt:
+	\[ F^{(k)}(z)=\sum_{\nu\geq k}^{}k!\binom{\nu}{k}a_\nu(z-c)^{\nu-k},\quad z\in B,k\in\N \]
+	Da $ B $ irgendeine Kreisscheibe in $ \C\setminus|\gamma| $, so folgt (2)  und insbesondere $ F\in\sO(\cal\setminus|\gamma|) $.
+\end{beweis}
