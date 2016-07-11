@@ -1,0 +1,79 @@
+ \chapter{Isolierte Singularit\"aten}
+ \begin{definition}
+ 	Ist $ f $ holomorph in einem Bereich $ D $ mit Ausnahme eines Punktes $ c\in D $, so hei\ss t der Punkt $ c $ eine \deftxt{isolierte Singularit\"at voin $ f $}.
+ \end{definition}
+ \section{Hebbare Singularit\"aten, Pole}
+ \begin{definition}
+ 	Eine isolierte Singularit\"at $ c $ einer holomorphen Funktion $ f\in\sO(D\setminus\lbrace c\rbrace) $ hei\ss t \deftxt{hebbar}, wenn $ f $ holomorph nach $ c $ fortsetzbar ist.
+ \end{definition}
+\begin{beispiel*}
+	$ D=\C\setminus\lbrace 0\rbrace $, $ f(z)=\frac{\sin z}{z} $ f\"ur $ z\neq 0 $.
+	\[ \sin z=z-\frac{z^3}{3!}+\frac{z^5}{5!}-...=z\left(1-\frac{z^2}{3!}+\frac{z^4}{5!}-...\right)\eqqcolon g(z) \]
+	$ g(z)=\frac{\sin z}{z} $, d.h. $ g(z) $ ist eine holomorphe Fortsetzung von $ \frac{\sin z}{z} $ auf ganz $ \C $. Also ist $ 0 $ eine hebbare Singularit\"at von $ \frac{\sin z}{z} $.
+\end{beispiel*}
+\begin{satz}[Hebbarkeitssatz]
+    Der Punkt $ c $ ist genau dann eine hebbare Singularit\"at von $ f\in\sO(D\setminus\lbrace 0\rbrace) $, wenn es eine Umgebung $ U\subset D $ von $ c $ gibt, so dass $ f $ in $ U\setminus\lbrace c\rbrace $ beschr\"ankt ist.
+\end{satz}
+\newpage
+\begin{beweis}
+	Folgt direkt aus dem Riemannschen Fortsetzungssatz,
+\end{beweis}
+\begin{definition}
+	Sei $ f\in\sO(D\setminus\lbrace c\rbrace) $. Ist $ (z-c)^nf(z) $ beschr\"ankt f\"ur eine Zahl $ n\in\N $ in einer Umgebung von $ c $ und f\"ur $ n\neq 0 $ nicht beschr\"ankt, so hei\ss t $ c $ ein \deftxt{Pol von $ f $}. Dann hei\ss t die Zahl \[ m\coloneqq\min\lbrace k\in\N\mid (z-c)^kf(z)\text{ beschr\"akt um }c\rbrace\geq 1 \] 
+	die \deftxt{Ordnung des Pols $ c $ von $ f $}.
+\end{definition}
+\begin{beispiel*}
+	$ D=\Delta\setminus\lbrace 0\rbrace $, $ f(z)=\frac{1}{1-\cos z} $.
+	\[ \cos z=1-\frac{z^2}{2!}+\frac{z^4}{4!}+...\Rightarrow 1-\cos z=\frac{z^2}{2!}-\frac{z^4}{4!}+\frac{z^6}{6!}-...=z^2\underbrace{\left(\frac{1}{2!}-\frac{z^2}{4!}+\frac{z^4}{6!}-...\right)}_{\eqqcolon g(z)\in\sO(\C)} \]
+	Also $ f(z)=\frac{1}{z^2}\frac{1}{g(z)} $. Die Ordnung des Pols $ 0 $ von $ f(z) $ ist also $ =2 $.
+\end{beispiel*}
+\begin{satz}
+	Folgende Aussagen \"uber $ f\in\sO(D\setminus c) $ und $ m\in\N $, $ m\geq 1 $, sind \"aquivalent:
+	\begin{enumerate}
+		\item $ f $ hat in $ c $ einen Pol der Ordnung $ m $.
+		\item Es gibt eine Funktion $ g\in\sO(D) $ mit $ g(z)\neq 0 $ so dass gilt:
+		\[ f(z)=\frac{g(z)}{(z-c)^m}\forall z\in D\setminus c \]
+		\item Es gibt eine Umgebung $ U\subset D $ von $ c $ und ein $ h\in\sO(U) $, $ h(z)\neq 0\forall z\in U $, $ h(z) $ hat eine Nullstelle der Ordnung $ m $ in $ c $, so dass $ f=\frac{1}{h}$ in $ U\setminus c $.
+		\item $ \exists U\subset D $ Umgebung von $ c $, $ \exists M>0,\tilde M>0 $, so dass $ \forall z\in U\setminus c $ gilt:
+		\[ M|z-c|^{-m}\leq |f(z)|\leq\tilde M|z-c|^{-m} \]
+	\end{enumerate}  
+\end{satz}
+\newpage
+\begin{beweis}
+	\begin{description}
+		\item[i)$ \Rightarrow $ii):] $ (z-c)^mf(z) $ ist in $ U\setminus c $ beschr\"ankt f\"ur eine Umgebung $ U $ von $ c $. Dann $ \exists g\in\sO(U) $ so dass $ (z-c)^mf(z)=g(z)\forall z\in U\setminus c $. Wir haben $ g(c)\neq 0 $, weil $ m $ die Ordnung von $ f $ ist. Also gilt $ f(z)=\frac{g(z)}{(z-c)^m} $.
+		\item[ii)$ \Rightarrow $iii):] $ g(c)\neq 0:\exists U\subset D $ Umgebung von $ c $, so dass $ g(z)\neq 0\forall z\in U $. Dann ist $ \tilde h(z)\coloneqq\frac{1}{g(z)}\in\sO(U) $ und $ h(z)\coloneqq (z-c)^m\tilde h(z)\in\sO(U) $, $ \tilde h(c)\neq 0 $ und \[ f=\frac{g(z)}{(z-c)^m}=\frac{1}{(z-c)^m\frac{1}{g(z)}}=\frac{1}{h(z)} \] 
+		$ h $ hat eine Nullstelle der Ordnung $  $ in $ c $.
+	\item[iii)$ \Rightarrow $iv):] $ f=\frac{1}{h} $, wobei $ h(z)=(z-c)^m\tilde h(z) $, $ \tilde h(c)\neq 0 $. Da $ \tilde h\in\sO(U) $, folgt $ \tilde h\in C(U) $ und $ \exists U'\subset U $ eine Umgebung von $ c $, $ \exists M>0,\tilde M>0 $ so dass
+	\[ M\leq|\tilde h(z)|\leq\tilde M\forall z\in U' \]
+	Dann ist
+	\[ \frac{1}{\tilde M}\leq\left|\frac{1}{\tilde h(z)}\right|\leq\frac{1}{M} \]
+	Und somit:
+	\[ \frac{1}{\tilde M}|z-c|^{-m}\leq\left|\frac{1}{\tilde h(z)}|z-c|^{-m}\right|=|f(z)|\leq\frac{1}{M}|z-c|^{-m} \]
+	\item[iv)$ \Rightarrow $i):] Aus iv) folgt $ |f(z)(z-c)^m|\leq\tilde M\forall z\in U\setminus c $. $ z=c $ ist ein Pol von $ f $. Sei $ k<m $.
+	\[ |f(z)(z-c)^m|\geq M|z-c|^{-m}|z-c|^k=M|z-c|^{k-m}\rightarrow\infty \]
+	D.h. $ m $ ist die Ordnung von $ f $ in $ c $.
+	\end{description}
+\end{beweis}
+\begin{korollar}
+	Die Funktion $ f\in\sO(D\setminus c) $ hat genau dann einen Pol in $ c $, wenn gilt:
+	\[ \lim_{z\to c} f(z)=\infty \]
+\end{korollar}
+\begin{beweis}
+	Trivial. 'Hinrichtung' folgt aus iv), 'R\"uckrichtung' folgt aus iii) mit $ h=\frac{1}{f} $.
+\end{beweis}
+\newpage
+\section{Entwicklung von Funktionen um Polstellen}
+\begin{satz}
+	Es sei $ f\in\sO(D\setminus c) $ und es sei $ c $ ein Pol $ m- $ter Ordnung von $ f $. Dann gibt es $ b_1,...,b_m\in\C $ mit $ b_m\neq 0 $ und $ \tilde f\in\sO(D) $  so dass:
+	\[ f(z)=\frac{b_m}{(z-c)^m}+\frac{b_{m-1}}{(z-c)^{m-1}}+...+\frac{b_1}{z-c}+\tilde f(z), z\in D\setminus c\qquad (\ast) \]
+	Die Zahlen $ b_1,...,b_m $ und die Funktion $ \tilde f $ sind eindeutig durch $ f $ bestimmt.\\
+	Umgekehrt, hat jede Funktion $ f\in\sO(D\setminus c) $, f\"ur die $ (\ast) $ gilt, in $ c $ einen Pol der Ordnung $ m $.
+\end{satz}
+\begin{beweis}
+	$ f $ hat einen Pol in $ c $ $ m- $ter Ordnung, also $ f(z)=\frac{1}{(z-c)^m}g(z) $ mit $ g(z)\in\sO(D) $, $ g(c)\neq 0 $. Es gilt:
+	\[ g(z)=a_0+a_1(z-c)+a_2(z-c)^2+... \]
+	Also:
+	\[ f(z)=\frac{a_0}{(z-c)^m}+\frac{a_1}{(z-c)^{m-1}}+...+\frac{a_{m-1}}{z-c}+\underbrace{a_m+a_{m+1}(z-c)+...}_{\eqqcolon\tilde f(z)} \]
+	Die umgekehrte Richtung ist trivial.
+\end{beweis}

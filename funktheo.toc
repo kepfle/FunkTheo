@@ -28,3 +28,12 @@
 \contentsline {section}{\numberline {13.1}Cauchyscher Integralsatz f\"ur Sterngebiete}{59}{section.13.1}
 \contentsline {section}{\numberline {13.2}Cauchysche Integralformel f\"ur Kreisscheiben}{62}{section.13.2}
 \contentsline {section}{\numberline {13.3}Entwicklung holomorpher Funktionen in Potenzreihen}{64}{section.13.3}
+\contentsline {chapter}{\numberline {14}Fundamentals\"atze \"uber holomorphe Funktionen}{69}{chapter.14}
+\contentsline {section}{\numberline {14.1}Identit\"atssatz}{69}{section.14.1}
+\contentsline {section}{\numberline {14.2}Existenz singul\"arer Punkte}{71}{section.14.2}
+\contentsline {section}{\numberline {14.3}Konvergenzs\"atze von Weierstra\ss }{73}{section.14.3}
+\contentsline {section}{\numberline {14.4}Offenheitssatz und Maximumprinzip}{75}{section.14.4}
+\contentsline {section}{\numberline {14.5}Allgemeine Version von Cauchys Satz}{79}{section.14.5}
+\contentsline {chapter}{\numberline {15}Isolierte Singularit\"aten}{83}{chapter.15}
+\contentsline {section}{\numberline {15.1}Hebbare Singularit\"aten, Pole}{83}{section.15.1}
+\contentsline {section}{\numberline {15.2}Entwicklung von Funktionen um Polstellen}{86}{section.15.2}

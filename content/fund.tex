@@ -1,0 +1,254 @@
+\chapter{Fundamentals\"atze \"uber holomorphe Funktionen}
+\section{Identit\"atssatz}
+Eine holomorphe Funktion wird lokal eindeutig durch ihre Taylorreihe dargestellt. Hierein ist bereits ein Identit\"atssatz enthalten, n\"amlich:
+\begin{satz}[]
+	$ f,g\in\sO(D) $, $ \exists c\in D\exists U(c)\subset D $ so dass $ f|_U=g|_U $. Dann gilt $ f|_{B_d(c)}=g|B_d(c) $, wobei $ d\coloneqq d_c(D) $ der Randabstand von $ c $ in $ D $ ist.
+\end{satz}
+\begin{beweis}
+	Klar durch die letzten S\"atze.
+\end{beweis}
+Eine andere Version des Identit\"atssatzes folgt direkt aus der Integralformel:
+\begin{satz}
+	$ f,g\in\sO(U(\bar B)) $, $ f|_{\partial B}=g|_{\partial B} $. Dann folgt $ f\underset{\bar B}{\equiv}g $ eine Umgebung von $ \bar B $.
+\end{satz}
+\newpage
+\begin{satz}[Identit\"atssatz]
+	Folgende Aussagen \"uber zwei in einem Gebiet $ G\subset\C $ holomorphe Funktionen $ f $ und $ g $ sind \"aquivalent:
+	\begin{enumerate}
+		\item $ f=g $.
+		\item Die 'Identit\"atsmenge' $ \lbrace w\in G\mid f(w)=g(w)\rbrace $ hat einen H\"aufungspunkt in $ G $.
+		\item $ \exists c\in G $, so dass $ f^{(n)}(c)=g^{(n)}(c)\forall n\in\N $.
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	\begin{description}
+		\item[i)$ \Rightarrow $ii):] Trivial.
+		\item[ii)$ \Rightarrow $iii):] Wir setzen $ h\coloneqq f-g $. Die Nullstellenmenge $ M\coloneqq\lbrace w\in G\mid h(w)=0\rbrace $ hat nach Voraussetzungen einen H\"aufungspunkt in $ c\in G $. G\"abe es ein $ m\in\N $ mit $ h^{(m)}(c)\neq 0 $, so w\"ahlen wir $ m $ minimal. Dann gilt: $ h(z)=(z-c)^m h_m(z) $ mit $ h_m(z)=\sum_{\mu\geq m}^{}\frac{h^{(\mu)}(c)}{\mu!}(z-c)^{\mu-m}\in\sO(B) $ f\"ur jeden Kreis $ B\subset G $ um $ c $ nach dem Entwicklungssatz, wobei $ h_m(c)\neq 0 $. 
+		%
+		%von ali nachtragen
+		%
+		\item[iii)$ \Rightarrow $i):] \[ S_n\coloneqq\lbrace w\in G\mid f^{(n)}(w)=g^{(n)}(w)\rbrace \]
+		$ f^{(n)} $ und $ g^{(n)} $ sind stetig, also ist $ S_n $ abgeschlossen. Somit ist auch $ S\coloneqq\bigcap_{n\in\N}S_n $ abgeschlossen. $ c\in S $, also $ S\neq\emptyset $. $ h=f-g\in\sO(G) $ und $ h^{(n)}(c)=0\forall n\in\N $. Es existiert ein $ \e>0 $ so dass $ \overline{B(c,\e)}\subset G $ und $ h $ l\"asst sich auf $ B(c,\e) $ in eine Potenzreihe entwickeln die auf $ B(c,\e) $ kompakt konvergiert:
+		\[ \sum_{n=0}^{\infty}a_n(z-c)^n \]
+		mit $ a_n=\frac{h^{(n)}(c)}{n!}=0 $. Also ist auch die Potenzreihe $ \equiv 0 $ auf $ B(c,\e) $ und damit auch $ h|_{b(c,\e)}\equiv 0 $. Dies gilt f\"ur alle $ c\in S $, aber das hei\ss t $ \forall c\in S\exists \e>0: B(c,\e)\subset S $. Also ist $ S $ offen, $ G $ zusammenh\"angend und somit $ S=G $ und $ f=g $.
+	\end{description}
+\end{beweis}
+\begin{korollar}
+	Sei $ f\colon\R\rightarrow\C $ differnzierbar. Dann gibt es maximal eine M\"oglichkeit, $ f $ holomorph auf $ \C $ fortzusetzen.
+\end{korollar}
+Zum Beispiel: $ \sin $, $ \cos $, $ \exp $.
+\section{Existenz singul\"arer Punkte}
+\begin{definition}
+	Sei $ G\subseteq\C $ ein Gebiet und $ f\in\sO(G) $. Dann hei\ss t $ w\in\partial G $ ein \deftxt{singul\"arer Punkt} von $ f $, wenn es keine Umgebung $ U $ von $ w $ in $ \C $ gibt mit $ \tilde f\in\sO(U) $ und $ f|_{U\cap G}=\tilde{f}|_{U\cap G} $.
+\end{definition}
+\begin{beispiel*}
+	$ f(z)=\frac{1}{z} $ auf $ G=\C^\ast $. $ w\in 0\in\partial\C^\ast $. Angenommen $ w $ w\"are kein singul\"arer Punkt von $ f $. Dann $ \exists \e>0 $ und $ \exists\tilde f\in\sO(B(0,\e)) $ mit $ \tilde f|_{B(0,\e)\setminus\lbrace 0\rbrace}=\frac{1}{z} $. Aber $ \frac{1}{z} $ hat keine holomorphe Fortsetzung in $ 0 $! Also ist $ 0 $ singul\"arer Punkt.
+\end{beispiel*}
+\begin{satz}[Existenz singul\"arer Punkte]
+	Auf dem Rand des Konvergenzkreises einer holomorphen Potenzreihe $ f(z)=\sum_{k=0}^{\infty}a_k(z-c)^k $ liegt immer mindestens ein singul\"arer Punkt von $ f $.
+\end{satz}
+\begin{beweis}
+	Gegenannahme: Es gibt keinen singul\"aren Punkt auf dem Rand des Konvergenzkreises von $ f $. Sei $ \zeta>0 $ der Konvergenzradius von $ f $. $ \forall w\in\partial B(c,\zeta)\exists $offene Umgebung $ U_w $ von $ w $ in $ \C $ und $ \exists \tilde f_w\in\sO(U_w) $ und $ \tilde f_w|_{U\cap B(c,\zeta)}=f|_{U\cap B(c,\zeta)} $. $ \partial B(c,\zeta) $ ist kompakt, also existiert eine endliche Teil\"uberdeckung. $ w_1,...,w_m\in\partial B(c,\zeta) $ mit Umgebungen $ U_1,...,U_m $.
+	Wir definieren:
+	\[ F\colon B(c,\zeta)\cup\bigcup_{j=1}^m U_j\rightarrow\C \]
+	\[ F(z)\coloneqq \begin{cases}
+	f(z)&z\in B(c,\zeta)\\
+	\tilde f_j(z)&z\in U_j
+	\end{cases} \]
+	$ F $ ist holomorph.\\
+	$ \exists $Kreisscheibe $ B(c,\zeta') $, $ \zeta'>\zeta $, mit
+	\[ B(c,\zeta')\subset B(c,\zeta)\cup\bigcup_{j=1}^m U_j \]
+	$ F $ l\"asst sich um $ c $ in eine Potenzreihe entwickeln mit Konvergenzradius mindestens $ \zeta'>\zeta $. $ B(c,\zeta) $ ist zusammenh\"angend und $ F|_{B(c,\zeta)}=f|_{B(c,\zeta)} $, also sind nach dem Identit\"atssatz die Potenzreihen gleich. Dies ist ein Widerspruch zum Konvergenzradius $ \zeta $. 
+\end{beweis}
+\begin{definition}
+	Eine holomorphe Funktion, die auf ganz $ \C $ definiert ist, hei\ss t \deftxt{ganze Funktion}.
+\end{definition}
+\begin{satz}[Satz von Liouville]
+	Jede ganze beschr\"ankte Funktion ist konstant.
+\end{satz}
+\begin{beweis}
+	Cauchy-Integralformel:
+	\[ f^{(k)}(z)=\frac{k!}{2\pi i}\ointctrclockwise_{\partial B(z,\rho)}\frac{f(w)}{(w-z)^{k+1}}\dd z \]
+	\begin{align*} |f'(z)|&=\frac{1}{2\pi}\left|\int_0^{2\pi}\frac{f(\gamma(t))}{(\gamma(t)-z)^2}\gamma'(t)\right|\dd t\\&=\frac{1}{2\pi}\int_0^{2\pi}\frac{|f(\gamma(t))|}{\rho^2}\rho\dd t\\&=\frac{1}{2\pi}\frac{1}{\rho}\int_0^{2\pi}|f(\gamma(t))|\dd t\\&\leq\frac{1}{2\pi}\frac{1}{\rho}\int_0^{2\pi}M\dd t\\&=\frac{M}{\rho}\xrightarrow{\rho\to\infty}0\end{align*}
+	Also $ f'(z)=0\forall z\in\C $. Da $ \C $ zusammenh\"angend ist, ist $ f $ also konstant.
+\end{beweis}
+\begin{satz}[Fundamentalsatz der Algebra]
+	Jedes Polynom $ p\in\C[z] $, welches nicht konstant ist, hat mindestens eine Nullstelle in $ \C $.
+\end{satz}
+\begin{beweis}
+	Gegenannahme: Sei $ p\in\C[z] $ ohne Nullstelle in $ \C $. Dann ist $ f(z)\coloneqq\frac{1}{p(z)} $ eine ganze Funktion (Quotientenregel).
+	\[ \lim_{|z|\to\infty}|f(z)|=0 \]
+	Nach dem Wachstumslemma f\"ur Polynome $ p\not\equiv $const. $ \forall\e>0\exists r>0 $ so dass $ |f(z)|<\e $ falls $ |z|>r $. $ f $ ist stetig, also ist $ f $ auf $ \overline{B(0,r)} $ beschr\"ankt durch $ M $. $ f $ ist auf $ \C $ beschr\"ankt durch $ \max\lbrace M,\e\rbrace $. Nach dem Satz von Liouville ist dann $ f $ konstant und somit auch $ p=\frac{1}{f}\lightning $.
+\end{beweis}
+\newpage
+\begin{korollar}
+	Jedes Polynom $ p\in\C[z] $ l\"asst sich in Linearfaktoren zerlegen.
+\end{korollar}
+\section{Konvergenzs\"atze von Weierstra\ss}
+\begin{satz}[Weierstra\ss scher Konvergenzsatz]
+	Sei $ D\subset\C $ offen. Sei $ f_k $ eine Folge von holomorphen Funktionen auf $ D $ die in $ D $ kompakt gegen ein $ f $ konvergiert. Dann ist $ f $ auch holomorph in $ D $ und $ f^{(n)}_k\rightarrow f^{(n)} $ kompakt in $ D $ $ \forall n\in\N $.
+\end{satz}
+\begin{beweis}
+	Analysis 2: $ f_k $ sind stetig auf jedem Kompaktum $ K\subset D $, $ f_k\underset{K}{\rightrightarrows}f $ gleichm\"a\ss ig. Dann ist $ f $ stetig auf $ K $. Jeder Punkt $ z\in D $ ist im Innern eines passenden Kompaktums enthalten, also $ f\in C(D) $. Dann ist $ f $ auf kompakten Teilmengen von $ D $ integrierbar. Sei $ \Delta $ ein Dreieck in $ D $.
+	\[ \ointctrclockwise_{\partial\Delta}f(z)\dd z=\ointctrclockwise_{\partial\Delta}\lim_{k\to\infty}f_k(z)\dd z=\lim_{k\to\infty}\ointctrclockwise_{\partial\Delta}f_k(z)\dd z \]
+	Vertauschungssatz bei gleichm\"a\ss iger Konvergenz auf Kompakta. Der Dreiecksweg ist kompakt und in $ D $ enthalten und $ \ointctrclockwise_{\partial\Delta}f_k(z)\dd z=0 $ nach dem Lemma von Goursat. Satz von Morera: $ f $ holomorph auf $ D $. \\
+	Es reicht, dies f\"ur $ n=1 $ zu zeigen. Cauchy-Integralformel:
+	\[ f'(z)=\frac{1}{2\pi i}\ointctrclockwise_{\partial D(a,\e)}\frac{f(w)}{(w-z)^2}\dd w \]
+	$ z\in D(a,\e)\Subset D $. Sei $ K\subset D $ ein Kompaktum. Nach Voraussetzung gilt:
+	\[ \forall\e>0\exists k_0\in\N:k>k_0\Rightarrow |f(z)-f_k(z)|<\e\forall z\in K \]
+	\[ L=K_\delta=\lbrace z\in\C|d(z,K)<\delta\rbrace \]
+	Wir k\"onnen so ein $ \delta>0 $ finden, dass $ L\subset D $ (Stetigkeit der Randabstandsfunktion).\\
+	Wir zeigen auf $ K $ die gleichm\"a\ss ige Konvergenz von $ f' $. $ K $ kompakt, also l\"asst es sich mit endlich vielen Kreisscheiben $ D(a_j,\e) $, $ j=1,...,q $, \"uberdecken. $ f $ nimmt auf $ L $ ein Maximum $ M $ an, da $ f $ stetig. 
+	\begin{align*} f_k'(z)-f'(z)|&=\left|\frac{1}{2\pi i}\ointctrclockwise_{\partial B(a_j,\e)}\frac{f_k(w)-f(w)}{(w-z)^2}\dd z\right|\\&\leq\frac{1}{2\pi}\ointctrclockwise_{\partial B(a_j,\e)}\frac{|f_k(w)-f(w)|}{(w-z)^2}|\dd z|\\&<\frac{1}{2\pi}\e\ointctrclockwise_{\partial B(a_j,\delta)}\frac{1}{(w-z)^2}\dd z\\&=\frac{\e}{\delta}\forall z\in K \end{align*}
+	$ \delta $ fest. Also folgt die Behauptung. 
+\end{beweis}
+\begin{satz}[Weierstra\ss scher Differentiationssatz f\"ur kompakt konvergente Reihen]
+	Sei $ \sum_{n=1}^\infty f_n $ eine in $ D $ gegen $ f $ kompakt konvergente Reihe von in $ D $ holomorphen Funktionen. F\"ur jedes $ k\in\N $ konvergiert $ \sum_{n=1}^\infty f_n^{(k)} $ kompakt in $ D $ gegen $ f^{(k)} $. 
+\end{satz}
+\begin{beweis}
+	\[ F_m\coloneqq\sum_{n=1}^m f_n\in\sO(D) \]
+	konvergiert in $ D $ kompakt gegen $ f $. Nach dem Konvergenzsatz von Weierstra\ss\ folgt $ f\in\sO(D) $ und $ F_m^{(k)}=\sum_{n=1}^m f_n^{(k)} $ konvergiert auf $ D $ kompakt gegen $ f^{(k)} $.
+\end{beweis}
+\newpage
+\section{Offenheitssatz und Maximumprinzip}
+\begin{definition}
+	Eine Abbildung $ f\colon X\rightarrow Y $ zwischen metrischen R\"aumen hei\ss t \deftxt{offen}, falls das Bild $ f(U) $ jeder in $ X $ offenen Menge $ U $ in $ Y $ offen ist. 
+\end{definition}
+\begin{lemma}[Existenz von Nullstellen]
+	Sei $ D\subseteq\C $ offen, $ f\in\sO(D) $. Sei $ c\in D $ und $ B $ eine Kreisscheibe um $ c $ mit $ \bar B\subset D $. Zudem gelte:
+	\[ \min_{z\in\partial B}|f(z)|>|f(c)| \]
+	Dann hat $ f $ eine Nullstelle in $ B $.
+\end{lemma} 
+\begin{beweis}
+	Gegenannahme: $ f $ hat keine Nullstelle in $ B $. Wegen $ \min_{z\in\partial B}|f(z)|>|f(c)|>0 $ hat $ f $ keine Nullstelle in $ \bar B $. $ f $ ist stetig, also ist die Nullstellenmenge von $ f $ abgeschlossen. Es existiert also eine offene Umgebung $ U $ von $ \bar B $ in $ D $, auf welcher $ f $ nullstellenfrei ist.\\
+	Auf $ U $ definiert $ g(z)=\frac{1}{f(z)} $ eine holomorphe Funktion. Mittelwertungleichunug f\"ur holomorphe Funktionen:
+	\[ |f(c)|^{-1}=|g(c)|\leq\max_{z\in\partial B}|f(z)|=\max_{z\in\partial B}\left|\frac{1}{f(z)}\right|=\min_{z\in\partial B}|f(z)|^{-1}\lightning \]
+\end{beweis}
+\begin{lemma}
+	Sei $ D\subseteq \C $ offen, $ B $ eine Kreisscheibe um $ c $, mit $ \bar B\subset D $, sei $ f\in\sO(D) $. Es gelte:
+	\[ 0<\min_{z\in\partial B}|f(z)-f(c)|=2\delta \]
+	Dann gilt: \[ f(B)\supset B_\delta(f(c)) \]
+\end{lemma}
+\begin{beweis}
+	F\"ur jedes $ b\in\C $ mit $ |b-f(z)|<\delta $ gilt:
+	\[ |f(z)-b|\geq |f(z)-f(c)|-|b-f(c)|>\delta,\quad z\in\partial B \]
+    \[ \min_{z\in\partial B}|f(z)-b|>|f(c)-b| \]
+    Mit obigem Lemma angewandt auf $ f(z)-b $ existiert ein $ \tilde z\in B $ mit $ f(\tilde z)=b $.
+\end{beweis}
+\begin{satz}[Offenheitssatz]
+	Sei $ D\subset\C $ ein Gebiet und $ f $ holomorph auf $ D $ und nicht konstant. Dann ist die Abbildung $ f\colon D\rightarrow\C $ offen.
+\end{satz}
+\begin{beweis}
+	Sei $ c\in D $. Ziel ist: $ \exists $Kreisscheibe um $ f(c) $ in $ f(D) $. $ f $ ist nicht konstant, also existiert $ B $ um $ c $ mit $ \bar B\subset D $ und $ f(c)\notin f(\partial B) $. (Angenommen, f\"ur alle $ \e\in(0,\e_0) $ w\"urde gelten: $ f(c)\in f(\partial B_\e(c)) $. Dann g\"abe es eine Folge von Punkten $ z_\e\in\partial B_\e(c) $ mit $ f(z_\e)=f(c) $. Das bedeutet: $ c $ ist H\"aufungspunkt von $ z_\e $ ($ \e\to 0 $) und $ f(c)=f(z_\e). $. Nach dem Identit\"atssatz w\"are dann $ f $ const.$ \equiv f(c)\lightning $)
+	\[ 2\delta\coloneqq\min_{z\in\partial B}|f(z)-f(c)|>0 \]
+	da $ f(c)\notin f(\partial B) $ und $ \partial B $ kompakt. Nach Lemma oben gilt dann:
+	\[ f(B)\supset B_\delta(f(c)) \]
+	F\"ur jeden Punkt $ p\in f(D)\exists c\in D $ mit $ f(c)=p $ und $ \exists $Kreisscheibe $ B $ um $ c $ mit $ f(B)\supset B_\delta(f(c)) $, also enth\"alt $ f(D) $ um jeden Punkt eine offene Kreisscheibe. 
+\end{beweis}
+\begin{satz}[Satz von der Gebietstreue]
+	Sei $ G\subset\C $ ein Gebiet und sei $ f $ holomorph auf $ G $ und nicht konstant. Dann ist $ f(G)\subset\C $ ein Gebiet.
+\end{satz}
+\begin{beweis}
+	$ f $ stetig. $ G $ zusammenh\"angend$ \Rightarrow f(G) $ zusammenh\"angend. $ f $ holomorph und nicht konstant$ \Rightarrow f(G) $ offen nach Offenheitssatz.
+\end{beweis}
+\begin{satz}[Maximumprinzip]
+	Eine holomorphe Funktion, die in einem Gebiet $ G $ ein lokales Maximum ihres Absolutbetrages annimmt, ist konstant.
+\end{satz}
+\begin{beweis}
+	Annahme: $ \exists c\in G $, $ \exists $Umgebung $ U $ von $ c $ in $ G $ mit $ |f(z)\leq|f(c)| $ f\"ur alle $ z\in U $. Dann ist $ f(U)\subset\lbrace w\in\C\mid |w|\leq |f(c)|\rbrace $. Die Menge $ f(U) $ ist dann keine Umgebung von $ f(c) $ in $ \C $. Dies ist ein Widerspruch zum Offenheitssatz.
+\end{beweis}
+\begin{satz}[Maximumprinzip f\"ur beschr\"ankte Gebiete]
+	Sei $ G\subset\C $ ein beschr\"anktes Gebiet und sei $ f $ holomorph auf $ G $ und stetig auf $ \bar G $. Dann nimmt $ |f| $ ihr Maximum auf $ \partial G $ an.
+\end{satz}
+\begin{beweis}
+	$ f $ stetig, $ \bar G $ kompakt$ \Rightarrow |f| $ nimmt Maximum auf $ \bar G $ an. O.B.d.A. $ f $ nicht konstant. Mit dem Maximumprinzip folgt die Behauptung.
+\end{beweis}
+\begin{satz}[Minimumprinzip]
+	Sei $ G\subset\C $ ein beschr\"anktes Gebiet, $ f $ sei holomorph auf $ G $ und stetig auf $ \bar G $. Dann hat $ f $ Nullstellen in $ G $ oder $ |f| $ nimmt das Minimum auf $ \partial G $ an.
+\end{satz}
+\begin{beweis}
+	O.B.d.A. $ f $ hat keine Nullstellen in $ G $. $ \frac{1}{f}\eqqcolon g\in\sO(G) $. Nach dem Maximumprinzip nimmt $ |g| $ in $ G $ kein lokales Maximum an (oder $ g $ konstant). Das bedeutet, dass $ |f| $ kein lokales Minimum in $ G $ annimmt.
+\end{beweis}
+\newpage
+\begin{satz}[Schwarzsches Lemma]
+	Sei $ \D\coloneqq\lbrace z\in\C\mid |z|<1\rbrace $ die Einheitskreisscheibe. F\"ur jede holomorphe Funktion $ f\colon\D\rightarrow\D $ mit $ f(0)=0 $ gilt:
+	\[ |f(z)|\leq |z|\forall z\in\D \]
+	\[ |f'(0)|\leq 1 \]
+	Falls es einen Punkt $ c\in\D\setminus\lbrace 0\rbrace $ mit $ |f(c)|=|c| $ oder falls $ |f'(0)|=1 $, dann ist $ f $ eine Drehung um $ 0 $, $ f(z)=az $, $ a\in\C $, $ |a|=1 $. 
+\end{satz}
+\begin{beweis}
+	$ f(z)=\sum_{k=0}^\infty a_kz^k $ konvergiert kompakt in $ \D $ und $ a_0=0 $.
+	\[ f(z)=z\underbrace{\sum_{k=1}^\infty a_kz^{k-1}}_{\eqqcolon g(z)} \]
+	und $ g(z)=\frac{f(z)}{z} $ ist holomorph auf $ \D $.\\
+	Sei $ 1>r>0 $.
+	\[ r\max_{|z|=r}|g(z)|\leq 1 \]
+	da $ |f(z)|<1\forall z\in\D $. Maximumprinzip anwenden auf $ g $ auf der Kreisscheibe $ r\D $:
+	\[ \max_{\overline{r\D}}|g(z)|\leq\frac{1}{r} \]
+	Mit $ r\to 1 $ folgt: \[ |g(z)|\leq 1\forall z\in\D \]
+	\[ \left|\frac{f(z)}{z}\right|\leq 1\Leftrightarrow|f(z)|\leq|z|\forall z\in\D \]
+	\[ f'(0)=\lim_{z\to 0}\frac{f(z)-f(0)}{z}=\lim_{z\to 0}\frac{f(z)}{z}=\lim_{z\to 0}g(z)=g(0) \]
+	und $ |g(0)|\leq 1 $, also $ |f'(0)|\leq 1 $.\\
+	Falls $ |f'(0)|=1 $, dann ist $|g(0)|=1 $. Also nimmt $ g $ das Maximum in $ \D $ an. Nach dem Maximumprinzip ist dann $ g\equiv a\in\C $ const. Also:
+	\[ a=\frac{f(z)}{z}\Rightarrow az=f(z),\quad |a|=1 \]
+	Falls $ \exists c\in\D $, $ c\neq 0 $ mit $ |f(c)|=|c| $, dann bedeutet dies
+	\[ |cg(c)|=c\Rightarrow |g(c)|=1 \]
+	Maximumprinzip anwenden: $ g\equiv a\in\C $ konstant mit $ |a|=1 $. Analog wie oben. 
+\end{beweis}
+\section{Allgemeine Version von Cauchys Satz}
+\begin{definition}
+	Sei $ G\subset\C $ ein Gebiet. Wir sagen, dass $ G $ \deftxt{einfach zusammenh\"angend} ist, wenn es f\"ur jede Abbildung $ \varphi\colon[0,1]\rightarrow G $ mit $ \varphi(0)=\varphi(1) $, $ \varphi $ stetig, eine stetige Abbildung $ \Phi\colon[0,1]\times[0,1]\rightarrow G $ gibt, so dass
+	\begin{enumerate}
+		\item $ \Phi(t,0)=\varphi(t)\forall t\in[0,1] $
+		\item $ \Phi(0,s)=\Phi(1,s)\forall s\in[0,1] $
+		\item $ \Phi(t,1)\equiv $const.
+	\end{enumerate}
+\end{definition}
+\begin{beispiel*}
+	\begin{enumerate}
+		\item[] 
+		\item $ G=\Delta_1(0) $. $ \exists\Phi\colon[0,1]\times[0,1]\rightarrow G $: $ \Phi(t,s)=(1-s)\varphi(t) $.
+		\item $ G=A\coloneqq \Delta_1(0)\setminus\bar{\Delta}_{\sfrac{1}{2}}(0) $. $ \varphi=\frac{3}{4}e^{2\pi it} $. $ \nexists\Phi $.
+	\end{enumerate}
+\end{beispiel*}
+\begin{definition}
+	$ G\subset\hat\C $ ein Gebiet, $ G $ einfach zusammenh\"angend genau dann, wenn $ \partial G $ eine zusammenh\"angende Menge ist.
+\end{definition}
+\begin{satz}[Weierstra\ss]
+	Sei $ K\subset\R^n $ kompakt, $ f\in C(K) $. Dann existieren Polynome $ \lbrace P_n(x)\rbrace_{n=1}^\infty $ mit
+	\[ P_n(x)=\sum_{\alpha\in A}^{} a_\alpha x^\alpha,\quad \alpha=(\alpha_1,\alpha_2,...,\alpha_n),\quad x^\alpha=x_1^{\alpha_1}x_2^{\alpha_2}...x_n^{\alpha_n}  \]
+	so dass \[ \norm{f(x)-P_n(x)}_K\xrightarrow{n\to\infty}0 \]
+\end{satz}
+\begin{bemerkung*}
+	Satz von Weierstra\ss$ \Rightarrow $wir k\"onnen $ \varphi,\Phi $ in der Definition $ C^\infty $ nehmen.
+\end{bemerkung*}
+\begin{satz}
+	Sei $ G\subset\C $ einfach zusammenh\"angend, $ f\in\sO(G) $, $ \gamma\colon[0,1]\rightarrow G $, $ \gamma\in C^[0,1] $ mit $ \gamma(0)=\gamma(1) $. Dann ist
+	\[ \int_{\gamma}^{} f(z)\dd z=0 \]
+\end{satz}
+\begin{beweis}
+	$ G $ einfach zusammenh\"angend, also $ \exists\Phi\colon[0,1]\times[0,1]\eqqcolon Q\rightarrow G $ so dass obige Definitionen wahr sind. $ \forall p\in \Phi(Q)\exists B_{r_p}(p)\subset G $. $ \lbrace B_{r_p}(Q)\rbrace_{p\in\Phi(Q)} $ ist eine offene \"Uberdeckung von $ \Phi(Q) $. Da $ \Phi $ stetig ist, ist $ \Phi(Q) $ ein Kompaktum. Also existiert eine endliche Teil\"uberdeckung $ \lbrace B_1,B_2,...,B_m\rbrace $ von $ \Phi(Q) $. Wir teilen $ Q $ und bekommen $ Q_{i,j}\coloneqq\left\lbrack\frac{i}{n},\frac{i+1}{n}\right\rbrack\times\left\lbrack\frac{j}{n},\frac{j+1}{n}\right\rbrack $, $ n $ gen\"ugend gro\ss, $ 1\leq i,j\leq n-1 $. Wenn $ n $ gen\"ugend gro\ss\ ist, dann $ \forall i,j\exists 1\leq q\leq n $ so dass $ \Phi(Q_{i,j})\subset B_q $. $ B_q $ ist ein Sterngebiet und es gilt:
+	\[ \int_{\Phi(\partial Q_{i,j})}^{} f(z)\dd z=0 \]
+	\[ \sum_{i,j=1}^n\int_{\Phi(\partial Q_{i,j})}^{}=0 \]
+	Und somit:
+	\[ \int_{\gamma}^{}f(z)\dd z+\underbrace{\int_{\Phi(1,s)}^{}f(z)\dd z-\int_{\Phi(0,s)}^{}f(z)\dd z}_{=0}-\underbrace{\int_{\Phi(t,1)}^{}f(z)\dd z}_{=0}=0 \]
+\end{beweis}
+\begin{satz}[Allgemeine Version von Cauchys Satz]
+	Sei $ G\Subset\C $ ein Gebiet, $ \partial G $ sei st\"uckweise $ C^1- $glatt. $ f\in\sO(G) $. Dann gilt:
+	\[ f(z)=\frac{1}{2\pi i}\int_{\partial G}^{}\frac{f(\zeta)}{\zeta-z}\dd\zeta\forall z\in G \]
+\end{satz}
+\begin{beweis}
+	Seien $ C_1,C_2,...,C_m $ Zusammenhangskomponenten von $ \partial G $, so dass $ C_1=\partial\Omega_1 $, $ C_2=\partial\Omega_2 $,..., wobei $ \Omega_1,...,\Omega_m $ beschr\"ankte Komponenten von $ \C\setminus\bar G $ sind und $ C_0=\partial\Omega_0 $ eine unbeschr\"ankte Komponente von $ \C\setminus\bar G $ ist. Sei $ \gamma_1,\gamma_2,...\gamma_m,\gamma_{m+1}\subset G $, $ \gamma_i\cap\gamma_j=\emptyset $, $ i\neq j $, $ \gamma_i $ hat Anfangsunkt auf $ C_{i-1} $, Endpunkt auf $ C_i $ f\"ur $ i=1,2,...,m $, $ \gamma_{m+1} $ hat Anfangspunkt in $ C_m $ und Endpunkt in $ \partial B_\e(z) $. Sei \[ G^\ast\coloneqq G\setminus \overline{B_\e(z)}\cup\bigcup_{i=1}^{m+1}\gamma_i \] einfach zusammenh\"angend. Aus $ \frac{f(\zeta)}{\zeta-z}\in\sO(\bar G^\ast) $ folgt dann:
+	\[ \int_{\partial G^\ast}^{} \frac{f(\zeta)}{\zeta-z}\dd z=0 \]
+	Dann:
+	\[ \int_{\partial G}^{} \frac{f(\zeta)}{\zeta-z}\dd z+\sum_{i=1}^{m+1}\int_{\gamma_i}^{}\frac{f(\zeta)}{\zeta-z}\dd z-\sum_{i=1}^{m+1}\int_{\gamma_i}^{}\frac{f(\zeta)}{\zeta-z}\dd z-\int_{\partial B_\e(z)}^{}\frac{f(\zeta)}{\zeta-z}\dd z=0 \]
+\end{beweis}
+\begin{satz}[Cauchysche Ungleichungen]
+	Sei $ G\Subset\C $ ein Gebiet. $ \partial G $ sei st\"uckweise $ C^1- $glatt, $ f\in\sO(\bar G) $. Dann gilt:
+	\[ |f^{(k)}(z)|\leq\frac{k!}{2\pi}\frac{|f|_{\partial G}}{(d(z,\partial G))^{k+1}}\cdot\ell_1(\partial G)\forall z\in G\forall k\in\N \]
+	wobei $ d(z,\partial G)\coloneqq\int_{w\in\partial G} |z-w| $ und $ \ell_1(\partial G) $ die L\"ange von $ \partial G $ ist.
+\end{satz}
+\begin{beweis}
+	\[ f(z)=\frac{1}{2\pi i}\int_{\partial G}^{}\frac{f(\zeta)}{\zeta-z}\dd\zeta\Rightarrow f^{(k)}(z)=\frac{k!}{2\pi i}\int_{\partial G}^{}\frac{f(\zeta)}{(\zeta-z)^{k+1}}\dd\zeta \]
+	Es folgt:
+	\[ |f^{(k)}(z)\leq\frac{k!}{2\pi}\frac{|f|_{\partial G}{d(z,\partial G)^{k+1}}\ell_1(\partial G) \]
+\end{beweis}

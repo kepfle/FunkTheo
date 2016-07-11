@@ -129,5 +129,52 @@ zu. Wir behaupten:
 	\[ \frac{k!}{2\pi i}\int_{\gamma}^{}\frac{f(\zeta)}{(\zeta-z)^{k+1}}\dd\zeta=\sum_{\nu\geq k}^{}k!\binom{\nu}{k}a_\nu(z-c)^{\nu-k}\quad\text{mit}\quad a_\nu\coloneqq\frac{1}{2\pi i}\int_{\gamma}^{}\frac{f(\zeta)}{(\zeta-z)^{\nu+1}}\dd\zeta \]
 	Damit ist gezeigt, dass die durch oben definierte Funktion $ F $ in der Kreisscheibe $ B $ durch die Potenzreihe $ \sum a_\nu(z-c)^\nu $ dargestellt wird ($ k=0 $), wegen Eigenschafteen von Potenzreihen folgt weiter, dass $ F $ in $ B $ komplex differenzierbar ist und dass gilt:
 	\[ F^{(k)}(z)=\sum_{\nu\geq k}^{}k!\binom{\nu}{k}a_\nu(z-c)^{\nu-k},\quad z\in B,k\in\N \]
-	Da $ B $ irgendeine Kreisscheibe in $ \C\setminus|\gamma| $, so folgt (2)  und insbesondere $ F\in\sO(\cal\setminus|\gamma|) $.
+	Da $ B $ irgendeine Kreisscheibe in $ \C\setminus|\gamma| $, so folgt (2)  und insbesondere $ F\in\sO(\C\setminus|\gamma|) $.
+\end{beweis}
+\begin{satz}[Entwicklungssatz von Cauchy-Taylor]
+	Es sei $ c\in D $, und es sei $ B_d(c) $ die gr\"o\ss te Kreisscheibe um $ c $ in $ D $. Dann ist jede in $ D $ holomorphe Funktion $ f $ um $ c $ in eine Taylorreihe $ \sum a_\nu(z-c)^\nu $ entwickelbar, die in $ B_d(c) $ normal gegen $ f $ konvergiert. Die Taylorkoeffizienten $ a_\nu $ werden gegeben durch die Integrale
+	\[ a_\nu=\frac{f^{(\nu)}(c)}{\nu !}=\frac{1}{2\pi i}\int_{\partial B}\frac{f(\zeta)}{(\zeta-c)^{\nu+1}}\dd\zeta\quad(4) \]
+	wobei $ B\coloneqq B_r(c) $ mit $ 0<r<d $. 
+\end{satz}
+Insbesondere ist $ f $ beliebig oft komplex differenzierbar in $ D $. In jeder Kreisscheibe in $ B $ gelten die Cauchyschen Integralformeln
+\[ f^{(k)}(z)=\frac{k!}{2\pi i}\int_{\partial B}^{}\frac{f(\zeta)}{(\zeta-z)^{k+1}}\dd\zeta, z\in B,\forall k\in\N\quad (5) \]
+\begin{beweis}
+	Wegen $ f\in\sO(D) $ gilt f\"ur jeden Kreis $ B=B_r(c) $, $ 0<r<d $, die Cauchysche Formel
+	\[ f(z)=\frac{1}{2\pi i}\int_{\partial B}^{}\frac{f(\zeta)}{\zeta-z}\dd\zeta,z\in B \]
+	Nach dem Entwicklungslemma (mit $ F\coloneqq f $, $ \gamma=\partial B $) hat $ f $ also in $ c $ eine in $ B_r(c) $ konvergente Taylorentwicklung mit den durch $ (4) $ gegebenen Taylorkoeffizienten. jede Wahl von $ r<d $ f\"uhrt zur gleichen Reihe. Insbesondere herrscht Konvergenz gegen $ f $ in $ B_d(c) $. Die Identit\"aten $ (5) $ folgen ebenfalls direkt aus dem Entwicklungslemma.
+\end{beweis}
+\\
+F\"ur jede Menge $ A\subset D $ zeigt man die \"Aquivalenz folgender Aussagen:
+\begin{enumerate}
+	\item Jeder Punkt von $ A $ hat eine Umgebung $ U $, so dass $ U\cap A $ endlich ist.
+	\item $ A $ ist abgeschlossen in $ D $, und jeder Punkt $ p\in A $ ist ein isolierter Punkt von $ A $ (d.h. hat eine Umgebung $ U $ mit $ U\cap A=\lbrace p\rbrace $).
+	\item F\"ur jedes Kompaktum $ K\subset D $ ist $ K\cap A $ endlich.
+\end{enumerate}
+\begin{definition}
+	Mengen, die i)-iii) erf\"ullen hei\ss en \deftxt{lokal endlich in $ D $}.
+\end{definition}
+Endliche Mengen sind lokal endlich.
+\newpage
+\begin{definition}
+	Ist $ A\subset D $ abgeschlossen und $ f\in\sO(D\setminus A) $, so hei\ss t $ f $ \deftxt{stetig} bzw. \deftxt{holomorph nach $ A $ fortsetzbar}, wenn es eine in $ D $ stetige bzw. holomorphe Funktion $ \tilde f\colon D\rightarrow\C $ gibt, so dass $ \tilde f|_{D\setminus A}=f|_{D\setminus A} $.
+\end{definition}
+\begin{satz}[Riemannscher Fortsetzungssatz]
+	Ist $ f $ lokal endlich in $ D $, so sind folgende Aussagen \"uber eine in $ D\setminus A $ holomorphe Funktion \"aquivalent:
+	\begin{enumerate}
+		\item $ f $ ist holomorph nach $ A $ fortsetzbar.
+		\item $ f $ ist stetig nach $ A $ fortsetzbar.
+		\item $ f $ ist in einer Umgebung $ U\subset D $ eines jeden Punktes $ c\in A $ beschr\"ankt.
+		\item \[ \lim_{z\to c}(z-c)f(z)=0\forall c\in A \]
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	i)$ \Rightarrow $ii)$ \Rightarrow $iii)$ \Rightarrow $iv) ist trivial. Wir zeigen iv)$ \Rightarrow $i).\\
+	Wir nehmen $ C=0 $ an: Wir betrachten die Funktionen
+	\[ g(z)=zf(z)\forall z\in D\setminus\lbrace 0\rbrace,\quad g(0)\coloneqq 0,\quad h(z)\coloneqq zg(z) \]
+	$ g\in C(D) $ wegen iv). Dann folgt $ h(z)=h(0)+zg(z) $ ist im Nullpunkt komplex differenzierbar mit $ h'(0)=g(0)=0 $. Aus $ h\in\sO(D\setminus\lbrace 0\rbrace) $ folgt $ h\in\sO(D) $ und mit dem Entwicklungslemma:
+	\[ h(z)=a_0+a_1z+a_2z^2+... \]
+	Wegen $ h(0)=h'(0)=0 $ folgt
+	\[ h(z)=z^2(a_2+a_3z+a_4z^2+...) \]
+	Da $ h(z)=z^2f(z) $ f\"ur $ z\in D\setminus\lbrace 0\rbrace $ ist
+	\[ \tilde f(z)=a_2+a_3z+a_4z^2+... \]
 \end{beweis}
