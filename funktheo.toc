@@ -37,3 +37,6 @@
 \contentsline {chapter}{\numberline {15}Isolierte Singularit\"aten}{83}{chapter.15}
 \contentsline {section}{\numberline {15.1}Hebbare Singularit\"aten, Pole}{83}{section.15.1}
 \contentsline {section}{\numberline {15.2}Entwicklung von Funktionen um Polstellen}{86}{section.15.2}
+\contentsline {section}{\numberline {15.3}Wesentliche Singularit\"aten, Satz von Casorati-Weierstrass}{87}{section.15.3}
+\contentsline {chapter}{\numberline {16}Laurentreihen und Fourierreihen}{89}{chapter.16}
+\contentsline {section}{\numberline {16.1}Laurentdarstellung in Kreisringen}{90}{section.16.1}

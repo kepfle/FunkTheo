@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.1)  7 JUL 2016 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.1)  12 JUL 2016 15:49
 entering extended mode
 **./funktheo.tex
 (funktheo.tex
@@ -1468,7 +1468,8 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 ) (content/reihen.aux) (content/stetig.aux) (content/raum.aux)
 (content/kompdiff.aux) (content/holo.aux) (content/kapitelzwei.aux)
 (content/potenz.aux) (content/kapitelfuenf.aux) (content/int.aux)
-(content/int2.aux) (content/fund.aux) (content/isosing.aux))
+(content/int2.aux) (content/fund.aux) (content/isosing.aux)
+(content/laurent.aux))
 \openout1 = `funktheo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -1716,9 +1717,9 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 34.
 
 [4]
-\openout2 = `content/isosing.aux'.
+\openout2 = `content/laurent.aux'.
 
- (content/isosing.tex
+ (content/laurent.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1727,7 +1728,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
- [82
+ [88
+
 
 
 
@@ -1747,90 +1749,89 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 ]
-chapter 15.
+chapter 16.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 17.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 17.
+[89]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 5.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 16.07027pt on input line 5.
+(Font)              scaled to size 16.07027pt on input line 21.
 LaTeX Font Info:    Font shape `T1/fnc/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/fnc/b/n' tried instead on input line 5.
+(Font)              Font shape `T1/fnc/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 16.07027pt on input line 5.
+(Font)              scaled to size 16.07027pt on input line 21.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
-[83]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
- [84]
+(babel)             in language  on input line 21.
 LaTeX Font Info:    Font shape `T1/phv/bx/sl' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 65.
- [85]
+(babel)             in language  on input line 38.
+ [90])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 57.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
-)
+(babel)             in language  on input line 57.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
+(babel)             in language  on input line 57.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
- [86]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
+(babel)             in language  on input line 57.
+ [91]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
  (funktheo.aux (inc/titlepage.aux) (inc/preface.aux)
 (content/kapitel1.aux) (content/topo.aux) (content/folgen.aux)
 (content/reihen.aux) (content/stetig.aux) (content/raum.aux)
 (content/kompdiff.aux) (content/holo.aux) (content/kapitelzwei.aux)
 (content/potenz.aux) (content/kapitelfuenf.aux) (content/int.aux)
-(content/int2.aux) (content/fund.aux) (content/isosing.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
+(content/int2.aux) (content/fund.aux) (content/isosing.aux)
+(content/laurent.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
 Package rerunfilecheck Info: File `funktheo.out' has not changed.
-(rerunfilecheck)             Checksum: 9F666C7575AFF7DA0D2BB31C073450B9;246.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
+(rerunfilecheck)             Checksum: CBD7BE2A64C6F31BC55EECB0AB443D98;158.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 31261 strings out of 493634
- 603085 string characters out of 3133608
- 752618 words of memory out of 3000000
- 33877 multiletter control sequences out of 15000+200000
- 53725 words of font info for 112 fonts, out of 3000000 for 9000
+ 31256 strings out of 493634
+ 603065 string characters out of 3133608
+ 753254 words of memory out of 3000000
+ 33881 multiletter control sequences out of 15000+200000
+ 53704 words of font info for 110 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 67i,10n,78p,10454b,553s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section.14.5} has been referenced but does not ex
+ 67i,11n,78p,10454b,553s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{section.15.3} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.15.2} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.15.1} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.15} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.14.5} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{section.14.4} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1924,22 +1925,20 @@ replaced by a fixed one
 
 {C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontname/
 8r.enc}<C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/fourier/fourier-bb.pfb><C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/fourier/fourier-mcl.pfb><C:/Users/Sebastian/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/Sebastian
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb><C
-:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/
-fourier-ms.pfb><C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/hoekwater/stmary10.pfb><C:/Users/Sebastian/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Sebastian/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Sebastian/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Seb
-astian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C
-:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ncntrsbk/un
-cri8a.pfb>
-Output written on funktheo.pdf (8 pages, 110474 bytes).
+/esint/esint10.pfb><C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/fourier/fourier-bb.pfb><C:/Users/Sebastian/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/fourier/fourier-mcl.pfb><C:/Users/Sebastian/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Us
+ers/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/four
+ier-ms.pfb><C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
+w/helvetic/uhvb8a.pfb><C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Sebastian/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Sebastian/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C:/Users/Sebastian/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on funktheo.pdf (7 pages, 110262 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 19493 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 188 PDF objects out of 1000 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
+ 19485 words of extra memory for PDF output out of 20736 (max. 10000000)
 

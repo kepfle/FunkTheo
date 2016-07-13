@@ -77,3 +77,22 @@
 	\[ f(z)=\frac{a_0}{(z-c)^m}+\frac{a_1}{(z-c)^{m-1}}+...+\frac{a_{m-1}}{z-c}+\underbrace{a_m+a_{m+1}(z-c)+...}_{\eqqcolon\tilde f(z)} \]
 	Die umgekehrte Richtung ist trivial.
 \end{beweis}
+\newpage
+\section{Wesentliche Singularit\"aten, Satz von Casorati-Weierstrass}
+\begin{definition}
+	Eine isolierte Singularit\"at $ c $ von $ f\in\sO(D\setminus c) $ hei\ss t \deftxt{wesentlich}, wenn $ c $ keine hebbare Singularit\"at und kein Pol von $ f $ ist.
+\end{definition}
+\begin{satz}[Casorati-Weierstrass]
+	Folgende Aussagen \"uber eine in $ D\setminus c $ holomorphe Funktion $ f $ sind \"aquivalent:
+	\begin{enumerate}
+		\item Der Punkt $ c $ ist eine wesentliche Singularit\"at von $ f $.
+		\item F\"ur jede Umgebung $ U\subset D $ von $ c $ liegt das Bild $ f(U\setminus c) $ dicht in $ \C $.
+		\item Es gibt eine Folge $ z_n $ in $ D\setminus c $ mit $ \lim z_n=c $, so dass die Bildfolge $ f(z_n) $ keinen Limes in $ \C\cup\lbrace\infty\rbrace $ hat.  
+	\end{enumerate} 
+\end{satz}
+\begin{beweis}
+	\begin{description}
+		\item[i)$ \Rightarrow $ii):] Indirekt. Wir nehmen an, es g\"abe eine Umgebung $ U\subset D $ von $ c $, so dass $ f(U\setminus c) $ nicht dicht in $ \C $ liegt. Dann gibt es eine Kreisscheibe $ B_r(a) $, $ r>0 $, mit $ f(U\setminus c)\cap B_r(a)=\emptyset $, d.h. $ |f(z)-a|\geq r\forall z\in U\setminus c $. Die Funktion $ g(z)\coloneqq (f(z)-a)^{-1} $ f\"ur $ z\in U\setminus c $ ist holomorph in $ U\setminus c $ und hat, da sie durch $ r^{-1} $ beschr\"ankt ist, eine hebbare Singularit\"at in $ c $. Dann hat $ f(z)=a+g(z)^{-1} $ im Fall $ \lim_{z\to c} g(z)\neq 0 $ eine hebbare Singularit\"at und im Fall $ \lim_{z\to c}g(z)=0 $ einen Pol in $ c $, also keine wesentliche Singularit\"at. $ \lightning $
+		\item[ii)$ \Rightarrow $iii)$ \Rightarrow $i):] Klar nach Definition.  
+	\end{description}
+\end{beweis}
