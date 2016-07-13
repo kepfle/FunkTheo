@@ -1,5 +1,5 @@
-\chapter{Komplexe Differentialrechnung}
-\section*{Komplexe Differenzierbarkeit}
+\newpage
+\section{Komplexe Differentialrechnung}
 \begin{definition}
 	Eine Funktion $ f\colon D\rightarrow\C $ hei\ss t \deftxt{komplex differenzierbar} in $ c\in D $, wenn es eine in $ c $ stetige Funktion $ f_1 \colon D\rightarrow\C$ gibt, so dass
 	\[ f(z)=f(c)+(z-c)f_1(z)\forall z\in D \]
@@ -13,8 +13,8 @@ Wegen der Stetigkeit von $ f_1 $ in $ c $ gilt, wenn man $ h=z-c $ setzt:
 Die Zahl $ f_1(c)\in\C $ hei\ss t die \deftxt{Ableitung (nach $ z $) von $ f $ in $ c $}.\\
 $ f\in c $ differenzierbar$ \Rightarrow f$ in $ c $ stetig.\\
 Man beweist direkt: $ f $ in $ c $ komplex differenzierbar$ \Rightarrow\forall\e>0\exists\delta>0 $ so dass
-\[ |f(c+h)-f(c)-f'(c)h|\leq\e|h|\forall h\in\C, |h|\leq\delta \] 
-\section*{Cauchy-Riemannsche Differenzialgleichungen}
+\[ |f(c+h)-f(c)-f'(c)h|\leq\e|h|\forall h\in\C, |h|\leq\delta \]
+\\
 Wir schreiben $ c=a+ib=(a,b) $, $ z=x+iy=(x,y) $. Ist $ f(z)=u(x,y)+iv(x,y) $ komplex differenzierbar in $ c\in D $, so gilt:
 \[ f'(z)=\lim_{h\to 0}\frac{f(c+h)-f(c)}{h}=\lim_{h\to\infty}\frac{f(c+ih)-f(c)}{ih} \]
 W\"ahlt man $ h $ reell, so folgt
@@ -28,7 +28,7 @@ $ f\colon X\rightarrow \C $, $ c\in D $, $ f(z)=u(x,y)+iv(x,y) $. $ f $ ist in $
 \[ T= \begin{pmatrix}
 u_x(c)&v_x(c)\\ u_y(c)&v_y(v)
 \end{pmatrix} \]
-\section*{Hinreichendes Kriterium f\"ur komplexe Differenzierbarkeit}
+\\
 Sind $ u,v $ in $ D $ stetig differenzierbare reelle Funktionen, so ist die komplexe Funktion $ f=u+iv $ in jedem Punkt von $ D $ reell differenzierbar. Gilt zus\"atzlich $ u_x=v_y $ und $ u_y=-v_x $ \"uberall in $ D $, so ist $ f $ in jedem Punkt von $ D $ komplex differenzierbar.
 \begin{beweis}
 	Sei $ c=a+ib=(a,b) $, $ h=\Delta x+i\Delta y=(\Delta x,\Delta y) $. Dann ist
@@ -42,7 +42,7 @@ Sind $ u,v $ in $ D $ stetig differenzierbare reelle Funktionen, so ist die komp
 	\end{align*}
 	L\"osungen dieses LGS: $ (x=0,y=0) $, $ \left(x=\frac{1}{3},y=-\frac{\sqrt{2}}{3}\right)  $ und $ \left(x=\frac{1}{3}, y=\frac{\sqrt{2}}{3}\right) $.
 \end{beispiel*}
-\section*{Harmonische Funktionen}
+\\
 Laplace-Operator:
 \[ \Delta\varphi=\frac{\partial^2\varphi}{\partial x^2}+\frac{\partial^2\varphi}{\partial y^2} \]
 \begin{definition}

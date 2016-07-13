@@ -1,16 +1,14 @@
-\chapter{Holomorphe Funktionen}
+\section{Holomorphe Funktionen}
 \begin{definition}
 	Eine Funktion $ f\colon D\rightarrow\C $ hei\ss t \deftxt{holomorph in $ D $}, wenn $ f $ in jedem Punkt $ c\in D $ komplex differenzierbar ist.\\
 	Die Menge der holomorphen Funktionen in $ D $ bezeichnen wir mit $ \sO(D) $.
 \end{definition}
-\section*{Differentiationsregeln}
 \paragraph{Summen- und Produktregel.} $ \forall f,g\in\sO(D) \forall a,b\in\C$ ist $ af+bg \in\sO(D) $ und $ fg\in\sO(D) $ und $ (af+bg)'=af'+bg' $, $ (fg)'=f'g+fg' $. Insbesondere $ p(z)=a_0+a_1z+a_2z^2+...+a_nz^n\in\sO(\C) $ und $ p'(z)=a_1+2a_2z+...+na_nz^{n-1} $.
 \paragraph{Quotientenregel.} $ \forall f,g\in\sO(D), \forall z\in D: g(z)\neq 0 $: $\frac{f}{g}\in\sO(D)$
 \[ \left(\frac{f}{g}\right)=\frac{f'g-fg'}{g^2} \]
 \paragraph{Kettenregel.} $ g\in\sO(D), h\in\sO(D'), g(D)\subset D' $: $ (h\circ g)(z)\coloneqq h(g(z))\in\sO(D) $
 \[ (h\circ g)'(z)=h'(g(z))g'(z)\forall z\in D \]
 \newpage
-\section*{Charakterisierung lokal-konstanter Funktionen}
 \begin{proposition}
 	Folgende Aussagen \"uber eine Funktion $ f\colon D\rightarrow\C $ sind \"aquivalent:
 	\begin{enumerate}
@@ -41,7 +39,7 @@
 	\[ v^2v_x+uvu_x+u^2v_x-uvu_x=(u^2+v^2)v_x\equiv 0 \]
 	Also: $ v_x\equiv 0 $, und somit ist $ f $ lokal-konstant in $ D $.
 \end{beweis}
-\section*{Partielle Differentiation nach $ x,y,z $ und $ \bar z $}
+\\
 $ f\colon D\rightarrow\C $, $ D $ offene Menge, $ f=u+iv $ ist in $ D $ reell differenzierbar. Wir definieren:
 \[ f_x\coloneqq u_x+iv_x,\quad f_y\coloneqq u_y+v_y\quad f_z\coloneqq\frac{1}{2}(f_x-if_z),\quad f_{\bar z}\coloneqq\frac{1}{2}(f_x+if_y) \]
 Von hier bekommen wir direkt:
