@@ -1,0 +1,141 @@
+\chapter{Residuenkalk\"ul}
+\section{Residuensatz}
+\begin{definition}
+	Ist $ f $ holomorph in $ D\setminus c $ und ist $ \sum_{-\infty}^{\infty}a_\nu(z-c)^\nu $ die Laurententwicklung von $ f $ in einer punktierten Kreisscheibe $ B^\ast $ um $ c $, so gilt
+	\[ a_{-1}=\frac{1}{2\pi i}\int_{S} f(\zeta)\dd\zeta \]
+	f\"ur jede Kreislinie $ S\subset B^\ast $ um $ c $. Diese Zahl hei\ss t das \deftxt{Residuum} von $ f $ im Punkt $ c $. Wir schreiben $ \res_c f=a_{-1} $.
+\end{definition}
+\begin{satz}
+	Das Residuum von $ f\in\sO(D\setminus c) $ in $ c $ ist die eindeutig bestimmte komplexe Zahl $ a $, so dass $ f(z)-a(z-c)^{-1} $ in einer in $ c $ punktierten Umgebung von $ c $ eine Stammfunktion hat. 
+\end{satz}
+\begin{beweis}
+	Ist $ \sum_{-\infty}^{\infty}a_\nu(z-c)^\nu $ die Laurentreihe von $ f $ in $ B^\ast=B_r(c)\setminus c $, so hat die Funktion
+	\[ F\coloneqq\sum_{\nu\neq -1}^{}\frac{1}{\nu+1}a_\nu(z-c)^{\nu+1}\in\sP(B^\ast) \]
+	die Ableitung $ F' =f-a_{-1}(z-c)^{-1}$. In einer in $ c $ punktierten Umgebung von $ c $ ist daher $ H $ genau dann Stammfunktion von $ f-a(z-c)^{-1} $, wenn dort gilt
+	\[ (F-H)'=(a-a_{-1})(z-c)^{-1} \]
+	Da $ (z-c)^{-1} $ keine Stammfunktion um $ c $ hat, so existiert $ H $ mit $ H\coloneqq F+const. $ genau dann, wenn $ a=a_{-1} $.
+\end{beweis}
+\newpage
+\begin{satz}[Rechenregeln f\"ur Residuen]
+	\bullshit
+	\begin{enumerate}
+		\item $ \C- $Linearit\"at:
+		\[ \res_a(\lambda f+\mu g)=\lambda res_a ff+\mu\res a g\forall f,g\in\sO(D\setminus c)\forall\lambda,\mu\in\C \]
+		\item Ist $ c $ ein einfacher Pol von $ f $, so gilt:
+		\[ \res_c f=\lim_{z\to c}(z-c)f(z) \]
+		\item[ii')] Es seien $ g $ und $ h $ holomorph in einer Umgebung von $ c $, wobei $ g(c)\neq 0 $, $ h(c)=0 $ und $ h'(c)\neq 0 $. Dann hat $ f\coloneqq\frac{g}{h} $ in $ c $ einen einfachen Pol und es gilt:
+		\[ \res_c f=\frac{g(c)}{h'(c)} \]
+		\item Hat $ f\in\sO(D\setminus c) $ in $ c $ einen Pol h\"ochstens $ m- $ter Ordnung und ist $ g $ die holomorphe Fortsetzung von $ (z-c)^m f(z) $ nach $ c $, so gilt:
+		\[ \res_c f=\frac{1}{(m-1)!}g^{(m-1)}(c) \]  
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	\begin{enumerate}
+		\item[ii)] $ f $ hat einfachen Pol$ \Rightarrow f(z)=\frac{a_{-1}}{z-c}+g(z) $, $ g\in\sO(D) $.
+		\[ \lim_{z\to c}(z-c) f(z)=\lim_{z\to c}(a_{-1}+(z-c)g(z))=a_{-1}=\res_c f \]
+		\item[ii')] Da $ h $ um $ c $ die Taylorentwicklung $ h(z)=h(c)+h'(c)(z-c)+... $ besitzt, so folgt
+		\[ \lim_{z\to c}(z-c)f(z)=\lim_{z\to c}(z-c)\frac{g(z)}{h(z)}=\frac{g(c)}{h'(c)}\neq 0 \]
+		Mithin ist $ c $ ein einfacher Pol von $ f $ mit dem Residuum $ \frac{g(c)}{h'(c)} $.
+		\item[iii)] $ f $ hat in $ c $ einen Pol der Ordnung $ m $, also ist
+		\[ f(z)=\frac{b_{-m}}{(z-c)^m}+\frac{b_{-(m-1)}}{(z-c)^{m-1}}+...+\frac{b_{-1}}{z-c}+h(z) \]
+		\[ (z-c)^m f(z)=b_{-m}+b_{-(m-1)}(z-c)+...+b_{-1}(z-c)^{m-1}+b_0(z-c)^m+... \]
+		\[ \frac{1}{(m-1)!}g^{(m-1)}(c)=\frac{1}{(m-1)!}(m-1)!b_{-1}=b_{-1}=\res_c f \]
+	\end{enumerate}\vspace{-22pt}
+\end{beweis}
+\begin{beispiel*}
+	\[ f(z)=\frac{1}{\sin(\sin z)}\in\sO(B_1(0)\setminus 0) \]
+	\begin{align*} &\sin z=z-\frac{z^3}{3!}+\frac{z^5}{5!}-...=z\underbrace{\left(1-\frac{z^2}{3!}+\frac{z^4}{5!}-...\right)}_{\eqqcolon g(z)}\\\Rightarrow&\sin(\sin z)=\sin z-\frac{\sin^3 z}{3!}+\frac{\sin^5 z}{5!}+...=zg(z)-\frac{z^3g^3(z)}{3!}+\frac{z^5g^5(z)}{5!}+...=z\underbrace{(g(z)-...)}_{\eqqcolon G(z)}\\\Rightarrow&\frac{1}{\sin(\sin z)}=\frac{1}{zG(z)}\\\Rightarrow& \res_0 f(z)=\lim_{z\to 0}\frac{z}{zG(z)}=1 \end{align*}
+\end{beispiel*}
+\begin{satz}[Residuensatz]
+	Sei $ D\Subset\C $ ein Gebiet mit $ \partial D $ st\"uckweise $ C^1- $glatt. Seien $ c_1,c_2,...,c_m $ endlich viele Punkte in $ D $. Sei $ f\in\sO(\bar D\setminus\lbrace c_1,c_2,...,c_m\rbrace) $. Dann ist
+	\[ \frac{1}{2\pi i}\int_{\partial D}^{}f(z)\dd z=\sum_{i=1}^{m}\res_{c_i}f \] 
+\end{satz}
+\begin{beweis}
+	Sei $ \e>0 $ klein genug. Dann nehmen wir \[ D_\e\coloneqq D\setminus\bigcup_{i=1}^m B_\e(c_i) \]
+	Dann ist $ f\in\sO(\bar D_\e) $. Dann:
+	\[ \int_{\partial D_\e} f(z)\dd z=0\Rightarrow\int_{\partial D}^{}f(z)\dd z-\underbrace{\sum_{\i=1}^{m}\int_{\partial B_\e(c_i)}^{}f(z)\dd z}_{=2\pi i\res_{c_i}f}=0 \]
+	Durch Umstellen folgt die Behauptung.
+\end{beweis}
+\begin{satz}[Anzahlformel f\"ur Null- und Polstellen]
+	Sei $ D $ ein Gebiet mit $ \partial D $ st\"uckweise $ C^1- $glatt. Seien $ c_1,c_2,...,c_m $ endlich viele Punkte in $ D $. Sei $ f\in\sO(\bar D\setminus\lbrace c_1,c_2,...,c_m\rbrace) $, $ f $ hat nur Polstellen in $ c_1,c_2,...,c_m $. Sei $ f\neq 0 $ auf $ \partial D $. Dann ist
+	\[ \frac{1}{2\pi i}\int_{\partial D}^{}\frac{f'(z)}{f(z)}\dd z=N-P \]
+	wobei $ N $ die Anzahl von Nullstellen (berechnet mit Multiplizit\"tat) und $ P $ die Anzahl der Polstellen (berechnet mit Ordnung) ist.
+\end{satz}
+\begin{beweis}
+	Seien $ a_1,a_2,...,a_p $ die Nullstellen von $ f $. Dann ist $ \frac{f'(z)}{f(z)}\in\sO(\bar D\setminus\lbrace a_1,...,a_p\rbrace\lbrace\cup\rbrace  c_1,c_2,...,c_m\rbrace) $. Nach dem Residuensatz ist dann
+	\[ \frac{1}{2\pi i}\int_{\partial D}^{}\frac{f'(z)}{f(z)}\dd z=\sum_{i=1}^{p}\res_{a_i}\frac{f'}{f}+\sum_{j=1}^{m}\res_{c_i}\frac{f'}{f} \]
+	Sei $ a_i $ eine Nullstelle von $ f $ mit Multiplizit\"at $ k_i $. Das hei\ss t
+	\[ f(z)=(z-a_i)^{k_i}g(z), g(z)\in\sO(U(a_i)),  g(a_i)\neq 0\forall z\in U(a_i)  \]
+	Dann ist
+	\[ f'(z)=k_i(z-a_i)^{k_i-1}g(z)+(z-a_i)^{k_i}g'(z) \]
+	Also:
+	\[ \frac{f'(z)}{f(z)}=\frac{k_i(z-a_i)^{k_i-1}g(z)+(z-a_i)^{k_i}g'(z)}{(z-a_i)^{k_i}g(z)}=\frac{k_i}{z-a_i}+\frac{g'(z)}{g(z)}\in\sO(U(a_i)) \]
+	Es folgt:
+	\[ \res_{a_i}\frac{f'}{f}=k_i \]
+	Sei nun $ c_j $ eine Polstelle von $ f $ dr Ordnung $ l_j $. Das hei\ss t
+	\[ f(z)=\frac{g(z)}{(z-c_j)^{l_j}}, g(c_j)\neq 0, g\in\sO(U(c_j)) \]
+	Dann:
+	\[ f'(z)=-l_j(z-c_j)^{-l_j-1}g(z)+(z-c_j)^{-l_j}g'(z) \]
+	Also:
+	\[ \frac{f'(z)}{f(z)}=\frac{(-l_j(z-c_j)^{-l_j-1}+(z-c_j)^{-l_j}g'(z))(z-c_j)^{l_j}}{g(z)}=-\frac{l_j}{z-c_j}+\frac{g'(z)}{g(z)} \]
+	Es folgt:
+	\[ \res_{c_j}\frac{f'}{f}=l_j \]
+\end{beweis}
+\begin{satz}[Satz von Rouche]
+	Sei $ D\Subset\C $ ein Gebiet, $ \partial D $ st\"uckweise $ C^1- $glatt. Seien $ f,g\in\sO(\bar D) $. Sei
+	\[ |f(z)-g(z)|<|g(z)|\forall z\in\partial D\qquad(\ast\ast) \]
+	Dann ist $ N_D(f)=N_D(g) $.
+\end{satz}
+\begin{beweis}
+	Sei $ h=\frac{f}{g} $ eine in $ D $ holomorphe Funktion mit endlich vielen Nullstellen und endlich vielen Polstellen und $ |h(z)-1|<1\forall z\in U(\partial D)\eqqcolon U $. Dann ist \[ h(U)\subset B_1(1)\subset\C^+=\lbrace z\in\C\mid\Re z>0\]
+	Dann ist $ \log h $ wohldefiniert in $ U $.
+	 und dort eine Stammfunktion von $ \frac{h'}{h} $. Da $ \frac{h'}{h}=\frac{f'}{f}-\frac{g'}{g} $ und da $ f $ und $ g $ wegen $ (\ast\ast) $ nullstellenfrei auf $ \partial D $ sind, folgt:
+	 \[ 0=\frac{1}{2\pi i}\int_{\partial D}^{}\frac{f'(z)}{f(z)}\dd z-\frac{1}{2\pi i}\int_{\partial D}\frac{g'(z)}{g(z)}\dd z=N_D(f)-N_D(g) \]
+\end{beweis}
+\begin{beispiel*}
+	\begin{enumerate}
+		\item[]
+		\item \[ \int_{-\infty}^{\infty}\frac{\dd x}{1+x^2}\eqqcolon\lim_{R\to\infty}\underbrace{\int_{-R}^{R}\frac{\dd x}{1+x^2}}_{I(R)} \]
+		\[ 2\pi i\res_i\frac{1}{1+z^2}=\int_{\partial D}^{}\frac{\dd z}{1+z^2}=I(R)+\underbrace{\int_0^\pi\frac{\dd(Re^{i\theta})}{1+(Re^{i\theta})^2}}_{J(R)} \]
+		\[ |J(R)|\leq\frac{\pi R}{R^2-1}\xrightarrow{R\to\infty}0 \]
+		Also:
+		\[ 2\pi i\res_i\frac{1}{1+z^2}=I(+\infty)=\int_{-\infty}^{\infty}\frac{\dd x}{1+x^2} \]
+		\[ \frac{1}{1+z^2}=\frac{a}{z+i}+\frac{b}{z-i}=\frac{az-ia+bz+ib}{z^2+1}\Rightarrow \begin{cases}
+		a+b=0\Rightarrow a=-b\\i(b-a)=1\Rightarrow 2bi=1\Rightarrow b=\frac{1}{2i}=-\frac{i}{2}
+		\end{cases} \]
+		\[ \res_i\frac{1}{1+z^2}=-\frac{i}{2}\Rightarrow\int_{-\infty}^{\infty}\frac{\dd x}{1+x^2}=2\pi i\cdot\left(-\frac{i}{2}\right)=\pi \]
+		\item \[ \int_{-\infty}^{\infty}\frac{\dd x}{1+x^4} \]
+		\[ 1+z^4=0\Leftrightarrow z^4=-1=e^{i\pi}\Leftrightarrow z_k=e^{\frac{i(\pi+k2\pi)}{4}}, k=0,1,2,3 \]
+		\[ \frac{1}{1+z^4}=\frac{a}{z-e^{\frac{i\pi}{4}}}+\frac{b}{z-e^{\frac{3\pi i}{4}}}+\frac{d}{z-e^{\frac{5\pi i}{4}}}+\frac{e}{z-e^{\frac{7\pi i}{4}}}\qquad(\ast) \]
+	    \[ \res_{e^{\frac{i\pi }{4}}}\frac{1}{1+z^4}=\left.\frac{1}{4z^3}\right|_{z=e^{\frac{i\pi}{4}}}=\frac{1}{4e^{\frac{i3\pi}{4}}} \]
+		Analog wie oben. Schlussendlich:
+		\[ \int_{-\infty}^{\infty}\frac{\dd x}{1+x^4}=\frac{2\pi i}{4}\left(\frac{1}{-\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2}}+\frac{1}{\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2}}\right)=...=\frac{\pi}{\sqrt{2}} \]
+		\item Sei $ D=\lbrace 1<|z|<2\rbrace $, $ f(z)=z^5+2z^2+6z-1 $. $ N_D(f)=? $.
+		$ N_{B_2(0)}(f)=N_{B_2(0)}(z^5) $ weil f\"ur $ |z|\leq 2 $: \[ |2z^2+6z-1|<|2z^2|+|6z|+1\leq 2\cdot 4+6\cdot 2+1=21 \]
+		\[ |z^5|=32>21 \]
+		Also ist $ N_{B_2(0)}=5 $. $ N_{B_1(0)}(f)=N_{B_1(0)}(6z)=1 $ weil f\"ur $ |z|=1 $:
+		\[ |6z|=6>4=|z|^5+|2z^2|+1\geq |z^5+2z^2-1| \]
+		Also:
+		\[ N_D(f)=N_{B_2(0)}(f)-N_{B_1(0)}(f)=5-1=4 \]
+	\end{enumerate}
+\end{beispiel*}
+\begin{definition}
+	Ein geschlossener Weg $ \gamma $ hei\ss t \deftxt{einfach geschlossen}, wenn $ \Int\gamma\neq\emptyset $ und $ \ind_{\gamma}(z)=1\forall z\in\Int \gamma $. Dabei benutzen wir die Notationen
+	\[ \ind_\gamma(z)=\frac{1}{2\pi i}\int_{\gamma}^{}\frac{\dd\zeta}{\zeta-z}\in\Z,z\notin\gamma,\quad\Int\gamma=\lbrace z\in\C\setminus\gamma\mid \ind_\gamma(z)\neq 0 \]
+\end{definition}
+\newpage
+\begin{satz}[Residuensatz]
+	Es sei $ \gamma $ ein nullhomologer Weg in einem Bereich $ D $ und es sei $ A $ eine endliche Menge in $ D $, so dass kein Punkt von $ A $ auf $ \gamma $ liegt. Dann gilt:
+	\[ \frac{1}{2\pi i}\int_{\gamma}^{}h(\zeta)\dd\zeta=\sum_{c\in\Int\gamma}\ind_\gamma(c)\res_c h\qquad (\ast) \]
+	f\"ur jede in $ D\setminus A $ holomorphe Funktion $ h $.
+\end{satz}
+\section{Conformal mappings - Konforme Abbildungen}
+\begin{definition}
+	$ f\colon D\rightarrow G $ hei\ss t \deftxt{konform}, wenn $ f $ bijektiv und holomorph ist.
+\end{definition}
+\begin{definition}
+	$ f\colon D\rightarrow G $ konform genau dann, wenn $ f $ bijektiv und $ \forall z_0\in D $ $ \forall\gamma_1,\gamma_2 $ glatte Kurven in $ D $, so dass $ \gamma_1(0)=z_0=\gamma_2(0) $, ist $ \measuredangle(\gamma_1,\gamma_2)_{z_0}=\measuredangle(f(\gamma_1),f(\gamma_2))_{f(z_0)} $.
+\end{definition}
+\begin{satz}[Abbildungssatz von Riemann]
+	Sei $ D\subset\C $ einfach zusammenh\"angend, $ D\neq\C $. Dann existiert $ f\colon D\rightarrow B_1(0) $ biholomorph.
+\end{satz}

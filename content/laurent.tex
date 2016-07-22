@@ -39,3 +39,65 @@
 		auf $ A $. Daher wird durch $ h\coloneqq f^+-g^+ $ auf $ A^+ $ und $ h\coloneqq g^--f^- $ auf $ A^- $ eine ganze Funktion $ h\colon\C\rightarrow\C $ mit $ \lim_{z\to\infty}h(z)=0 $ definiert. $ h $ ist beschr\"ankt auf $ \C $ und mit Liouville ist $ h(z)\equiv $const. Wegen dem Limes ist $ h(z)\equiv 0 $, also $ g^+\equiv f^+ $ und $ g^-\equiv f^- $.
 	\end{description}
 \end{beweis}
+Man nennt die Darstellung von $ f $ als Summe $ f^++f^- $ die \deftxt{Laurentdarstellung von $ f $ in $ A $}. Die Funktion $ f^- $ hei\ss t der \deftxt{Hauptteil}, und $ f^+ $ \deftxt{Nebenteil} von $ f $.
+\begin{definition}
+	\[ \sum_{-\infty}^{\infty}a_\nu(z-c)^\nu \]
+	hei\ss en \deftxt{Laurentreihen um $ c $}. Die Reihen
+	\[ \sum_{-\infty}^{-1}a_\nu(z-c)^\nu=\sum_{1}^{\infty}a_{-\nu}(z-c)^{-\nu}\quad\text{bzw.}\quad\sum_0^\infty a_\nu(z-c)^\nu \]
+	hei\ss en \deftxt{Hauptteil} bzw. \deftxt{Nebenteil}.
+\end{definition}
+Reihen der Form
+
+\begin{satz}[Entwicklungssatz von Laurent]
+	Jede im Kreisring $ A $ um $ c $ mit den Radien $ r $ und $ s $ holomorphe Funktion $ f $ ist in $ A $ eindeutig in eine Laurentreihe
+	\[ f(z)=\sum_{-\infty}^{\infty}a_\nu(z-c)^\nu \]
+	entwickelbar, die in $ A $ normal gegen $ f $ konvergiert. Es gilt:
+	\[ a_\nu\coloneqq\frac{1}{2\pi i}\int_{S_\rho}\frac{f(\zeta)}{(\zeta-c)^{\nu+1}}\dd\zeta\qquad(\ast) \]
+	f\"ur $ r<\rho<s $, $ \nu\in\Z $.
+\end{satz}
+\begin{beweis}
+	Sei $ f=f^++f^- $ die Laurentdarstellung von $ f $ in $ A=A^+\cap A^- $. Dann hat der Nebenteil $ f^+\in\sO(A^+) $ von $ f $ nach dem Satz von Cauchy-Taylor in $ A^+=B_s(c) $ eine Taylorentwicklung.
+	\[ f^+(z)=\sum_{0}^{\infty}a_\nu(z-c)^\nu \]
+	Doch auch der Hauptteil $ f^-\in\sO(A^-) $ von $ f $ gestattet eine einfache Reihenentwicklung in $ A^-=\lbrace z\in\C\mid |z-c|>r\rbrace $: Da die Abbildung $ B_{r^{-1}}(0)\setminus 0\rightarrow A^- $, $ w\mapsto z\coloneqq c+w^{-1} $ biholomorph ist mit $ z\mapsto w=(z-c)^{-1} $ als Umkehrabbildung, gilt $ g(w)\coloneqq f^-(c+w^{-1})\in\sO(B_{r^{-1}}(0)\setminus 0) $. Wir wissen, dass $ \lim_{z\to\infty}f^-(z)=0 $, also $ \lim_{w\to 0}g(w)=0 $. Mit dem Riemannschen Fortsetzungssatz folgt dann $ g\in\sO(B_{r^{-1}}(0)) $. Also ist
+	\[ g(w)=\sum_{\nu=1}^\infty b_\nu w^\nu \]
+	und
+	\[ f^-(z)=\sum_{n=1}^\infty b_\nu(z-c)^{-\nu} \]
+	Wir setzen $ a_\nu=b_{-\nu} $ f\"ur $ \nu=-1,-2,... $ und bekommen
+	\[ f(z)=f^+(z)+f^-(z)=\sum_{\nu=0}^{\infty}a_\nu(z-c)^\nu+\sum_{-\infty}^{-1}a_\nu(z-c)^\nu=\sum_{-\infty}^{\infty}a_\nu(z-c)^\nu \]
+	Diese Reihe konvergiert normal in $ A $.
+	\[ (z-c)^{-n-1}f(z)=\sum_{-\infty}^{-1}a_{\nu+n+1}(z-c)^\nu+\sum_{\nu=0}^\infty a_{\nu+n+1}(z-c)^\nu \]
+	\begin{align*} \int_{S_\rho}(z-c)^{-n-1}f(z)\dd z&=\int_{S_\rho}\left(\sum_{-\infty}^{-1}a_{\nu+n+1}(z-c)^\nu+\sum_{\nu=0}^\infty a_{\nu+n+1}(z-c)^\nu\right)\dd z\\&=\sum_{\nu=-\infty}^{-1}a_{\nu+n+1}\int_{S_\rho}(z-c)^{\nu}\dd z+\sum_{\nu=0}^{\infty}\int_{S_\rho}a_{\nu+n+1}(z-c)^{\nu}\dd z\\&=2\pi i a_n \end{align*}
+	Hieraus folgt $ (\ast) $
+\end{beweis}
+\section{Eigenschaften von Laurentreihen}
+\begin{satz}[Identit\"atssatz]
+	Sind $ \sum_{-\infty}^{\infty}a_\nu(z-c)^\nu $ und $ \sum_{-\infty}^{\infty}b_\nu(z-c)^\nu $ Laurentreihen, die beide auf einer Kreislinie $ S_\rho $, $ \rho>0 $, um $ c $ gleichm\"a\ss ig konvergieren gegen dieselbe Grenzfunktion $ f $, so gilt:
+	\[ a_\nu=b_\nu=\frac{1}{2\pi\rho^\nu}\int_0^{2\pi}f(c+\rho e^{i\varphi})e^{-i\nu\varphi}\dd\varphi, \nu\in\Z \] 
+\end{satz}
+\begin{beweis}
+	Folgt direkt aus $ (\ast) $.
+\end{beweis}
+\begin{satz}[Gutzmersche Formel und Cauchysche Ungleichungen]
+	Konvergiert die Laurentreihe $ \sum_{-\infty}^{\infty}a_\nu(z-c)^\nu $ auf der Kreislinie $ S_\rho $ um $ c $ gleichm\"a\ss ig gegen $ f\colon S_\rho\rightarrow\C $, so gilt die Gutzmersche Formel:
+	\[ \sum_{-\infty}^{\infty}|a_\nu|^2\rho^{2\nu}=\frac{1}{2\pi}\int_0^{2\pi}|f(c+\rho e^{i\varphi})|^2\dd\varphi\leq M(\rho)^2\qquad (\ast) \]
+	mit $ M(\rho)\coloneqq |f|_{S_\rho} $, insbesondere bestehen die Cauchyschen Ungleichungen
+	\[ |a_\nu|\leq\frac{M(\rho)}{\rho^\nu}\forall\nu\in\Z\qquad(\ast\ast) \]
+\end{satz}
+\begin{beweis}
+	Wegen
+	\[ \overline{f(c+\rho e^{i\varphi})}=\sum_{-\infty}^{\infty}\bar a_\nu\rho^\nu e^{-i\nu\varphi} \]
+	folgt direkt:
+	\[ |f(c+\rho e^{i\varphi})|^2=\sum_{-\infty}^{\infty}\bar a_\nu\rho^\nu f(c+\rho e^{i\varphi})e^{-i\nu\varphi} \]
+	Dies konvergiert normal auf $ [0,2\pi] $, also:
+	\[ \int_0^{2\pi}|f(c+\rho e^{i\varphi})|^2\dd\varphi=\sum_{-\infty}^{\infty}\bar a_\nu\rho^\nu\int_0^{2\pi} f(c+\rho e^{i\varphi})e^{-i\nu\varphi}\dd\varphi=2\pi\sum_{-\infty}^{\infty}|a_\nu|^2\rho^{2\nu} \]
+	Der Rest von $ (\ast) $ folgt mit der Standardabsch\"atzung.
+	$ (\ast\ast) $ ist trivial.
+\end{beweis}
+\begin{satz}[Klassifizierung isolierter Singularit\"aten]
+	Es sei $ c\in D $ eine isolierte Singularit\"at von $ f\in\sO(D\setminus c) $ und es sei $ f(z)=\sum_{-\infty}^{\infty}a_\nu(z-c)^\nu $ die Laurententwicklung von $ f $ um $ c $. Dann ist $ c $
+	\begin{enumerate}
+		\item eine hebbare Singularit\"at$ \Leftrightarrow a_\nu=0\forall\nu < 0 $.
+		\item ein Pol der Ordnung $ m\geq 1\Leftrightarrow a_\nu=0\forall \nu<-m $ und $ a_{-m}\neq 0 $.
+		\item eine wesentliche Singularit\"at$ \Leftrightarrow a_\nu\neq 0$ f\"ur unendlich viele $ \nu <0 $.
+	\end{enumerate}
+\end{satz}

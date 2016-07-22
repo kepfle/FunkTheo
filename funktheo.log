@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.1)  13 JUL 2016 14:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.1)  21 JUL 2016 15:46
 entering extended mode
 **./funktheo.tex
 (funktheo.tex
@@ -1466,7 +1466,8 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 (inc/settings/hyphenation.tex) (funktheo.aux (inc/titlepage.aux)
 (inc/preface.aux) (content/kapitelzwei.aux) (content/potenz.aux)
 (content/kapitelfuenf.aux) (content/int.aux) (content/int2.aux)
-(content/fund.aux) (content/isosing.aux) (content/laurent.aux))
+(content/fund.aux) (content/isosing.aux) (content/laurent.aux)
+(content/residuen.aux))
 \openout1 = `funktheo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -2985,26 +2986,159 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 38.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 38.
- [80])
+ [80]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 60.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 60.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 60.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 60.
  [81]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+ [82]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 72.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 90.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 90.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 90.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 90.
+ [83])
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 57.
+ [84]
+\openout2 = `content/residuen.aux'.
+
+ (content/residuen.tex
+chapter 10.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+[85
+
+
+
+
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+ [86]
+
+LaTeX Warning: Command \i invalid in math mode on input line 56.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 63.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 63.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 63.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 63.
+[87]
+Overfull \hbox (13.35332pt too wide) in paragraph at lines 65--66
+[] \T1/fnc/m/n/12 (-20) Sei-en $\FML/fncmi/m/it/12 a[]; a[]; :::; a[]$ \T1/fnc/
+m/n/12 (-20) die Null-stel-len von $\FML/fncmi/m/it/12 f$\T1/fnc/m/n/12 (-20) .
+ Dann ist $[] \FMS/fncm/m/n/12 2 O\T1/fnc/m/n/12 (-20) ([] \FMS/fncm/m/n/12 n f
+\FML/fncmi/m/it/12 a[]; :::; a[]\FMS/fncm/m/n/12 gf[g\FML/fncmi/m/it/12 c[]; c[
+]; :::; c[]\FMS/fncm/m/n/12 g\T1/fnc/m/n/12 (-20) )$.
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 84.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 84.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 84.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 84.
+[88]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 108.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 108.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 108.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 108.
+ [89]
+Underfull \hbox (badness 6608) in paragraph at lines 123--124
+ []\T1/fnc/m/n/12 (+20) Ein ge-schlos-se-ner Weg $\FML/fncmi/m/it/12 $ \T1/fnc
+/m/n/12 (+20) heiˇt []ein-fach ge-schlos-sen[], wenn $[] \FML/fncmi/m/it/12  \
+FMS/fncm/m/n/12 6Å ;$ \T1/fnc/m/n/12 (+20) und 
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 126.
+[90]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 132.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 132.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+ [91]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 67.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 67.
  (funktheo.aux (inc/titlepage.aux) (inc/preface.aux)
 (content/kapitelzwei.aux) (content/potenz.aux) (content/kapitelfuenf.aux)
 (content/int.aux) (content/int2.aux) (content/fund.aux) (content/isosing.aux)
-(content/laurent.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
+(content/laurent.aux) (content/residuen.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 67.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 67.
 Package rerunfilecheck Info: File `funktheo.out' has not changed.
-(rerunfilecheck)             Checksum: 0B893071937634F3C1EFB6F36DDFC3BC;3389.
+(rerunfilecheck)             Checksum: 4D236ED5C4C9CED117FEC4D773145A58;3689.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -3013,16 +3147,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 67.
  ) 
 Here is how much of TeX's memory you used:
- 32446 strings out of 493634
- 619381 string characters out of 3133608
- 752068 words of memory out of 3000000
- 34357 multiletter control sequences out of 15000+200000
+ 32551 strings out of 493634
+ 620526 string characters out of 3133608
+ 753145 words of memory out of 3000000
+ 34384 multiletter control sequences out of 15000+200000
  139211 words of font info for 377 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 67i,18n,78p,10454b,569s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,18n,78p,10454b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontnam
 e/8r.enc}<C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/esint/esint10.pfb><C:/Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/font
@@ -3043,9 +3177,9 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Sebas
 tian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C:/
 Users/Sebastian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ncntrsbk/uncr
 i8a.pfb>
-Output written on funktheo.pdf (81 pages, 451006 bytes).
+Output written on funktheo.pdf (91 pages, 497510 bytes).
 PDF statistics:
- 1214 PDF objects out of 1440 (max. 8388607)
- 597 named destinations out of 1000 (max. 500000)
- 41301 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1348 PDF objects out of 1440 (max. 8388607)
+ 668 named destinations out of 1000 (max. 500000)
+ 41333 words of extra memory for PDF output out of 42996 (max. 10000000)
 
