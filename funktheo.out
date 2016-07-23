@@ -10,36 +10,38 @@
 \BOOKMARK [1][]{section.1.8}{1.8 Holomorphe Funktionen}{chapter.1}% 10
 \BOOKMARK [0][]{chapter.2}{2 Konvergenzbegriffe der Funktionentheorie}{}% 11
 \BOOKMARK [1][]{section.2.1}{2.1 Gleichm\344\337ige, lokal-gleichm\344\337ige und kompakte Konvergenz}{chapter.2}% 12
-\BOOKMARK [0][]{chapter.3}{3 Potenzreihen}{}% 13
-\BOOKMARK [1][]{section.3.1}{3.1 Konvergenzkriterien}{chapter.3}% 14
-\BOOKMARK [1][]{section.3.2}{3.2 Beispiele konvergenter Potenzreihen}{chapter.3}% 15
-\BOOKMARK [1][]{section.3.3}{3.3 Holomorphie von Potenzreihen}{chapter.3}% 16
-\BOOKMARK [2][]{subsection.3.3.1}{3.3.1 Beispiele holomorpher Funktionen}{section.3.3}% 17
-\BOOKMARK [0][]{chapter.4}{4 Elementar-transzendente Funktionen}{}% 18
-\BOOKMARK [1][]{section.4.1}{4.1 Exponentialfunktion und trigonometrische Funktionen}{chapter.4}% 19
-\BOOKMARK [1][]{section.4.2}{4.2 Polarkoordinaten und Einheitswurzeln}{chapter.4}% 20
-\BOOKMARK [1][]{section.4.3}{4.3 Logarithmusfunktion}{chapter.4}% 21
-\BOOKMARK [0][]{chapter.5}{5 Komplexe Integralrechnung}{}% 22
-\BOOKMARK [1][]{section.5.1}{5.1 Wegintegrale in \040C}{chapter.5}% 23
-\BOOKMARK [1][]{section.5.2}{5.2 Eigenschaften komplexer Wegintegrale}{chapter.5}% 24
-\BOOKMARK [1][]{section.5.3}{5.3 Wegunabh\344ngigkeit von Integralen, Stammfunktionen}{chapter.5}% 25
-\BOOKMARK [0][]{chapter.6}{6 Integralsatz, Integralformel und Potenzreihenentwicklung}{}% 26
-\BOOKMARK [1][]{section.6.1}{6.1 Cauchyscher Integralsatz f\374r Sterngebiete}{chapter.6}% 27
-\BOOKMARK [1][]{section.6.2}{6.2 Cauchysche Integralformel f\374r Kreisscheiben}{chapter.6}% 28
-\BOOKMARK [1][]{section.6.3}{6.3 Entwicklung holomorpher Funktionen in Potenzreihen}{chapter.6}% 29
-\BOOKMARK [0][]{chapter.7}{7 Fundamentals\344tze \374ber holomorphe Funktionen}{}% 30
-\BOOKMARK [1][]{section.7.1}{7.1 Identit\344tssatz}{chapter.7}% 31
-\BOOKMARK [1][]{section.7.2}{7.2 Existenz singul\344rer Punkte}{chapter.7}% 32
-\BOOKMARK [1][]{section.7.3}{7.3 Konvergenzs\344tze von Weierstra\337}{chapter.7}% 33
-\BOOKMARK [1][]{section.7.4}{7.4 Offenheitssatz und Maximumprinzip}{chapter.7}% 34
-\BOOKMARK [1][]{section.7.5}{7.5 Allgemeine Version von Cauchys Satz}{chapter.7}% 35
-\BOOKMARK [0][]{chapter.8}{8 Isolierte Singularit\344ten}{}% 36
-\BOOKMARK [1][]{section.8.1}{8.1 Hebbare Singularit\344ten, Pole}{chapter.8}% 37
-\BOOKMARK [1][]{section.8.2}{8.2 Entwicklung von Funktionen um Polstellen}{chapter.8}% 38
-\BOOKMARK [1][]{section.8.3}{8.3 Wesentliche Singularit\344ten, Satz von Casorati-Weierstrass}{chapter.8}% 39
-\BOOKMARK [0][]{chapter.9}{9 Laurentreihen und Fourierreihen}{}% 40
-\BOOKMARK [1][]{section.9.1}{9.1 Laurentdarstellung in Kreisringen}{chapter.9}% 41
-\BOOKMARK [1][]{section.9.2}{9.2 Eigenschaften von Laurentreihen}{chapter.9}% 42
-\BOOKMARK [0][]{chapter.10}{10 Residuenkalk\374l}{}% 43
-\BOOKMARK [1][]{section.10.1}{10.1 Residuensatz}{chapter.10}% 44
-\BOOKMARK [1][]{section.10.2}{10.2 Conformal mappings - Konforme Abbildungen}{chapter.10}% 45
+\BOOKMARK [1][]{section.2.2}{2.2 Konvergenzkriterien}{chapter.2}% 13
+\BOOKMARK [1][]{section.2.3}{2.3 Normalkonvergente Reihen}{chapter.2}% 14
+\BOOKMARK [0][]{chapter.3}{3 Potenzreihen}{}% 15
+\BOOKMARK [1][]{section.3.1}{3.1 Konvergenzkriterien}{chapter.3}% 16
+\BOOKMARK [1][]{section.3.2}{3.2 Beispiele konvergenter Potenzreihen}{chapter.3}% 17
+\BOOKMARK [1][]{section.3.3}{3.3 Holomorphie von Potenzreihen}{chapter.3}% 18
+\BOOKMARK [2][]{subsection.3.3.1}{3.3.1 Beispiele holomorpher Funktionen}{section.3.3}% 19
+\BOOKMARK [0][]{chapter.4}{4 Elementar-transzendente Funktionen}{}% 20
+\BOOKMARK [1][]{section.4.1}{4.1 Exponentialfunktion und trigonometrische Funktionen}{chapter.4}% 21
+\BOOKMARK [1][]{section.4.2}{4.2 Polarkoordinaten und Einheitswurzeln}{chapter.4}% 22
+\BOOKMARK [1][]{section.4.3}{4.3 Logarithmusfunktion}{chapter.4}% 23
+\BOOKMARK [0][]{chapter.5}{5 Komplexe Integralrechnung}{}% 24
+\BOOKMARK [1][]{section.5.1}{5.1 Wegintegrale in \040C}{chapter.5}% 25
+\BOOKMARK [1][]{section.5.2}{5.2 Eigenschaften komplexer Wegintegrale}{chapter.5}% 26
+\BOOKMARK [1][]{section.5.3}{5.3 Wegunabh\344ngigkeit von Integralen, Stammfunktionen}{chapter.5}% 27
+\BOOKMARK [0][]{chapter.6}{6 Integralsatz, Integralformel und Potenzreihenentwicklung}{}% 28
+\BOOKMARK [1][]{section.6.1}{6.1 Cauchyscher Integralsatz f\374r Sterngebiete}{chapter.6}% 29
+\BOOKMARK [1][]{section.6.2}{6.2 Cauchysche Integralformel f\374r Kreisscheiben}{chapter.6}% 30
+\BOOKMARK [1][]{section.6.3}{6.3 Entwicklung holomorpher Funktionen in Potenzreihen}{chapter.6}% 31
+\BOOKMARK [0][]{chapter.7}{7 Fundamentals\344tze \374ber holomorphe Funktionen}{}% 32
+\BOOKMARK [1][]{section.7.1}{7.1 Identit\344tssatz}{chapter.7}% 33
+\BOOKMARK [1][]{section.7.2}{7.2 Existenz singul\344rer Punkte}{chapter.7}% 34
+\BOOKMARK [1][]{section.7.3}{7.3 Konvergenzs\344tze von Weierstra\337}{chapter.7}% 35
+\BOOKMARK [1][]{section.7.4}{7.4 Offenheitssatz und Maximumprinzip}{chapter.7}% 36
+\BOOKMARK [1][]{section.7.5}{7.5 Allgemeine Version von Cauchys Satz}{chapter.7}% 37
+\BOOKMARK [0][]{chapter.8}{8 Isolierte Singularit\344ten}{}% 38
+\BOOKMARK [1][]{section.8.1}{8.1 Hebbare Singularit\344ten, Pole}{chapter.8}% 39
+\BOOKMARK [1][]{section.8.2}{8.2 Entwicklung von Funktionen um Polstellen}{chapter.8}% 40
+\BOOKMARK [1][]{section.8.3}{8.3 Wesentliche Singularit\344ten, Satz von Casorati-Weierstrass}{chapter.8}% 41
+\BOOKMARK [0][]{chapter.9}{9 Laurentreihen und Fourierreihen}{}% 42
+\BOOKMARK [1][]{section.9.1}{9.1 Laurentdarstellung in Kreisringen}{chapter.9}% 43
+\BOOKMARK [1][]{section.9.2}{9.2 Eigenschaften von Laurentreihen}{chapter.9}% 44
+\BOOKMARK [0][]{chapter.10}{10 Residuenkalk\374l}{}% 45
+\BOOKMARK [1][]{section.10.1}{10.1 Residuensatz}{chapter.10}% 46
+\BOOKMARK [1][]{section.10.2}{10.2 Conformal mappings - Konforme Abbildungen}{chapter.10}% 47

@@ -29,7 +29,7 @@
 \end{satz}
 \begin{beweis}
 	\begin{description}
-		\item[Existenz:] Die Funktion \[ f^+_\rho(z)=\frac{1}{2\pi i}\int_{S_{\rho}}\frac{f(\zeta)}{\zeta-z}\dd\zeta, z\in B\rho(c) \] ist holomorph in $ B_\rho(c) $. F\"ur $ \sigma\in(\rho, s) $ gilt: $ f^+_{\rho}=f^+_\sigma|_{B_\rho(c)} $ nach dem Integralsatz. Es gibt also eine Funktion $ f^+\in\sO(A^+) $ die in $ B_\rho(c) $	mit $ f^+ $ \"ubereinstimmt. Ebenso ist
+		\item[Existenz:] Die Funktion \[ f^+_\rho(z)=\frac{1}{2\pi i}\int_{S_{\rho}}\frac{f(\zeta)}{\zeta-z}\dd\zeta, z\in B_\rho(c) \] ist holomorph in $ B_\rho(c) $. F\"ur $ \sigma\in(\rho, s) $ gilt: $ f^+_{\rho}=f^+_\sigma|_{B_\rho(c)} $ nach dem Integralsatz. Es gibt also eine Funktion $ f^+\in\sO(A^+) $ die in $ B_\rho(c) $	mit $ f^+ $ \"ubereinstimmt. Ebenso ist
 		\[ f^-(z)\coloneqq f^-_\sigma(z)\coloneqq\frac{-1}{2\pi i}\int_{S_\sigma}\frac{f(\zeta)}{\zeta-z}\dd\zeta,z\in A^-, r<\sigma<\min\lbrace s,|z-c|\rbrace \]
 		holomorph in $ A^- $. Die Integralformel, angewendet auf alle Kreisringe $ A' $ um $ c $ mit $ \bar A'\subset A $, liefert in $ A $ die Darstellung $ f=f^++f^- $. Die Standardabsch\"atzung f\"ur Integrale gilt f\"ur $ z\in A^- $:
 		\[ |f^-(z)|\leq\sigma\max_{\zeta\in S_\sigma}|f(\zeta)(\zeta-z)^{-1}|\leq\frac{\sigma}{|z-c|-\sigma}|f|_{S_\sigma} \]
@@ -41,13 +41,12 @@
 \end{beweis}
 Man nennt die Darstellung von $ f $ als Summe $ f^++f^- $ die \deftxt{Laurentdarstellung von $ f $ in $ A $}. Die Funktion $ f^- $ hei\ss t der \deftxt{Hauptteil}, und $ f^+ $ \deftxt{Nebenteil} von $ f $.
 \begin{definition}
+	Reihen der Form
 	\[ \sum_{-\infty}^{\infty}a_\nu(z-c)^\nu \]
 	hei\ss en \deftxt{Laurentreihen um $ c $}. Die Reihen
 	\[ \sum_{-\infty}^{-1}a_\nu(z-c)^\nu=\sum_{1}^{\infty}a_{-\nu}(z-c)^{-\nu}\quad\text{bzw.}\quad\sum_0^\infty a_\nu(z-c)^\nu \]
 	hei\ss en \deftxt{Hauptteil} bzw. \deftxt{Nebenteil}.
 \end{definition}
-Reihen der Form
-
 \begin{satz}[Entwicklungssatz von Laurent]
 	Jede im Kreisring $ A $ um $ c $ mit den Radien $ r $ und $ s $ holomorphe Funktion $ f $ ist in $ A $ eindeutig in eine Laurentreihe
 	\[ f(z)=\sum_{-\infty}^{\infty}a_\nu(z-c)^\nu \]

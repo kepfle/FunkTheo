@@ -6,6 +6,7 @@
 \end{definition}
 \begin{beispiel*}
 	\begin{enumerate}
+		\item[]
 		\item 	$ f_n(x)=x^n $, $ A=[0,1) $. $ f(x)\equiv 0\forall x\in A $. $ f_n\xrightarrow{n\to\infty}f $ punktweise, aber nicht gleichm\"a\ss ig.
 		\item $ A=[0,1] $.
 		\[ f_n(z)=\begin{cases}
@@ -16,15 +17,89 @@
 		$ f(x)\equiv 0\forall x\in[0,1] $.
 	\end{enumerate}
 \end{beispiel*}
-%
-%
-%
-%
-%
-%Vorlesung nachtragen
-%
-%
-%
-%
-%
-%
+\begin{definition}
+	Die \deftxt{Supremumsnorm} f\"ur Funktionen $ f\colon X\rightarrow\C $ und jede Menge $ A\subset X $ definiert man als:
+	\[ |f|_A\coloneqq\sup_{x\in A}|f(x)| \]
+\end{definition}
+\begin{definition}
+	Eine Funktionenfolge $ f_n\colon X\rightarrow\C $ hei\ss t \deftxt{lokal-gleichm\"a\ss ig konvergent} in $ X $ genau dann, wenn $ \forall x\in X $ eine Umgebung $ U\subset X $ existiert, so dass $ f_n|_U $ gleichm\"a\ss ig konvergiert.
+\end{definition}
+\begin{bemerkung*}
+	$ f_n\colon X\rightarrow\C $ gleichm\"a\ss ig konvergent$ \nLeftarrow\Rightarrow $lokal gleichm\"a\ss ige Konvergenz.
+\end{bemerkung*}
+\begin{beispiel*}
+	$ f_n(z)=z^n\colon\Delta_1(0)\rightarrow\C$ konvergiert nur lokal gleichm\"a\ss ig.
+\end{beispiel*}
+\begin{satz}[Stetigeitssatz]
+	Konvergiert die Folge $ f_n\in C(X) $ lokal-gleichm\"a\ss ig in $ X $, so ist die Grenzfunktion $ f=\lim_{n\to\infty}f_n $ ebenfalls stetig in $ X $, d.h. $ f\in C(X) $.
+\end{satz}
+\begin{satz}
+	Konvergiert die Folge $ f_n\colon X\rightarrow\C $ gleichm\"a\ss ig in endlich vielen Teilmengen $ A_1,...,A_m $ von $ X $, so konvergiert sie nat\"urlich auch gleichm\"a\ss ig in der Vereinigung. Hieraus folgt unmittelbar: Konvergiert die Folge $ f_n $ lokal-gleichm\"a\ss ig in $ X $, so konvergiert $ f_n $ gleichm\"a\ss ig in jeder kompakten $ K\subset X $.
+\end{satz}
+\begin{beweis}
+	$ \forall  x\in K\exists$offene Umgebung $ U $ von $ x $ in $ X $, so dass $ f_n|_U $ gleichm\"a\ss ig konvergiert. $ K $ kompakt. Dann exitieren $ U_1,...,U_m $ so dass $ K\subset\bigcup_{i=1}^m U_i $, $ f_n|_{U_i} $ konvergiert gleichm\"a\ss ig $ \forall i=1,...,m $. Dann konvergiert $ f_n|_{U_1\cup...\cup U_m} $ gleichm\"a\ss ig und somit $ f_n|_K $.
+\end{beweis}
+\begin{definition}
+	Man nennt eine Folge bzw. eine Reihe \deftxt{kompakt konvergent} in $ X $, wenn sie in jeder kompakten Teilmenge von $ X $ gleichm\"a\ss ig konvergiert.
+\end{definition}
+\section{Konvergenzkriterien}
+\begin{definition}
+	Eine Funktionenfolge $ f_n\colon X\rightarrow\C $ auf $ A\subset X $ hei\ss t \deftxt{Cauchyfolge} (bzgl. der Supremumsnorm), wenn $ \forall\e>0\exists n_0\in\N $, so dass $ |f_n-f_m|_A<\e\forall n,m\geq n_0 $.
+\end{definition}
+\begin{satz}[Cauchysches Konvergenzkriterium]
+	Folgende Aussagen \"uber eine Folge $ f_n\colon X\rightarrow\C $ und eine Teilmenge $ A\neq\emptyset $ von $ X $ sind \"aquivalent:
+	\begin{enumerate}
+		\item $ f_n $ ist gleichm\"a\ss ig konvergent in $ A $.
+		\item $ f_n $ ist eine Cauchyfolge in $ A $.
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	\begin{description}
+		\item[ii)$ \Rightarrow $i):] Aus $ |f_m(x)-f_n(x)|\leq|f_m-f_n|_A $ folgt, dass $ \lbrace f_n(x)\rbrace $ eine Cauchyfolge $ \forall x\in A $ ist. Dann konvergiert $ f_n $ punktweise in $ A $. Sei $ f(x)=\lim_{n\to\infty}f_n(x)\forall x\in A $. Es gilt:
+		\[ |f_n(x)-f(x)|\leq|f_n(x)-f_m(x)|+|f_m(x)-f(x)|\forall x\in A \]
+		Sei $ \e>0 $ vorgegeben, so gibt es ein $ n_0 $ so dass
+		\[ |f_n(x)-f_m(x)|<\e\forall m,n\geq n_0\forall x\in A \]
+		W\"ahlt man zu $ x\in A $ ein $ m=m(x)\geq n_0 $ so dass
+		\[ |f_m(x)-f(x)|<\e\Rightarrow |f_n(x)-f(x)|<2\e\forall x\in A\forall n\geq n_0\Rightarrow |f_n-f|_A\leq 2\e\forall n\geq n_0 \]
+		\item[i)$ \Rightarrow $ii):] Trivial.
+	\end{description}
+\end{beweis}
+\begin{satz}[Cauchysches Konvergenzkriterium f\"ur Reihen]
+	Folgende Aussagen \"uber eine unendliche Reihe $ \sum f_\nu $, $ f_\nu\colon X\rightarrow\C $, sind \"aquivalent:
+	\begin{enumerate}
+		\item $ \sum f_\nu $ ist gleichm\"a\ss ig konvergent in $ A $.
+		\item $ \forall\e>0\exists n_0\in\N $ so dass $ |f_{m+1}(x)+...+f_n(x)|<\e\forall n>m\geq n_0\forall x\in A $.
+	\end{enumerate}
+\end{satz}
+\begin{satz}[Majorantenkriterium von Weierstra\ss]
+	Es sei $ f_\nu\colon X\rightarrow\C $ eine Funktionenfolge. Es sei $ A\neq\emptyset $ eine Teilmenge von $ X $ und es gebe eine Folge reeller Zahlen $ M_\nu\geq 0 $, so dass gilt:
+	\[ |f_\nu|_A\leq M_\nu,\nu\in\N,\sum M_\nu<\infty \]
+	Dann konvergiert die Reihe $ \sum f_\nu $ gleichm\"a\ss ig in $ A $.
+\end{satz}
+\begin{beweis}
+	$ \forall n>m\forall x\in A $ gilt:
+	\[ \left|\sum_{m+1}^n f_\nu(x)\right|\leq\sum_{m+1}^{n}|f_\nu(x)|\leq\sum_{m+1}^{n}M_\nu \]
+	Wegen $ \sum M_\nu<\infty $ gibt es zu jedem $ \e>0 $ ein $ n_0\in\N $ so dass
+	\[ \sum_{m+1}^n M_\nu<\e\forall n>m\geq n_0\Rightarrow |f_{m+1}+...+f_n(x)|<\e\forall n>m\geq n_0\forall x\in A \]
+	Daher ist $ \sum f_\nu $ nach dem Cauchyschen Kriterium gleichm\"a\ss ig konvergent.
+\end{beweis}
+\section{Normalkonvergente Reihen}
+\begin{definition}
+	Eine Reihe $ \sum f_\nu $ von Funktion $ f_\nu\colon X\rightarrow\C $ hei\ss t \deftxt{normal konvergent} in $ X $, wenn $ \forall x\in X $ eine Umgebung $ U $ existiert, so dass $ \sum |f_\nu|_U<\infty $.
+\end{definition}
+\begin{bemerkung*}
+	\begin{enumerate}
+		\item[]
+		\item $ \sum f_\nu $ normal konvergent$ \Rightarrow\sum f_\nu $ lokal-gleichm\"a\ss ig konvergent.
+		\item Ist $ f=\sum f_\nu $, $ f_\nu\in C(X) $, normal konvergent in $ X $, so ist $ f\in C(X) $.
+	\end{enumerate}
+\end{bemerkung*}
+\begin{satz}[Umordnungssatz]
+	Konvergiert $ \sum f_\nu $ in $ X $ normal gegen $ f $, so konvergiert f\"ur jede Bijektion $ \tau\colon\N\rightarrow\N $ die umgeordnete Reihe $ \sum f_{\tau(\nu)} $ in $ X $ normal gegen $ f $.
+\end{satz}
+\begin{beweis}
+	$ \forall x\in X\exists $eine Umgebung $ U\subset X $, so dass $ \sum |f_\nu|<\infty $. Nach dem Umordnungssatz f\"ur Reihen komplexer Zahlen gilt dann $ \sum |f_{\tau(\nu)}|<\infty $ f\"ur jede Bijektion $ \tau\colon\N\rightarrow\N $ und es folgt $ f(x)=\sum f_{\tau(\nu)}\forall x\in X $. Also ist $ \sum f_{\tau(\nu)} $ in $ X $ normal konvergent gegen $ f $.
+\end{beweis}
+\begin{satz}[Reihenproduktsatz f\"ur normal konergente Reihen]
+	Sind $ f=\sum f_\mu $ und $ g=\sum g_\nu $ normal konvergente Reihen in $ X $, so konvergiert jede Produktreihe $ \sum h_\kappa $, wobei $ h_0,h_1,... $ alle Produkte $ f_\mu g_\nu $ genau einmal durchlaufen, in $ X $ normal gegen $ fg $. Wir schreiben $ fg=\sum f_\mu g_nu $. Insbesindere gilt $ fg=\sum p_\lambda $ mit $ p_\lambda=\sum_{\mu+\nu=\lambda}^{}f_\mu g_\nu $.
+\end{satz}

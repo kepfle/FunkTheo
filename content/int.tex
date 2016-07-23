@@ -1,15 +1,78 @@
 \chapter{Komplexe Integralrechnung}
 \section{Wegintegrale in $ \C $}
 Eine \deftxt{Kurve}: $ \gamma\colon I=[a,b]\rightarrow\C\cong\R^2_{x,y} $, $ \gamma(t)=(x(t),y(t)) $, stetig differenzierbar.\\
-$ \gamma(a) $ hei\ss t \deftxt{Anfangspunkt}, $ \gamma(b) $ \deftxt{Endpunkt}.
+$ \gamma(a) $ hei\ss t \deftxt{Anfangspunkt}, $ \gamma(b) $ \deftxt{Endpunkt}.\\
+Ein st\"uckweise stetig differenzierbarer Weg:
+\[ \begin{cases}
+\gamma_1\colon I_1\rightarrow\C\\\gamma_2\colon I_2\rightarrow\C\\\vdots\\\gamma_m\colon I_m\rightarrow\C
+\end{cases}\text{Kurven}, \gamma_k(b_k)=\gamma_{k+1}(a_{k+1}), b_k=a_{k+1} \]
+\begin{satz}[Integration l\"angs Wegen]
+	$ |\gamma|=\gamma(I) $ sei der (kompakte) Tr\"ager des Weges $ \gamma $. Sei $ f(z)=u(z)+iv(z)\in C(|\gamma|) $. Ist $ \gamma(t)=\alpha(t)+i\beta(t)\colon[a_i,b_i]=I_i\rightarrow\C $ stetig differenzierbar, so gilt $ f(\gamma(t))\gamma'(t)\in C(I) $ und
+	\begin{align*} \exists\int_{\gamma}^{}f\dd z&\coloneqq\int_{\gamma}^{}f(z)\dd z\\&\coloneqq\int_a^b f(\gamma(t))\gamma'(t)\dd t\\&=\int_a^b u(\gamma(t))\alpha'(t)-v(\gamma(t))\beta'(t)\dd t+i\int_a^b (u(\gamma(t))\beta'(t)+v(\gamma(t))\alpha'(t)\dd t \end{align*}
+	F\"ur einen Weg $ \gamma=\gamma_1+...+\gamma_m $ und $ f\in C(|\gamma|) $ gilt dann
+	\[ \int_{\gamma}^{}f\dd z=\sum_{\mu=1}^{m}\int_{\gamma_\mu}^{f}\dd z \]
+\end{satz}
+\begin{satz}
+	$ \forall n\in\Z\forall B=B_r(c) $, $ r>0 $, gilt
+	\[ \int_{\partial B}^{}(\zeta-c)^n\dd\zeta= \begin{cases}
+	0&n\neq-1\\2\pi i&n=-1
+	\end{cases} \]
+\end{satz}
+\begin{beweis}
+	Sei $ \zeta(t)=c+re^{it} $, $ t\in[0,2\pi] $ eine Parametrisierung. Dann ist $ \zeta'(t)=ire^{it} $ und es folgt:
+	\[ \int_{\partial B}^{}(\zeta'-c)^n\dd\zeta=\int_0^{2\pi}(re^{it})^n ire^{it}\dd t=r^{n+1}\int_0^{2\pi}ie^{i(n+1)t}\dd t \]
+	Da $ \frac{1}{n+1}e^{i(n+1t} $ eine Stammfunktion von $ ie^{i(n+1)t} $, $ n\neq -1 $, ist, folgt die Behauptung.
+\end{beweis}
+\begin{satz}[Unabh\"angigkeit von der Parametrisierung]
+	$ \gamma\colon I\rightarrow\C $, $ \varphi\colon\tilde I\rightarrow I $ bijektiv und stetig differenzierbar, $ \varphi'\neq 0 $, $ \tilde\gamma=\gamma\circ\varphi\colon \tilde I\rightarrow\C $. Sei $ f\in C(|\gamma|) $. Dann gilt
+	\[ \int_\gamma f(z)\dd z=\int_{\tilde{\gamma}}^{}f(z)\dd z \]
+\end{satz}	
+\begin{beweis}
+	Kettenregel!
+\end{beweis}
+\newpage
 \section{Eigenschaften komplexer Wegintegrale}
-%
-%
-%
-%
-%
-%
-%
+\begin{satz}[Rechenregeln]
+	$ \forall f,g\in C(|\gamma|) $ gilt:
+	\begin{enumerate}
+		\item \[ \int_{\gamma}^{} f+g\dd z=\int_{\gamma}^{} f\dd z+\int_{\gamma}^{} g\dd z \]
+		\item \[ \int_{\gamma}^{} cf\dd z=c\int_{\gamma}^{}f\dd z\forall c\in\C \]
+		\item \[ \int_{\gamma_1+\gamma_2}^{}f\dd z=\int_{\gamma_1}^{}f\dd z+\int_{\gamma_2}^{}f\dd z, f\in C(|\gamma_1|\cup|\gamma_2|) \]
+	\end{enumerate}
+\end{satz}
+\begin{beweis}
+	Folgt direkt aus der Definition.
+\end{beweis}
+\begin{satz}[Umkehrregel]
+	\[ \int_{-\gamma}^{}f\dd z=-\int_{\gamma}^{} f\dd z\forall f\in C(|\gamma|) \]
+\end{satz}
+\begin{satz}[Transformationsregel]
+	Es sei $ g\colon\tilde D\rightarrow D $ eine holomorphe Abbildung mit stetiger Ableitung $ g' $, es sei $ \tilde{\gamma} $ ein Weg in $ \tilde D $ und $ \gamma\coloneqq g\circ\tilde{\gamma} $ der Bildweg in $ D $. Dann gilt:
+	\[ \int_{\gamma}^{}f(z)\dd z=\int_{\tilde{\gamma}}^{}f(g(\zeta))g'(\zeta)\dd\zeta\forall f\in C(|\gamma|) \]
+\end{satz}
+\begin{beweis}
+	Folgt direkt aus der Kettenregel!
+\end{beweis}
+\begin{definition}[Standardabsch\"atzung]
+	$ \gamma\colon[a,b]\rightarrow\C $, $ t\mapsto z(t)=x(t)+iy(t) $.
+	\[ L(\gamma)\coloneqq\int_a^b|z'(t)|\dd t=\int_a^b\sqrt{x'(t)^2+y'(t)^2}\dd t=\text{L\"ange von }\gamma \]
+\end{definition}
+\begin{satz}[Standardabsch\"atzung f\"ur Wegintegrale]
+	$ \forall $st\"uckweise differenzierbare Wege $ \gamma $ in $ \C $ und $ \forall f\in C(|\gamma|) $ gilt:
+	\[ \left|\int_{\gamma}^{}f\dd z\right|\leq |f|_{|\gamma|}L(\gamma), |f|_{|\gamma|}\coloneqq\max_{t\in[a,b]}f(t) \]
+\end{satz}
+\begin{beweis}
+	F\"ur eine Kurve ist
+	\[ \left|\int_{\gamma}^{}f\dd z\right|=\left|\int_a^b f(\gamma(t))\gamma'(t)\dd t\right|=\int_a^b|f(\gamma(t))||\gamma'(t)|\dd t\leq|f|_{|\gamma|}\int_a^b|\gamma'(t)\dd t \]
+	F\"ur einen Weg: Dreiecksungleichung!
+\end{beweis}
+\begin{satz}[Vertauschungssatz f\"ur Folgen]
+	Es sei $ \gamma $ ein Weg und $ f_n\in C(|\gamma|) $ eine Funktionenfolge die in $ |\gamma| $ gleichm\"a\ss ig gegen eine Funtion $ f\colon |\gamma|\rightarrow\C $ onvergiert. Dann gilt:
+	\[ \lim\int_{\gamma}^{}f_n\dd z=\int_{\gamma}^{}\lim f_n\dd z=\int_{\gamma}^{}f\dd z \]
+\end{satz}
+\begin{beweis}
+	\[ \left|\int_{\gamma}^{}f_n\dd z-\int_{\gamma}^{}f\dd z\right|\leq\left|\int_{\gamma}^{}f_n-f\dd z\right|\leq|f_n-f|_{|\gamma|}\rightarrow 0 \]
+\end{beweis}
 \begin{satz}[Vertauschungssatz f\"ur Reihen]
 	Sei $ \gamma $ ein Weg und $ \sum f_\nu $, $ f_\nu\in C(|\gamma|) $, eine Funktionsreihe, die in $ |\gamma| $ gleichm\"a\ss ig gegen eine Funktion $ f\colon |\gamma|\rightarrow\C $ konvergiert. Dann gilt:
 	\[ \sum\int_{\gamma}^{} f_\nu\dd z=\int_{\gamma}^{}\left(\sum f_\nu\right)\dd z=\int_{\gamma}^{} f\dd z \]
@@ -23,7 +86,6 @@ $ \gamma(a) $ hei\ss t \deftxt{Anfangspunkt}, $ \gamma(b) $ \deftxt{Endpunkt}.
 		\[ \int_{\gamma}^{} f\dd z=F(z)-F(w) \]
 	\end{enumerate}
 \end{satz}
-\newpage
 \begin{beweis}
 	\begin{description}
 		\item[i)$ \Rightarrow $ii):] Ist $ \gamma\colon[a,b]\rightarrow D $, $ t\mapsto \zeta(t) $, stetig differenzierbar, so gilt
@@ -58,6 +120,7 @@ Eine Funktion $ f\in C(D) $ hei\ss t \deftxt{integrabel}, wenn eine Stammfunktio
 	also
 	\[ \int_{\gamma_z}^{}f\dd\zeta=\int_{\gamma_z'}^{}f\dd\zeta\forall\gamma_z,\gamma_z' \] mit Anfangspunkt $ z $ und Endpunkt $ z $, d.h. $ F(z) $ ist von der Wahl von $ \gamma_z $ unabh\"angig, d.h. $ F(z) $ ist korrekt definiert und man kann zeigen, dass $ F'(z)=f(z)\forall z\in D $.
 \end{bemerkung*}
+\newpage
 \begin{beweis}
 	\begin{description}
 	\item[ii)$ \Rightarrow $i):] Da Wege stets in Zusammenhangskomponenten von $ D $ verlaufen, darf man annehmen, dass $ D $ ein Gebiet ist. Sei $ \gamma $ irgendein Weg in $ D $ von $ w $ nach $ z $, Wege $ \gamma_z $, $ \gamma_w $ in $ D $ von $ z_1 $ nach $ w $ bzw. $ z $. Dann ist $ \gamma_w+\gamma-\gamma_z $ ein geschlossener Weg, daher gilt
@@ -70,7 +133,6 @@ Eine Funktion $ f\in C(D) $ hei\ss t \deftxt{integrabel}, wenn eine Stammfunktio
 \begin{definition}
 	$ G \subset \C $ hei\ss t \deftxt{Sterngebiet} mit Zentrum $ c\in G $ genau dann, wenn $ \forall z\in G $ gilt: $ [c,z]\subset G $.
 \end{definition}
-\newpage
 \begin{definition}
 	Seien $ z_1,z_2,z_3\in\C $ drei Punkte. Die kompakte Menge \[ \Delta\coloneqq\lbrace z\in\C\mid z=z_1+s(z_2-z_1)+t(z_3-z_1),s\geq 0,t\geq 0, s+t\leq 1\rbrace \]
 	hei\ss t das \deftxt{(kompakte) Dreieck} mit Eckpunkten $ z_1,z_2,z_3 $.\\
@@ -78,6 +140,7 @@ Eine Funktion $ f\in C(D) $ hei\ss t \deftxt{integrabel}, wenn eine Stammfunktio
 	\[ \partial\Delta\coloneqq[z_1,z_2]+[z_2,z_3]+[z_3,z_1] \]
 	hei\ss t der \deftxt{Rand von $ \Delta $}. 
 \end{definition}
+\newpage
 \begin{satz}
 	Es sei $ G $ ein Sterngebiet mit Zentrum $ z_1 $. Es sei $ f\in C(G) $, f\"ur den Rand $ \partial\Delta $ eines jeden Dreiecks $ \Delta\subset G $, das $ z $ als Endpunkt hat, gelte:
 	\[ \int_{\partial\Delta}^{} f\dd\zeta = 0 \]

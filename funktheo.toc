@@ -14,36 +14,38 @@
 \contentsline {paragraph}{Kettenregel.}{25}{paragraph*.4}
 \contentsline {chapter}{\numberline {2}Konvergenzbegriffe der Funktionentheorie}{29}{chapter.2}
 \contentsline {section}{\numberline {2.1}Gleichm\"a\ss ige, lokal-gleichm\"a\ss ige und kompakte Konvergenz}{29}{section.2.1}
-\contentsline {chapter}{\numberline {3}Potenzreihen}{31}{chapter.3}
-\contentsline {section}{\numberline {3.1}Konvergenzkriterien}{31}{section.3.1}
-\contentsline {section}{\numberline {3.2}Beispiele konvergenter Potenzreihen}{34}{section.3.2}
-\contentsline {section}{\numberline {3.3}Holomorphie von Potenzreihen}{35}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Beispiele holomorpher Funktionen}{37}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}Elementar-transzendente Funktionen}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Exponentialfunktion und trigonometrische Funktionen}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Polarkoordinaten und Einheitswurzeln}{41}{section.4.2}
-\contentsline {section}{\numberline {4.3}Logarithmusfunktion}{43}{section.4.3}
-\contentsline {chapter}{\numberline {5}Komplexe Integralrechnung}{45}{chapter.5}
-\contentsline {section}{\numberline {5.1}Wegintegrale in $ \math@bb {C}$}{45}{section.5.1}
-\contentsline {section}{\numberline {5.2}Eigenschaften komplexer Wegintegrale}{45}{section.5.2}
-\contentsline {section}{\numberline {5.3}Wegunabh\"angigkeit von Integralen, Stammfunktionen}{45}{section.5.3}
-\contentsline {chapter}{\numberline {6}Integralsatz, Integralformel und Potenzreihenentwicklung}{49}{chapter.6}
-\contentsline {section}{\numberline {6.1}Cauchyscher Integralsatz f\"ur Sterngebiete}{49}{section.6.1}
-\contentsline {section}{\numberline {6.2}Cauchysche Integralformel f\"ur Kreisscheiben}{52}{section.6.2}
-\contentsline {section}{\numberline {6.3}Entwicklung holomorpher Funktionen in Potenzreihen}{54}{section.6.3}
-\contentsline {chapter}{\numberline {7}Fundamentals\"atze \"uber holomorphe Funktionen}{59}{chapter.7}
-\contentsline {section}{\numberline {7.1}Identit\"atssatz}{59}{section.7.1}
-\contentsline {section}{\numberline {7.2}Existenz singul\"arer Punkte}{61}{section.7.2}
-\contentsline {section}{\numberline {7.3}Konvergenzs\"atze von Weierstra\ss }{63}{section.7.3}
-\contentsline {section}{\numberline {7.4}Offenheitssatz und Maximumprinzip}{65}{section.7.4}
-\contentsline {section}{\numberline {7.5}Allgemeine Version von Cauchys Satz}{69}{section.7.5}
-\contentsline {chapter}{\numberline {8}Isolierte Singularit\"aten}{73}{chapter.8}
-\contentsline {section}{\numberline {8.1}Hebbare Singularit\"aten, Pole}{73}{section.8.1}
-\contentsline {section}{\numberline {8.2}Entwicklung von Funktionen um Polstellen}{76}{section.8.2}
-\contentsline {section}{\numberline {8.3}Wesentliche Singularit\"aten, Satz von Casorati-Weierstrass}{77}{section.8.3}
-\contentsline {chapter}{\numberline {9}Laurentreihen und Fourierreihen}{79}{chapter.9}
-\contentsline {section}{\numberline {9.1}Laurentdarstellung in Kreisringen}{80}{section.9.1}
-\contentsline {section}{\numberline {9.2}Eigenschaften von Laurentreihen}{83}{section.9.2}
-\contentsline {chapter}{\numberline {10}Residuenkalk\"ul}{85}{chapter.10}
-\contentsline {section}{\numberline {10.1}Residuensatz}{85}{section.10.1}
-\contentsline {section}{\numberline {10.2}Conformal mappings - Konforme Abbildungen}{91}{section.10.2}
+\contentsline {section}{\numberline {2.2}Konvergenzkriterien}{31}{section.2.2}
+\contentsline {section}{\numberline {2.3}Normalkonvergente Reihen}{32}{section.2.3}
+\contentsline {chapter}{\numberline {3}Potenzreihen}{35}{chapter.3}
+\contentsline {section}{\numberline {3.1}Konvergenzkriterien}{35}{section.3.1}
+\contentsline {section}{\numberline {3.2}Beispiele konvergenter Potenzreihen}{38}{section.3.2}
+\contentsline {section}{\numberline {3.3}Holomorphie von Potenzreihen}{39}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Beispiele holomorpher Funktionen}{41}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {4}Elementar-transzendente Funktionen}{43}{chapter.4}
+\contentsline {section}{\numberline {4.1}Exponentialfunktion und trigonometrische Funktionen}{43}{section.4.1}
+\contentsline {section}{\numberline {4.2}Polarkoordinaten und Einheitswurzeln}{45}{section.4.2}
+\contentsline {section}{\numberline {4.3}Logarithmusfunktion}{47}{section.4.3}
+\contentsline {chapter}{\numberline {5}Komplexe Integralrechnung}{49}{chapter.5}
+\contentsline {section}{\numberline {5.1}Wegintegrale in $ \math@bb {C}$}{49}{section.5.1}
+\contentsline {section}{\numberline {5.2}Eigenschaften komplexer Wegintegrale}{51}{section.5.2}
+\contentsline {section}{\numberline {5.3}Wegunabh\"angigkeit von Integralen, Stammfunktionen}{53}{section.5.3}
+\contentsline {chapter}{\numberline {6}Integralsatz, Integralformel und Potenzreihenentwicklung}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}Cauchyscher Integralsatz f\"ur Sterngebiete}{57}{section.6.1}
+\contentsline {section}{\numberline {6.2}Cauchysche Integralformel f\"ur Kreisscheiben}{60}{section.6.2}
+\contentsline {section}{\numberline {6.3}Entwicklung holomorpher Funktionen in Potenzreihen}{62}{section.6.3}
+\contentsline {chapter}{\numberline {7}Fundamentals\"atze \"uber holomorphe Funktionen}{67}{chapter.7}
+\contentsline {section}{\numberline {7.1}Identit\"atssatz}{67}{section.7.1}
+\contentsline {section}{\numberline {7.2}Existenz singul\"arer Punkte}{69}{section.7.2}
+\contentsline {section}{\numberline {7.3}Konvergenzs\"atze von Weierstra\ss }{72}{section.7.3}
+\contentsline {section}{\numberline {7.4}Offenheitssatz und Maximumprinzip}{74}{section.7.4}
+\contentsline {section}{\numberline {7.5}Allgemeine Version von Cauchys Satz}{78}{section.7.5}
+\contentsline {chapter}{\numberline {8}Isolierte Singularit\"aten}{81}{chapter.8}
+\contentsline {section}{\numberline {8.1}Hebbare Singularit\"aten, Pole}{81}{section.8.1}
+\contentsline {section}{\numberline {8.2}Entwicklung von Funktionen um Polstellen}{84}{section.8.2}
+\contentsline {section}{\numberline {8.3}Wesentliche Singularit\"aten, Satz von Casorati-Weierstrass}{85}{section.8.3}
+\contentsline {chapter}{\numberline {9}Laurentreihen und Fourierreihen}{87}{chapter.9}
+\contentsline {section}{\numberline {9.1}Laurentdarstellung in Kreisringen}{88}{section.9.1}
+\contentsline {section}{\numberline {9.2}Eigenschaften von Laurentreihen}{91}{section.9.2}
+\contentsline {chapter}{\numberline {10}Residuenkalk\"ul}{93}{chapter.10}
+\contentsline {section}{\numberline {10.1}Residuensatz}{93}{section.10.1}
+\contentsline {section}{\numberline {10.2}Conformal mappings - Konforme Abbildungen}{99}{section.10.2}

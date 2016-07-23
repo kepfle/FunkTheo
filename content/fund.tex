@@ -23,10 +23,9 @@ Eine andere Version des Identit\"atssatzes folgt direkt aus der Integralformel:
 \begin{beweis}
 	\begin{description}
 		\item[i)$ \Rightarrow $ii):] Trivial.
-		\item[ii)$ \Rightarrow $iii):] Wir setzen $ h\coloneqq f-g $. Die Nullstellenmenge $ M\coloneqq\lbrace w\in G\mid h(w)=0\rbrace $ hat nach Voraussetzungen einen H\"aufungspunkt in $ c\in G $. G\"abe es ein $ m\in\N $ mit $ h^{(m)}(c)\neq 0 $, so w\"ahlen wir $ m $ minimal. Dann gilt: $ h(z)=(z-c)^m h_m(z) $ mit $ h_m(z)=\sum_{\mu\geq m}^{}\frac{h^{(\mu)}(c)}{\mu!}(z-c)^{\mu-m}\in\sO(B) $ f\"ur jeden Kreis $ B\subset G $ um $ c $ nach dem Entwicklungssatz, wobei $ h_m(c)\neq 0 $. 
-		%
-		%von ali nachtragen
-		%
+		\item[ii)$ \Rightarrow $iii):] Wir setzen $ h\coloneqq f-g $. Die Nullstellenmenge $ M\coloneqq\lbrace w\in G\mid h(w)=0\rbrace $ hat nach Voraussetzungen einen H\"aufungspunkt in $ c\in G $. G\"abe es ein $ m\in\N $ mit $ h^{(m)}(c)\neq 0 $, so w\"ahlen wir $ m $ minimal. Dann gilt: $ h(z)=(z-c)^m h_m(z) $ mit $ h_m(z)=\sum_{\mu\geq m}^{}\frac{h^{(\mu)}(c)}{\mu!}(z-c)^{\mu-m}\in\sO(B) $ f\"ur jeden Kreis $ B\subset G $ um $ c $ nach dem Entwicklungssatz, wobei $ h_m(c)\neq 0 $. Aus Stetigkeitsgrunden ist $ h_m $ dann in einer Umgebung $ U\subset B $ um $ c $ nullstellenfrei. Es folgt
+		\[ M\cap(U\setminus\lbrace c\rbrace)=\emptyset \]
+		d.h. $ c $ w\"are ein H\"aufungspunkt von $ M $.$ \lightning $
 		\item[iii)$ \Rightarrow $i):] \[ S_n\coloneqq\lbrace w\in G\mid f^{(n)}(w)=g^{(n)}(w)\rbrace \]
 		$ f^{(n)} $ und $ g^{(n)} $ sind stetig, also ist $ S_n $ abgeschlossen. Somit ist auch $ S\coloneqq\bigcap_{n\in\N}S_n $ abgeschlossen. $ c\in S $, also $ S\neq\emptyset $. $ h=f-g\in\sO(G) $ und $ h^{(n)}(c)=0\forall n\in\N $. Es existiert ein $ \e>0 $ so dass $ \overline{B(c,\e)}\subset G $ und $ h $ l\"asst sich auf $ B(c,\e) $ in eine Potenzreihe entwickeln die auf $ B(c,\e) $ kompakt konvergiert:
 		\[ \sum_{n=0}^{\infty}a_n(z-c)^n \]
